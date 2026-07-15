@@ -247,28 +247,6 @@
       <p>© 2026 金秋南疆 · 不留遗憾之旅</p>
     </footer>
   </div>
-  <script>
-  <script>
-    // Hotel list - no auto-links
-  </script>
-      let html = el.innerHTML;
-      // Match hotel names (Chinese characters followed by optional spaces)
-      html = html.replace(/([\u4e00-\u9fff\u3000-\u303f\uff00-\uffef·]+(?:酒店|宾馆|饭店|大酒店|饭店|国际|宾馆|明珠|假日|迎宾馆|希岸|亚朵|美居|丽呈|都城|华|致|寓|驿|居|舍|季|阁|湾|苑|庭|汇|源|岸|里|宿|格|尚|住|家|公馆|客栈|民宿|青旅)?)/g, function(match) {
-        if (match.length < 2 || match.match(/^(连宿|第\d|晚|级|钻|舒适|四钻|同级|或|住宿|🏨|：|:|\/|\|)/)) return match;
-      let city = '';
-      let title = el.closest('.day-card').querySelector('.day-title')?.textContent || '';
-      if (title.includes('库尔勒')) city = '库尔勒';
-      else if (title.includes('乌鲁木齐')) city = '乌鲁木齐';
-      else if (title.includes('库车')) city = '库车';
-      else if (title.includes('阿拉尔')) city = '阿拉尔';
-      else if (title.includes('和田')) city = '和田';
-      else if (title.includes('塔县')) city = '塔什库尔干';
-      else if (title.includes('喀什')) city = '喀什';
-        let url = 'https://www.amap.com/search?query=' + encodeURIComponent(city + ' ' + match);
-        return '<span onclick="window.open(\''+url+'\',\'_blank\')" style="cursor:pointer;color:var(--accent);text-decoration:underline;text-underline-offset:2px" title="🗺️ 高德地圖">🗺️ ' + match + '</span>';
-      });
-      el.innerHTML = html;
-    });
-  </script>
+
 </body>
 </html>
