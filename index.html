@@ -67,6 +67,9 @@
     .day-title { font-size: 17px; font-weight: 800; color: var(--text-dark); line-height: 1.35; margin-bottom: 8px; }
   .day-title small { font-size: 11px; color: var(--text-muted); font-weight: 400; }
     .day-theme { font-size: 12px; color: var(--accent); font-weight: 700; padding: 8px 20px 0; }
+  
+  .hotel-grade { font-size: 10px; background: rgba(166,58,43,0.12); color: #A63A2B; padding: 1px 6px; border-radius: 8px; font-weight: 700; }
+
   .day-meal { font-size: 11px; color: var(--text-muted); padding: 2px 20px 8px; border-bottom: 1px dashed rgba(42,35,31,0.1); }
     .day-card-timeline { padding: 16px 20px; background: var(--card-cream); }
     .timeline-item { display: flex; gap: 12px; margin-bottom: 12px; font-size: 13px; position: relative; }
@@ -192,19 +195,21 @@
     
     <section id="quicklook">
       <div class="section-title">📋 行程秒懂 <span class="badge">12日速览</span></div>
-      <div class="day-card" style="padding:16px 20px;font-size:13px;line-height:2">
-        <div><b>D1</b> 出发地 → 乌鲁木齐（24H接机）<em>【四钻】</em></div>
-        <div><b>D2</b> 乌鲁木齐 → 乌尉高速 → 天山胜利隧道 → 博斯腾湖·白鹭洲 → 库尔勒 <em>【四钻】</em></div>
-        <div><b>D3</b> 库尔勒 → 罗布人村寨/塔塔秘境/葫芦岛（三选一）→ 库尔勒 <em>【四钻】</em></div>
-        <div><b>D4</b> 库尔勒 → 轮台胡杨林 → 热斯坦街·门巴扎·龟兹小巷 → 库车 <em>【四钻】</em></div>
-        <div><b>D5</b> 库车 → 克孜利亚/天山神秘大峡谷（二选一）→ 139秘境胡杨公路 → 阿拉尔 <em>【舒适】</em></div>
-        <div><b>D6</b> 阿拉尔 → 沙漠公路 → 翡翠湖 → 约特干故城 → 和田夜市 → 和田 <em>【四钻】</em></div>
-        <div><b>D7</b> 和田 → 泽普金胡杨/莎车王陵/喀什古城（三选一）→ 喀什 <em>【四钻】</em></div>
-        <div><b>D8</b> 喀什 → 喀喇昆仑公路 → 白沙湖 → 木吉火山口 → 喀拉库勒湖 → 塔县 <em>【舒适】</em></div>
-        <div><b>D9</b> 塔县 → 红其拉甫国门 → 瓦罕走廊 → 盘龙古道 → 班迪尔蓝湖 → 塔吉克家访·托格伦夏 <em>【舒适】</em></div>
-        <div><b>D10</b> 塔县 → 塔合曼湿地 → 树洞公路 → 慕士塔格冰川 → 奥依塔克红山谷 → 喀什 <em>【四钻】</em></div>
-        <div><b>D11</b> 喀什 → 天山昆仑山交汇 → 斯姆哈纳村·中国西极 → 喀什 <em>【四钻】</em></div>
-        <div><b>D12</b> 喀什 → 出发地（24H送机）</div>
+      <div class="day-card" style="padding:20px">
+        <div class="schedule">
+          <div class="schedule-item"><div class="time">D1</div><div class="desc">出发地 ✈️ <strong>乌鲁木齐</strong>（24H接机）<span class="hotel-grade">【四钻】</span></div></div>
+          <div class="schedule-item"><div class="time">D2</div><div class="desc">乌鲁木齐 → 乌尉高速 → 天山胜利隧道 → <strong>博斯腾湖·白鹭洲</strong> → 库尔勒 <span class="hotel-grade">【四钻】</span></div></div>
+          <div class="schedule-item"><div class="time">D3</div><div class="desc">库尔勒 → <strong>罗布人村寨/塔塔秘境/葫芦岛</strong>（三选一）→ 库尔勒 <span class="hotel-grade">【四钻】</span></div></div>
+          <div class="schedule-item"><div class="time">D4</div><div class="desc">库尔勒 → <strong>轮台塔里木胡杨林</strong> → 热斯坦街·门巴扎·龟兹小巷 → 库车 <span class="hotel-grade">【四钻】</span></div></div>
+          <div class="schedule-item"><div class="time">D5</div><div class="desc">库车 → <strong>克孜利亚/天山神秘大峡谷</strong>（二选一）→ 139秘境胡杨公路 → 阿拉尔 <span class="hotel-grade">【舒适】</span></div></div>
+          <div class="schedule-item"><div class="time">D6</div><div class="desc">阿拉尔 → <strong>沙漠公路</strong> → 翡翠湖 → 约特干故城 → 和田夜市 → 和田 <span class="hotel-grade">【四钻】</span></div></div>
+          <div class="schedule-item"><div class="time">D7</div><div class="desc">和田 → 泽普金胡杨/莎车王陵/<strong>喀什古城</strong>（三选一）→ 喀什 <span class="hotel-grade">【四钻】</span></div></div>
+          <div class="schedule-item"><div class="time">D8</div><div class="desc">喀什 → 喀喇昆仑公路 → <strong>白沙湖</strong> → 木吉火山口 → 喀拉库勒湖 → 塔县 <span class="hotel-grade">【舒适】</span></div></div>
+          <div class="schedule-item"><div class="time">D9</div><div class="desc">塔县 → <span class="pdf-highlight">红其拉甫国门</span> → 瓦罕走廊 → <strong>盘龙古道</strong> → 班迪尔蓝湖 → 塔吉克家访 <span class="hotel-grade">【舒适】</span></div></div>
+          <div class="schedule-item"><div class="time">D10</div><div class="desc">塔县 → 塔合曼湿地 → 树洞公路 → <strong>慕士塔格冰川公园</strong> → 奥依塔克红山谷 → 喀什 <span class="hotel-grade">【四钻】</span></div></div>
+          <div class="schedule-item"><div class="time">D11</div><div class="desc">喀什 → <strong>天山昆仑山交汇</strong> → 斯姆哈纳村·<strong>中国西极</strong> → 喀什 <span class="hotel-grade">【四钻】</span></div></div>
+          <div class="schedule-item"><div class="time">D12</div><div class="desc">喀什 ✈️ 出发地（24H送机）</div></div>
+        </div>
       </div>
     </section>
 
