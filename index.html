@@ -66,7 +66,9 @@
     .day-jp-sub { font-size: 10px; color: var(--gold-dark); letter-spacing: 1px; font-weight: 700; margin-bottom: 4px; text-transform: uppercase; }
     .day-title { font-size: 17px; font-weight: 800; color: var(--text-dark); line-height: 1.35; margin-bottom: 8px; }
   .day-title small { font-size: 11px; color: var(--text-muted); font-weight: 400; }
-    .day-theme { font-size: 12px; color: var(--accent); font-weight: 700; padding: 8px 20px 0; }
+      .back-to-top-btn { position: fixed; top: 65%; right: 4px; z-index: 9999; background: var(--gold); color: #1A0E08; border: none; border-radius: 12px; font-size: 14px; font-weight: 800; cursor: pointer; padding: 14px 8px; writing-mode: vertical-rl; letter-spacing: 4px; box-shadow: 0 4px 20px rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0.88; }  .back-to-top-btn:active { opacity: 1; transform: scale(0.95); }
+
+  .day-theme { font-size: 12px; color: var(--accent); font-weight: 700; padding: 8px 20px 0; }
   
   .hotel-grade { font-size: 11px; background: rgba(166,58,43,0.1); color: #A63A2B; padding: 2px 8px; border-radius: 10px; font-weight: 700; font-style: normal; }
 
@@ -95,7 +97,7 @@
     .spot-hero-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.9) 15%, rgba(0,0,0,0.1) 100%); z-index: 1; }
     .spot-hero-title { position: relative; z-index: 2; }
     .spot-hero-title span { font-size: 10px; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; font-weight: 800; display: block; margin-bottom: 4px; text-shadow: 0 1px 3px rgba(0,0,0,0.8); }
-    .spot-hero-title h3 { font-size: 24px; font-weight: 900; line-height: 1.1; text-shadow: 0 2px 8px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.8); }
+    .spot-hero-title h3 { font-size: 14px; font-weight: 900; line-height: 1.1; text-shadow: 0 2px 8px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.8); }
     .spot-info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: rgba(42, 35, 31, 0.1); }
     .spot-grid-item { background: var(--card-cream); padding: 16px; display: flex; flex-direction: column; }
     .spot-grid-label { font-size: 10px; color: var(--text-muted); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; display: flex; align-items: center; gap: 4px; }
@@ -297,11 +299,10 @@
   </div>
 
 
-  <button class="back-to-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="返回回到首页">↑<span style="font-size:11px;display:block;line-height:1">回到首页</span></button>
+  <button class="back-to-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="返回回到首页">↑ 回到首页</button>
 
 
   <script>
-    var btn = document.querySelector('.back-to-top-btn');
     window.addEventListener('scroll', function() {
       if (window.scrollY > 300) btn.classList.add('show');
       else btn.classList.remove('show');
