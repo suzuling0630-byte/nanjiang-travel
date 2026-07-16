@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>全景南疆 12 日金秋胡楊奢華之旅</title>
+  <style>
+    :root {
+      --bg-main: #1A0E08;
+      --bg-gradient: linear-gradient(135deg, #1A0E08 0%, #0F0804 100%);
+      --card-cream: #FDFBF7;
+      --card-cream-dark: #F5F1E6;
+      --text-dark: #2A231F;
+      --text-muted: #6B5E56;
+      --gold: #C5A880;
+      --gold-dark: #9E8159;
+      --red: #A63A2B;
+      --red-light: #FDF2F0;
+      --white: #FFFFFF;
+      --glass-bg: rgba(255, 255, 255, 0.07);
+      --glass-border: rgba(255, 255, 255, 0.12);
+      --glass-text: #EAE3D2;
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --nav-height: 52px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-height) + 16px); }
+    body { background-color: var(--bg-main); background-image: var(--bg-gradient); font-family: var(--font-family); color: var(--glass-text); line-height: 1.6; min-height: 100vh; overflow-x: hidden; }
+    .app-container { width: 100%; max-width: 600px; margin: 0 auto; background: rgba(15, 8, 4, 0.95); border-left: 1px solid rgba(197, 168, 128, 0.15); border-right: 1px solid rgba(197, 168, 128, 0.15); min-height: 100vh; padding-bottom: 80px; }
+    section[id], .day-card[id] { scroll-margin-top: calc(var(--nav-height) + 20px); }
+    .sticky-nav { position: sticky; top: 0; z-index: 100; height: var(--nav-height); background: rgba(26, 14, 8, 0.96); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(197, 168, 128, 0.2); display: flex; overflow-x: auto; white-space: nowrap; scrollbar-width: none; padding: 0 8px; align-items: center; }
+    .sticky-nav::-webkit-scrollbar { display: none; }
+    .sticky-nav-item { display: inline-flex; align-items: center; padding: 0 16px; height: 100%; color: rgba(234, 227, 210, 0.6); text-decoration: none; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; cursor: pointer; }
+    .hero::before { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.55); z-index:0; }
+  .hero-title { text-shadow: 0 2px 16px rgba(0,0,0,0.95), 0 0 50px rgba(0,0,0,0.7); }
+  .hero-subtitle { text-shadow: 0 1px 8px rgba(0,0,0,0.9); }
+  .hero-meta { text-shadow: 0 1px 6px rgba(0,0,0,0.9); }
+  .hero { position: relative; padding: 60px 24px 40px; text-align: center; overflow: hidden; border-bottom: 1px solid rgba(197, 168, 128, 0.1); background-image: url('hero_bg.jpg'); background-size: cover; background-position: center; }
+    .hero-watermark { position: absolute; top: 10%; left: 50%; transform: translate(-50%, -10%) scale(1.8); font-size: 110px; opacity: 0.05; user-select: none; pointer-events: none; z-index: 0; }
+    .hero-subtitle { font-size: 11px; letter-spacing: 5px; color: var(--gold); text-transform: uppercase; margin-bottom: 12px; font-weight: 700; display: inline-block; border-bottom: 1px solid var(--gold); padding-bottom: 4px; }
+    .hero-title { font-size: 30px; font-weight: 800; color: var(--white); letter-spacing: 1px; line-height: 1.3; margin-bottom: 16px; z-index: 1; position: relative; text-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+    .hero-title span { color: var(--gold); }
+    .hero-meta { font-size: 13px; color: rgba(234, 227, 210, 0.75); max-width: 440px; margin: 0 auto; z-index: 1; position: relative; }
+    .section-title { font-size: 18px; font-weight: 700; color: var(--gold); margin: 32px 24px 16px; display: flex; align-items: center; gap: 10px; }
+    .section-title::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(197,168,128,0.3) 0%, rgba(197,168,128,0) 100%); }
+    .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 0 24px; margin-bottom: 24px; }
+    .stat-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 8px; padding: 16px; text-align: center; }
+    .stat-val { font-size: 20px; font-weight: 800; color: var(--gold); margin-bottom: 4px; }
+    .stat-label { font-size: 11px; color: rgba(234, 227, 210, 0.5); text-transform: uppercase; letter-spacing: 1px; }
+    .route-roadmap-container { margin: 0 24px 32px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(197, 168, 128, 0.1); border-radius: 12px; padding: 20px; overflow-x: auto; }
+    .route-flow { display: flex; align-items: center; gap: 12px; width: max-content; padding-bottom: 8px; }
+    .route-node { display: flex; flex-direction: column; align-items: center; text-align: center; min-width: 80px; }
+    .route-circle { width: 32px; height: 32px; border-radius: 50%; background: var(--gold); border: 3px solid #1A0E08; display: flex; align-items: center; justify-content: center; color: var(--bg-main); font-size: 11px; font-weight: 800; box-shadow: 0 0 10px rgba(197, 168, 128, 0.3); }
+    .route-circle.special { background: var(--red); color: var(--white); box-shadow: 0 0 10px rgba(166, 58, 43, 0.4); }
+    .route-name { font-size: 12px; font-weight: 600; color: var(--white); margin-top: 8px; }
+    .route-stay { font-size: 10px; color: var(--gold); background: rgba(197, 168, 128, 0.15); padding: 1px 6px; border-radius: 10px; margin-top: 4px; }
+    .route-arrow { color: rgba(197, 168, 128, 0.4); font-size: 14px; font-weight: bold; }
+    .day-timeline { padding: 0 24px; position: relative; }
+    @media print { .day-card { page-break-inside: avoid; } .day-card-header { page-break-after: avoid; } .day-tips { page-break-before: avoid; } } .day-card { background: var(--card-cream); color: var(--text-dark); border-radius: 16px; margin-bottom: 32px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); display: flex; flex-direction: column; overflow: hidden; position: relative; border: 1px solid rgba(197, 168, 128, 0.2); }
+    .day-card-header { display: flex; border-bottom: 1px dashed rgba(42, 35, 31, 0.15); position: relative; }
+    .day-date-col { background: var(--card-cream-dark); padding: 24px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; border-right: 1px solid rgba(42, 35, 31, 0.1); min-width: 90px; }
+    .day-num { font-size: 34px; font-weight: 900; line-height: 1; color: var(--red); font-family: Georgia, serif; }
+    .day-lbl { font-size: 10px; text-transform: uppercase; font-weight: 800; letter-spacing: 1px; color: var(--text-muted); margin-top: 4px; }
+    .day-date-raw { font-size: 11px; font-weight: 700; color: var(--text-dark); margin-top: 6px; background: rgba(166, 58, 43, 0.08); padding: 2px 6px; border-radius: 4px; }
+    .day-info-col { padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: center; }
+    .day-jp-sub { font-size: 10px; color: var(--gold-dark); letter-spacing: 1px; font-weight: 700; margin-bottom: 4px; text-transform: uppercase; }
+    .day-title { font-size: 17px; font-weight: 800; color: var(--text-dark); line-height: 1.35; margin-bottom: 8px; }
+  .day-title small { font-size: 11px; color: var(--text-muted); font-weight: 400; }
+      .back-to-top-btn { position:fixed; top:65%; right:4px; z-index:9999; background:var(--gold); color:#1A0E08; border:none; border-radius:12px; font-size:14px; font-weight:800; cursor:pointer; padding:14px 8px; writing-mode:vertical-rl; letter-spacing:4px; box-shadow:0 4px 20px rgba(0,0,0,0.6); display:flex; align-items:center; justify-content:center; opacity:0.88; } .back-to-top-btn:active{opacity:1; transform:scale(0.95); }
+
+  .day-theme { font-size: 12px; color: var(--accent); font-weight: 700; padding: 8px 20px 0; }
+  
+  .hotel-grade { font-size: 11px; background: rgba(166,58,43,0.1); color: #A63A2B; padding: 2px 8px; border-radius: 10px; font-weight: 700; font-style: normal; }
+
+  .day-meal { font-size: 11px; color: var(--text-muted); padding: 2px 20px 8px; border-bottom: 1px dashed rgba(42,35,31,0.1); }
+    .day-card-timeline { padding: 16px 20px; background: var(--card-cream); }
+    .timeline-item { display: flex; gap: 12px; margin-bottom: 12px; font-size: 13px; position: relative; }
+    .timeline-item:last-child { margin-bottom: 0; }
+    .tl-time { font-weight: 800; color: var(--red); min-width: 45px; }
+    .tl-desc { color: var(--text-dark); font-weight: 500; }
+    .tl-desc strong { color: #000; }
+    
+  .pdf-red { color: #CC0000; font-weight: 700; }
+  .pdf-highlight { background: #FFF000; color: #CC0000; font-weight: 700; padding: 2px 6px; border-radius: 2px; }
+
+  .day-tips { background: #FFF8F0; border-left: 3px solid var(--gold); padding: 10px 16px; margin: 0 20px 12px; font-size: 11px; color: var(--ink-light); border-radius: 0 8px 8px 0; line-height: 1.5; }
+    .day-accommodation { background: #F4EFE3; padding: 12px 20px; font-size: 12px; color: var(--text-dark); border-top: 1px solid rgba(42, 35, 31, 0.06); line-height: 2; }
+  .day-accommodation b { color: var(--gold-dark); }
+  .day-accommodation em { font-size: 10px; color: var(--text-muted); font-style: normal; }
+  .ht { display: inline-block; background: #fff; border: 1px solid #e0d3c0; border-radius: 10px; padding: 2px 10px; margin: 2px 3px; font-size: 11px; font-weight: 600; color: var(--text-dark); }
+    .day-card-banner { height: 145px; position: relative; display: flex; align-items: flex-end; padding: 12px 20px; overflow: hidden; background-size: cover; background-position: center; }
+    .day-card-banner::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%); z-index: 1; }
+    .day-banner-title { position: relative; z-index: 2; color: var(--white); font-size: 11px; font-weight: 700; letter-spacing: 1px; display: flex; align-items: center; gap: 6px; text-shadow: 0 2px 8px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.8); }
+    .spot-highlight-sec { padding: 0 24px; }
+    .spot-card { background: var(--card-cream); color: var(--text-dark); border-radius: 16px; overflow: hidden; margin-bottom: 24px; box-shadow: 0 15px 35px rgba(0,0,0,0.5); border: 1px solid var(--gold); }
+    .spot-hero-img { height: 220px; position: relative; overflow: hidden; display: flex; align-items: flex-end; padding: 20px; color: var(--white); background-size: cover; background-position: center; }
+    .spot-hero-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.9) 15%, rgba(0,0,0,0.1) 100%); z-index: 1; }
+    .spot-hero-title { position: relative; z-index: 2; }
+    .spot-hero-title span { font-size: 10px; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; font-weight: 800; display: block; margin-bottom: 4px; text-shadow: 0 1px 3px rgba(0,0,0,0.8); }
+    .spot-hero-title h3 { font-size: 22px; font-weight: 900; line-height: 1.1; text-shadow: 0 2px 8px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.8); }
+    .spot-info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: rgba(42, 35, 31, 0.1); }
+    .spot-grid-item { background: var(--card-cream); padding: 16px; display: flex; flex-direction: column; }
+    .spot-grid-label { font-size: 10px; color: var(--text-muted); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; display: flex; align-items: center; gap: 4px; }
+    .spot-grid-val { font-size: 13px; font-weight: 800; color: var(--text-dark); }
+    .spot-footer { padding: 16px; background: var(--card-cream-dark); display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(42, 35, 31, 0.08); }
+    .spot-tag-pills { display: flex; gap: 6px; }
+    .spot-pill { font-size: 10px; font-weight: 700; background: var(--red-light); color: var(--red); padding: 3px 8px; border-radius: 4px; }
+    .budget-section { padding: 0 24px; }
+    .budget-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(197, 168, 128, 0.15); border-radius: 12px; padding: 24px; }
+    .budget-total { text-align: center; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid rgba(234, 227, 210, 0.1); }
+    .budget-total-num { font-size: 32px; font-weight: 900; color: var(--gold); font-family: Georgia, serif; }
+    .budget-total-lbl { font-size: 11px; color: rgba(234, 227, 210, 0.5); letter-spacing: 2px; text-transform: uppercase; margin-top: 4px; }
+    .budget-item { margin-bottom: 18px; }
+    .budget-item:last-child { margin-bottom: 0; }
+    .budget-meta { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 6px; font-weight: 600; }
+    .budget-name { color: rgba(234, 227, 210, 0.9); }
+    .budget-val { color: var(--gold); }
+    .progress-track { width: 100%; height: 8px; background: rgba(255, 255, 255, 0.08); border-radius: 4px; overflow: hidden; }
+    .progress-bar { height: 100%; border-radius: 4px; }
+    .bar-gold { background: linear-gradient(90deg, #9E8159, #C5A880); }
+    .bar-red { background: linear-gradient(90deg, #8C2D19, #A63A2B); }
+    .bar-sand { background: linear-gradient(90deg, #7A6348, #9E8159); }
+    .bar-grey { background: linear-gradient(90deg, #4A403A, #6B5E56); }
+    .tips-section { padding: 0 24px; }
+    .tips-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    .tip-glass-card { background: var(--glass-bg); border: 1px solid var(--glass-border); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 12px; padding: 20px; position: relative; overflow: hidden; }
+    .tip-glass-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--gold); }
+    .tip-glass-card.warning::before { background: var(--red); }
+    .tip-header { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+    .tip-header span { font-size: 18px; }
+    .tip-content { font-size: 13px; color: rgba(234, 227, 210, 0.75); line-height: 1.5; }
+    .tip-content ul { padding-left: 18px; margin-top: 6px; }
+    .tip-content strong { color: #FFD700; font-size: 13px; }
+  .tip-content li { color: rgba(234,227,210,0.9); margin-bottom: 4px; }
+    .footer { text-align: center; padding: 48px 24px; color: rgba(234, 227, 210, 0.4); font-size: 11px; letter-spacing: 1px; border-top: 1px solid rgba(197, 168, 128, 0.1); margin-top: 40px; }
+    .footer p { margin-bottom: 4px; }
+    .footer strong { color: var(--gold); }
+  </style>
+<style>@page { margin: 12mm; size: A4; }</style></head>
+<body>
+  <script>function scrollToId(id){var e=document.getElementById(id);if(e)e.scrollIntoView({behavior:'smooth'});}</script>
+  <div class="app-container">
+    <header class="sticky-nav">
+      <span onclick="scrollToId('summary')" class="sticky-nav-item">概覽</span>
+      <span onclick="scrollToId('itinerary')" class="sticky-nav-item">行程</span>
+      <span onclick="scrollToId('d1')" class="sticky-nav-item">D1</span><span onclick="scrollToId('d2')" class="sticky-nav-item">D2</span><span onclick="scrollToId('d3')" class="sticky-nav-item">D3</span><span onclick="scrollToId('d4')" class="sticky-nav-item">D4</span><span onclick="scrollToId('d5')" class="sticky-nav-item">D5</span><span onclick="scrollToId('d6')" class="sticky-nav-item">D6</span>
+      <span onclick="scrollToId('d7')" class="sticky-nav-item">D7</span><span onclick="scrollToId('d8')" class="sticky-nav-item">D8</span><span onclick="scrollToId('d9')" class="sticky-nav-item">D9</span><span onclick="scrollToId('d10')" class="sticky-nav-item">D10</span><span onclick="scrollToId('d11')" class="sticky-nav-item">D11</span><span onclick="scrollToId('d12')" class="sticky-nav-item">D12</span>
+      <span onclick="scrollToId('spot-highlight')" class="sticky-nav-item">焦點</span>
+      <span onclick="scrollToId('budget')" class="sticky-nav-item">預算</span>
+      <span onclick="scrollToId('tips')" class="sticky-nav-item">須知</span>
+    </header>
+    <section class="hero" id="summary">
+      <div class="hero-watermark">🐫</div>
+      <span class="hero-subtitle">GOLDEN AUTUMN XINJIANG</span>
+      <h1 class="hero-title">全景南疆 12日金秋胡楊<br><span>A版 (烏進喀出) · 奢華純玩團</span></h1>
+      <p class="hero-meta">全程安排 8 晚 4 鑽奢華酒店 + 3 晚高原舒適酒店<br>大氣不走回頭路 · 專爲熱愛極致人文與壯麗大漠的您設計</p>
+    </section>
+
+    <section>
+      <div class="section-title">🗺️ 行程路線數據</div>
+      <div class="stats-grid">
+        <div class="stat-card"><div class="stat-val">12 天</div><div class="stat-label">純玩總天數</div></div>
+        <div class="stat-card"><div class="stat-val">7 輛座</div><div class="stat-label">商務/頭等艙保姆車</div></div>
+        <div class="stat-card"><div class="stat-val">8 晚 4 鑽</div><div class="stat-label">高品質連宿體驗</div></div>
+        <div class="stat-card"><div class="stat-val">無人機</div><div class="stat-label">全程隨車航拍大片</div></div>
+      </div>
+      <div class="route-roadmap-container">
+        <div class="route-flow">
+          <div class="route-node"><div class="route-circle">UR</div><div class="route-name">烏魯木齊</div><div class="route-stay">D1 接機</div></div><div class="route-arrow">➔</div>
+          <div class="route-node"><div class="route-circle special">KO</div><div class="route-name">庫爾勒</div><div class="route-stay">D2-3 連宿</div></div><div class="route-arrow">➔</div>
+          <div class="route-node"><div class="route-circle">KU</div><div class="route-name">庫車</div><div class="route-stay">D4 龜茲</div></div><div class="route-arrow">➔</div>
+          <div class="route-node"><div class="route-circle">AL</div><div class="route-name">阿拉爾</div><div class="route-stay">D5 139公路</div></div><div class="route-arrow">➔</div>
+          <div class="route-node"><div class="route-circle">HO</div><div class="route-name">和田</div><div class="route-stay">D6 故城夜市</div></div><div class="route-arrow">➔</div>
+          <div class="route-node"><div class="route-circle special">KA</div><div class="route-name">喀什</div><div class="route-stay">D7 4鑽</div></div><div class="route-arrow">➔</div>
+          <div class="route-node"><div class="route-circle">TA</div><div class="route-name">塔縣</div><div class="route-stay">D8-9 帕米爾</div></div><div class="route-arrow">➔</div>
+          <div class="route-node"><div class="route-circle special">KA</div><div class="route-name">喀什</div><div class="route-stay">D10-11 連宿</div></div><div class="route-arrow">➔</div>
+          <div class="route-node"><div class="route-circle">✈</div><div class="route-name">出發地</div><div class="route-stay">D12 送機</div></div>
+        </div>
+      </div>
+    </section>
+
+    
+    
+    <section id="spots-summary">
+      <div class="route-roadmap-container" style="margin-top:24px">
+        <div style="font-size:11px;color:var(--gold);letter-spacing:2px;margin-bottom:8px;text-align:center">🏜️ 全景南疆 · 精華景點一覽</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;justify-content:center;font-size:12px;line-height:1.8">
+          <span class="pdf-red">博斯騰湖</span><span style="color:var(--glass-text)">·</span>
+          <span class="pdf-red">塔塔祕境</span><span style="color:var(--glass-text)">/</span><span class="pdf-red">羅布人村寨</span><span style="color:var(--glass-text)">/</span><span class="pdf-red">葫蘆島</span><span style="color:var(--glass-text)">·</span>
+          <span class="pdf-red">輪臺胡楊林</span><span style="color:var(--glass-text)">·</span>
+          <span class="pdf-red">139祕境胡楊公路</span><span style="color:var(--glass-text)">·</span>
+          <span class="pdf-red">溫宿托木爾大峽谷</span><span style="color:var(--glass-text)">/</span><span class="pdf-red">天山神祕大峽谷</span><span style="color:var(--glass-text)">/</span><span class="pdf-red">克孜利亞大峽谷</span><span style="color:var(--glass-text)">·</span>
+          <span class="pdf-red">沙漠公路</span><span style="color:var(--glass-text)">·</span>
+          <span class="pdf-red">澤普胡楊林</span><span style="color:var(--glass-text)">·</span>
+          <span class="pdf-red">白沙湖全景</span><span style="color:var(--glass-text)">·</span>
+          <span class="pdf-red">盤龍古道</span><span style="color:var(--glass-text)">·</span>
+          <span class="pdf-red">班迪爾藍湖</span><span style="color:var(--glass-text)">·</span>
+          <span class="pdf-red">慕士塔格冰川公園</span><span style="color:var(--glass-text)">·</span>
+          <span class="pdf-red">喀拉庫勒湖</span><span style="color:var(--glass-text)">·</span>
+          <span class="pdf-red">紅其拉甫口岸</span><span style="color:var(--glass-text)">·</span>
+          <span class="pdf-red">喀什古城</span><span style="color:var(--glass-text)">·</span>
+          <span class="pdf-red">木吉火山</span><span style="color:var(--glass-text)">·</span>
+          <span class="pdf-red">中國西極</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="highlights">
+      <div class="section-title">✨ 行程特色</div>
+      <div class="tips-grid">
+        <div class="tip-glass-card"><div class="tip-header"><span>🎯</span> 玩法攻略</div><div class="tip-content"><ul><li>烏魯木齊接機，喀什送機，不走回頭路，專爲熱愛人文和民族文化的您設計</li><li>探訪塔塔祕境，感受龜茲文化，紅其拉普國門，天山崑崙山交匯地貌</li><li>輪臺胡楊林，赴一場金色之約，感受生命的讚歌</li><li>打卡網紅盤龍古道和中巴友誼公路和沙漠公路</li><li>探祕帕米爾之眼-木吉火山口，你的一眼是木吉火山口的一千年</li><li>走近雪域高原遙望神祕冰川，漫遊喀什古城，解密帕米爾高原，做一回冰山上的來客</li><li>親臨帕米爾高原最美三大湖泊：喀拉庫勒湖、班迪爾藍湖、白沙湖全景，不留遺憾</li></ul></div></div>
+        <div class="tip-glass-card"><div class="tip-header"><span>🎭</span> 沉浸體驗</div><div class="tip-content">特別贈送<strong>塔吉克族高質量家訪</strong>：塔吉克族文化講解、刺繡、品嚐美食、歌舞互動、換裝體驗、杜絕走馬觀花式的體驗（若行程緊張無法安排或不想參加退40元/人）</div></div>
+        <div class="tip-glass-card"><div class="tip-header"><span>🏨</span> 甄選酒店</div><div class="tip-content">全程安排<strong>8晚4鑽酒店+3晚舒適酒店</strong>，住的舒服才能享受旅程，才能玩的好</div></div>
+        <div class="tip-glass-card"><div class="tip-header"><span>🚗</span> 安心用車</div><div class="tip-content"><ul><li>四人配備7座商務艙用車（大通G10/G20/別克/其他）</li><li>五人配備7座頭等艙用車（福特/依維柯/其他）</li><li>六人配備豪華7座1+1頭等艙（海格/大通/中通/宇通/福特/其他）</li></ul></div></div>
+        <div class="tip-glass-card"><div class="tip-header"><span>📷</span> 優選領隊</div><div class="tip-content">優選優秀領隊保駕護航，特別安排<strong>無人機航拍+單反相機拍照</strong>（若因天氣原因或師傅沒有拍攝退50元/人）</div></div>
+        <div class="tip-glass-card"><div class="tip-header"><span>📱</span> 小微管家</div><div class="tip-content"><ul><li>09:30-22:00極致服務，第一時間反饋</li><li>溫馨小貼士，提前告知前方實況</li><li>時刻待命，解決突發事件</li><li>全程質量跟蹤，確保每一個細節</li></ul></div></div>
+        <div class="tip-glass-card"><div class="tip-header"><span>🎁</span> 優享禮讚</div><div class="tip-content">隨車贈送礦泉水，酸奶/水果/乾果小禮包，人手贈送一個氧氣瓶</div></div>
+        <div class="tip-glass-card warning"><div class="tip-header"><span>📋</span> 預定須知</div><div class="tip-content"><ul><li>每人限帶26-28寸行李箱一個+背包一個（後備箱空間有限）</li><li>孕婦、哺乳期兒童、<strong><span class="pdf-highlight">75歲以上老人不宜報團</span></strong>，<span class="pdf-red">謝絕</span>參團</li><li>行程時間節點僅供參考，以實際參團爲準</li><li>前往塔縣、木吉、西極需提前手機辦理電子邊防通行證</li><li>帕米爾高原、紅其拉甫、西極屬高海拔地段，有心源性疾病客人<span class="pdf-red">不建議</span>前往</li><li><strong>慕士塔格冰川公園<span class="pdf-red">禁止</span><span class="pdf-highlight">70歲以上人員入內</span></strong></li><li><strong>羅布人村寨、塔塔祕境、葫蘆島、紅其拉甫國門<span class="pdf-red">禁止</span>外籍人員參觀</strong></li><li>此行程爲私家小團，在600公里範圍內可根據遊玩情況、體力等因素調整，不去的景點可退門票，臨時增加的景點補相關門票費用即可。帕米爾高原景點安排比較豐富，按原行程安排可以全域遊覽，也可根據自身情況篩選，不去的退相關門票費用</li></ul></div></div>
+      </div>
+    </section>
+
+    
+    <section id="quicklook">
+      <div class="section-title">📋 行程秒懂 <span class="badge">12日速覽</span></div>
+      <div class="day-card" style="padding:16px 20px;font-size:13px;line-height:2.2;color:var(--text-dark)">
+        <div><b>第一天：</b>出發地-烏魯木齊（24小時接機） <span class="hotel-grade">住 烏魯木齊【四鑽】</span></div>
+        <div><b>第二天：</b>烏魯木齊-<span class="pdf-red">烏尉高速</span>-<span class="pdf-red">天山勝利隧道</span>-<span class="pdf-red">博斯騰湖</span>-<span class="pdf-red">白鷺洲</span>-庫爾勒 <span class="hotel-grade">住 庫爾勒【四鑽】</span></div>
+        <div><b>第三天：</b>庫爾勒-<span class="pdf-red">羅布人村寨</span>/<span class="pdf-red">塔塔祕境</span>/<span class="pdf-red">葫蘆島水上胡楊</span>（三選一）-庫爾勒 <span class="hotel-grade">住 庫爾勒【四鑽】</span></div>
+        <div><b>第四天：</b>庫爾勒-<span class="pdf-red">輪臺塔里木胡楊林</span>-<span class="pdf-red">熱斯坦街</span>-<span class="pdf-red">門巴扎</span>-<span class="pdf-red">龜茲小巷</span>-庫車 <span class="hotel-grade">住 庫車【四鑽】</span></div>
+        <div><b>第五天：</b>庫車-自駕<span class="pdf-red">克孜利亞大峽谷</span>/<span class="pdf-red">天山神祕大峽谷</span>（二選一）-<span class="pdf-red">139祕境胡楊公路</span>-阿拉爾 <span class="hotel-grade">住 阿拉爾【舒適】</span></div>
+        <div><b>第六天：</b>阿拉爾-<span class="pdf-red">沙漠公路</span>-<span class="pdf-red">翡翠湖</span>-<span class="pdf-red">約特幹故城</span>（含日間演藝票）-<span class="pdf-red">和田夜市</span>-和田 <span class="hotel-grade">住 和田【四鑽】</span></div>
+        <div><b>第七天：</b>和田-【<span class="pdf-red">澤普金胡楊林</span>】/【<span class="pdf-red">莎車王陵+莎車老茶館</span>】/<span class="pdf-red">喀什古城</span>自由行（三選一）-喀什 <span class="hotel-grade">住 喀什【四鑽】</span></div>
+        <div><b>第八天：</b>喀什-<span class="pdf-red">喀喇崑崙公路</span>-<span class="pdf-red">白沙湖北岸+南岸</span>-<span class="pdf-red">十八羅漢峯</span>-<span class="pdf-red">木吉火山口</span>-<span class="pdf-red">喀拉庫勒湖</span>-<span class="pdf-red">巴鐵集市</span>-塔縣 <span class="hotel-grade">住 塔縣【舒適】</span></div>
+        <div><b>第九天：</b>塔縣-<span class="pdf-red">紅旗拉甫國門</span>-<span class="pdf-red">瓦罕走廊</span>-<span class="pdf-red">盤龍古道</span>-<span class="pdf-red">班迪爾藍湖</span>-<span class="pdf-red">帕米爾之眼</span>-<span class="pdf-red">塔吉克家訪</span>-<span class="pdf-red">托格倫夏</span> <span class="hotel-grade">住 塔縣【舒適】</span></div>
+        <div><b>第十天：</b>塔縣-<span class="pdf-red">塔合曼溼地</span>-<span class="pdf-red">樹洞公路</span>-<span class="pdf-red">慕士塔格冰川公園</span>-<span class="pdf-red">奧義塔克紅山谷</span>-喀什 <span class="hotel-grade">住 喀什【四鑽】</span></div>
+        <div><b>第十一天：</b>喀什-<span class="pdf-red">天山崑崙山交匯</span>-<span class="pdf-red">斯哈姆納村</span>-<span class="pdf-red">中國西極</span>-喀什 <span class="hotel-grade">住 喀什【四鑽】</span></div>
+        <div><b>第十二天：</b>喀什-出發地（24小時送機）</div>
+      </div>
+    </div>
+    </section>
+
+    <section id="itinerary">
+      <div class="section-title">📅 12日深度奢華行程</div>
+      <div class="day-timeline">
+        <div class="day-card" id="d1"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D1</span><span class="day-lbl">ARRIVE</span><span class="day-date-raw">第 01 天</span></div><div class="day-info-col"><span class="day-jp-sub">ウルムチ到着 · 接機</span><h3 class="day-title">出發地 ✈️ 烏魯木齊 (24H 接機)</h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>烏市初體驗</div><div class="day-meal">🍽️ 用餐：三餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">全天</div><div class="tl-desc">歡迎來到大美新疆！接機後送您入住酒店休息，然後自由活動，如時間允許您可自行前往推薦景點參觀遊覽（不含單獨用車）。次日出發時間司機和管家會發信息或電話告知，請您注意查收。</div></div><div class="timeline-item"><div class="tl-time">—</div><div class="tl-desc">自由活動推薦：<strong>【自治區博物館】</strong>（免費·需提前一天預約·營業時間10:30-18:00·週一閉館·憑身份證安檢入內）感懷西域歷史的滄桑變化。</div></div><div class="timeline-item"><div class="tl-time">—</div><div class="tl-desc">也可自行前往<strong>【二道橋國際大巴扎】</strong>體驗濃郁的新疆維吾爾族風情，晚上找一家新疆特色餐廳，品嚐地道的新疆美食，做個地道的喫貨！</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：<strong>重要：</strong>前往塔縣需要邊防通行證。外籍人員需前往喀什辦理，其餘持身份證件或者港澳通行證者，均可手機辦理電子版。邊防通行證須寫明前往地點：新疆維吾爾自治區喀什地區塔什庫爾幹縣，克孜勒蘇柯爾克孜自治州。<span class="pdf-highlight">16歲以下不支持線上辦理</span>，需帶身份證/戶口本/出生證明。新疆酒店入住時間一般在14:00以後，如提前到達可能發生等候。</div></div><div class="day-accommodation">🏨 <b>推介住宿</b><br><span class="ht">新旅逸格</span> <span class="ht">麗怡</span> <span class="ht">蘋果</span> <span class="ht">東方王朝</span> <span class="ht">桔子水晶</span> <span class="ht">百世昌龍泉</span> <span class="ht">百世昌歡居</span> <span class="ht">恆裕</span><br><em>【四鑽】</em></div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('bazaar.jpg');"><div class="day-banner-title">🕌 西域大巴扎 · 體驗熱情民族風情</div></div></div>
+        <div class="day-card" id="d2"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D2</span><span class="day-lbl">TRAVEL</span><span class="day-date-raw">第 02 天</span></div><div class="day-info-col"><span class="day-jp-sub">天山を越える砂漠の海</span><h3 class="day-title">烏魯木齊 ➔ 烏尉高速 ➔ 天山勝利隧道 ➔ 博斯騰湖 (白鷺洲) ➔ 庫爾勒 <small>【380KM·約5H】</small></h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>中國最大的內陸淡水湖～博斯騰湖</div><div class="day-meal">🍽️ 用餐：酒店含早，中晚餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">08:00-09:00</div><div class="tl-desc">司機小哥按遠近順序依次接駕，交友小團純玩之旅馬上開啓~</div></div><div class="timeline-item"><div class="tl-time">09:00-14:00</div><div class="tl-desc">離開烏魯木齊一路向南，穿過<strong>烏尉高速·天山勝利隧道</strong>，到達南疆。</div></div><div class="timeline-item"><div class="tl-time">14:00-15:00</div><div class="tl-desc">沿途合適地點自行用午餐，推薦拌麪、抓飯等新疆風味簡餐。</div></div><div class="timeline-item"><div class="tl-time">15:00-19:30</div><div class="tl-desc">遊覽<strong>【博斯騰湖】白鷺洲景區</strong>—沙漠與湖水共存，紅柳與胡楊同生；白鷺與沙鷗起飛，藍天共湖光一色。碧水，黃沙，藍天，紅柳，胡楊，羊羣，漁帆，遊船，大自然呈現出氣象萬千生機勃勃的景象。</div></div><div class="timeline-item"><div class="tl-time">19:30-20:30</div><div class="tl-desc">乘車前往香梨的家鄉—庫爾勒市，入住酒店休息。建議晚間自行前往孔雀河散步。</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：今日行車距離較長，建議準備小零食。旅遊車輛全程GPS監控，行駛4小時<span class="pdf-red">必須</span>停車休息20分鐘。</div></div><div class="day-accommodation">🏨 <b>推介住宿</b><br><span class="ht">博斯騰賓館</span> <span class="ht">申舍</span> <span class="ht">艾尚</span> <span class="ht">半城百麗·梨城</span> <span class="ht">摩登四季</span> <span class="ht">希岸</span> <span class="ht">璞居</span> <span class="ht">瑞德雪蓮</span><br><em>【四鑽】· 連宿第1晚</em></div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('bosten.jpg');"><div class="day-banner-title">🦢 白鷺戲水 · 沙沙共舞碧海</div></div></div>
+        <div class="day-card" id="d3"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D3</span><span class="day-lbl">EXPLORE</span><span class="day-date-raw">第 03 天</span></div><div class="day-info-col"><span class="day-jp-sub">ロプ人の砂漠祕境</span><h3 class="day-title">庫爾勒 ➔ 羅布人村寨 / 塔塔祕境 / 葫蘆島 (三選一) ➔ 庫爾勒 <small>【300KM·約5H】</small></h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>大漠風光</div><div class="day-meal">🍽️ 用餐：酒店含早，中晚餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">08:00-09:00</div><div class="tl-desc">酒店享用早餐，開始今天精彩的旅程。</div></div><div class="timeline-item"><div class="tl-time">10:00-18:00</div><div class="tl-desc"><strong>【羅布人村寨】/【塔塔祕境】/【葫蘆島景區】三選一。</strong>塔塔祕境含門票+區間車（不含遊船），隱匿於世的羅布湖，宛如一顆藍寶石鑲嵌在塔克拉瑪干沙漠之中，河流與湖泊交織，沙漠與胡楊林相映成趣。羅布人村寨集沙漠、胡楊、河流、湖泊於一體，羅布人不種五穀，不牧牲畜，唯以小舟捕魚爲食。葫蘆島胡楊林—超小衆水上胡楊，深秋時節沙漠中的胡楊樹全部染黃，宛如大漠桃源仙境。</div></div><div class="timeline-item"><div class="tl-time">18:00-20:00</div><div class="tl-desc">遊玩結束後前往酒店入住。</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：夏季蚊蟲多，做好防蚊蟲準備。景區均不含遊船、騎駱駝等項目，費用自理。南疆乾旱風沙大，做好防曬補水。</div></div><div class="day-accommodation">🏨 <b>推介住宿</b><br><span class="ht">博斯騰賓館</span> <span class="ht">申舍</span> <span class="ht">艾尚</span> <span class="ht">半城百麗·梨城</span> <span class="ht">摩登四季</span> <span class="ht">希岸</span> <span class="ht">璞居</span> <span class="ht">瑞德雪蓮</span><br><em>【四鑽】· 連宿第2晚</em></div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('tata.jpg');"><div class="day-banner-title">🛶 羅布木舟 · 浩瀚金黃大漠綠洲</div></div></div>
+        <div class="day-card" id="d4"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D4</span><span class="day-lbl">HISTORY</span><span class="day-date-raw">第 04 天</span></div><div class="day-info-col"><span class="day-jp-sub">黃金の海と亀茲古城</span><h3 class="day-title">庫爾勒 ➔ 輪臺塔里木胡楊林 ➔ 庫車 (熱斯坦街 / 龜茲小巷) <small>【390KM·約7H】</small></h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>不一樣的視覺衝擊</div><div class="day-meal">🍽️ 用餐：酒店含早，中晚餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">08:00-09:00</div><div class="tl-desc">酒店自由享用早餐，餐後退房出發。</div></div><div class="timeline-item"><div class="tl-time">09:00-12:30</div><div class="tl-desc">如玄奘取經一般一路向西，右手是天山南坡，左手是塔里木盆地的北延，路過村莊、農場、城鎮前往<strong>【輪臺胡楊林】</strong>。</div></div><div class="timeline-item"><div class="tl-time">13:30-17:30</div><div class="tl-desc">遊覽<strong>【輪臺塔里木胡楊林】</strong>（含門票+區間車，不含小火車，小火車¥100/人）。位於塔里木胡楊保護區的核心部位，每年秋天便是金色的海洋，河水倒影，小火車穿梭，美輪美奐。胡楊林變金色約從10月12-15號開始。</div></div><div class="timeline-item"><div class="tl-time">17:30-22:30</div><div class="tl-desc">抵達龜茲古城—庫車市，前往網紅打卡地<strong>【熱斯坦街】【龜茲小巷】【門巴扎】</strong>—穿越千年的西域風情體驗，街道兩旁古民居林立，色彩斑斕的門扉上雕刻着精美的花紋，攝影愛好者天堂！</div></div><div class="timeline-item"><div class="tl-time">22:30</div><div class="tl-desc">入住酒店休息，自行享用晚餐。</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：南疆乾旱風沙大，做好防曬補水。沿途服務區間距長設施較差。</div></div><div class="day-accommodation">🏨 <b>推介住宿</b><br><span class="ht">怡程</span> <span class="ht">庫車飯店</span> <span class="ht">庫車國際</span> <span class="ht">萬達悅華</span> <span class="ht">華悅</span> <span class="ht">麗都</span> <span class="ht">萬宸凱徠</span><br><em>【四鑽】</em></div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('huyang.jpg');"><div class="day-banner-title">🚞 金秋輪臺 · 千年大漠生命奇蹟</div></div></div>
+        <div class="day-card" id="d5"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D5</span><span class="day-lbl">ADVENTURE</span><span class="day-date-raw">第 05 天</span></div><div class="day-info-col"><span class="day-jp-sub">赤い峽谷と絕景公路</span><h3 class="day-title">庫車 ➔ 克孜利亞 / 天山神祕大峽谷 (二選一) ➔ 139祕境胡楊公路 ➔ 阿拉爾 <small>【360KM·約7H】</small></h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>神祕的雅丹地貌大峽谷</div><div class="day-meal">🍽️ 用餐：酒店含早，中晚餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">08:30-09:30</div><div class="tl-desc">早餐開啓，喫飽肚子要去神祕的雅丹地貌大峽谷啦。</div></div><div class="timeline-item"><div class="tl-time">09:30-11:30</div><div class="tl-desc">驅車前往<strong>【克孜利亞大峽谷】/【天山神祕大峽谷】</strong>二選一，欣賞沿途戈壁風光。</div></div><div class="timeline-item"><div class="tl-time">11:30-14:30</div><div class="tl-desc"><strong>天山神祕大峽谷</strong>：位於庫車市北部72公里處217國道旁，縱深長約5.5公里，紅褐色岩石經風雕雨刻而成，中國最美十大峽谷之一！<strong>克孜利亞大峽谷</strong>：維語意爲"紅色懸崖"，紅褐色巨大山體羣組成，中國最美十大峽谷之一！</div></div><div class="timeline-item"><div class="tl-time">15:30-20:00</div><div class="tl-desc">穿越<strong>【139祕境胡楊公路】</strong>—全長139公里，沿塔里木河流域，橫跨3座大橋，串聯星星湖、帕滿湖、月亮灣、塔河古渡口、沙雁洲、魔鬼林、塔河外灘等9個典型胡楊沙漠綜合景觀。金秋時節萬畝原始胡楊林層林盡染！</div></div><div class="timeline-item"><div class="tl-time">20:00</div><div class="tl-desc">前往酒店辦理入住。</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：做好防曬。如遇暴雨立即撤退景區。大峽谷穿鮮豔衣服拍照更好看，腳上<span class="pdf-red">不要</span>穿涼鞋。</div></div><div class="day-accommodation">🏨 <b>推介住宿</b><br><span class="ht">格林東方</span> <span class="ht">蘭祥</span> <span class="ht">柏曼</span> <span class="ht">維也納</span> <span class="ht">沙棗花香</span> <span class="ht">塔河陽光</span> <span class="ht">亞悅</span><br><em>【舒適】</em></div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('xiagu.jpg');"><div class="day-banner-title">🌋 天山奇觀 · 赤紅峽谷的壯美斧鑿</div></div></div>
+        <div class="day-card" id="d6"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D6</span><span class="day-lbl">DESERT</span><span class="day-date-raw">第 06 天</span></div><div class="day-info-col"><span class="day-jp-sub">砂漠公路と夜の古都</span><h3 class="day-title">阿拉爾 ➔ 沙漠公路 ➔ 翡翠湖 ➔ 約特幹故城 ➔ 和田 <small>【440KM·約6H】</small></h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>穿越沙漠公路</div><div class="day-meal">🍽️ 用餐：酒店含早，中晚餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">08:30-09:00</div><div class="tl-desc">酒店自由享用早餐。</div></div><div class="timeline-item"><div class="tl-time">09:00-16:00</div><div class="tl-desc">在世界上最大的<strong>【塔克拉瑪干大沙漠】</strong>馳騁，穿越被稱爲"死亡之海"的世界第二大沙漠。沒有荒涼的人生，只有荒涼的沙漠，奇蹟般的沙漠公路，千里瀚海，沙漠、沙丘、胡楊、紅柳，令人讚歎。</div></div><div class="timeline-item"><div class="tl-time">16:00-17:30</div><div class="tl-desc">遊玩<strong>【翡翠湖】</strong>—崑崙山冰雪融水彙集成湖，湖水富含礦物質，陽光照射下呈現淺綠到深碧的層次色彩，宛如鑲嵌金色沙海中的翡翠。每年秋季10月左右湖水碧綠、胡楊金黃，是最佳觀賞期，當地居民稱其爲"天賜的短暫奇蹟"。</div></div><div class="timeline-item"><div class="tl-time">17:30-19:00</div><div class="tl-desc">前往<strong>【約特幹故城】</strong>（含日間演藝票78元/人，晚19點之前進入無需補差價，夜間票168元/人，過了時間補差價哦，若放棄此景點，退還78元/人的門票費用），晚19點之前進入無需補差價，夜間票¥168/人，過了時間補差價。若放棄此景點，退還¥78/人的門票費用）。欣賞中國古代文化藝術魅力，感受絲綢之路的歷史文化。</div></div><div class="timeline-item"><div class="tl-time">20:00</div><div class="tl-desc">可自行前往<strong>【和田夜市】</strong>或返回酒店休息。</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：今日車程較長，建議攜帶頭枕眼罩，如有暈車請自備暈車藥。南疆氣候乾旱多敷面膜多喝水。午餐在沙漠公路中途服務區簡餐，建議提前準備。</div></div><div class="day-accommodation">🏨 <b>推介住宿</b><br><span class="ht">銀星麗呈</span> <span class="ht">亞朵</span> <span class="ht">金鷹國際</span> <span class="ht">美居</span> <span class="ht">錦江都城</span> <span class="ht">國玉</span> <span class="ht">天王</span> <span class="ht">蘭歐</span><br><em>【四鑽】</em></div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('desert.jpg');"><div class="day-banner-title">🐫 沙海奇蹟 · 浩瀚大漠邊緣的璀璨夜色</div></div></div>
+        <div class="day-card" id="d7"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D7</span><span class="day-lbl">CULTURE</span><span class="day-date-raw">第 07 天</span></div><div class="day-info-col"><span class="day-jp-sub">異國情緒のカシュガル</span><h3 class="day-title">和田 ➔ 澤普金胡楊 / 莎車老茶館 / 喀什古城 (三選一) ➔ 喀什 <small>【520KM·約6H】</small></h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>三選一自由規劃</div><div class="day-meal">🍽️ 用餐：酒店含早，中晚餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">09:30-16:00</div><div class="tl-desc">驅車前往<strong>【澤普金胡楊林】/【莎車王陵+莎車老茶館】/喀什古城自由行（三選一）</strong>。溫馨建議：1.如果返程機票離開喀什比較早，建議今天直接前往喀什古城遊玩。2.如果胡楊林已經視覺疲勞，可以放棄澤普胡楊林，選擇莎車或直接前往喀什古城。</div></div><div class="timeline-item"><div class="tl-time">16:00-20:00</div><div class="tl-desc">抵達喀什，入住後自由活動。可選擇遊覽<strong>【喀什古城】</strong>—老城是維吾爾民族文化保留最完整的地方，街巷縱橫交錯，佈局靈活多變，曲徑通幽，民居大多爲土木、磚木結構，不少傳統民居已有上百年曆史。晚餐自行前往<strong>【喀什夜市】</strong>：烤鴿子、面肺子、烤包子、椒麻雞、特色烤肉、手工冰激凌等，還有當地人載歌載舞，熱鬧非凡。</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：今日路程較長建議自備乾糧。<span class="pdf-red">不要</span>直對人臉拍攝，當地人會覺得不禮貌。喀什夜市美食價格平民。</div></div><div class="day-accommodation">🏨 <b>推介住宿</b><br><span class="ht">其尼瓦克</span> <span class="ht">美豪麗致</span> <span class="ht">朗譽</span> <span class="ht">柏曼</span> <span class="ht">維也納</span> <span class="ht">格林東方</span> <span class="ht">錦江都城</span> <span class="ht">麗柏</span><br><em>【四鑽】· 連宿第1晚</em></div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('kashgar.jpg');"><div class="day-banner-title">🏯 喀什老城 · 穿梭於生土與磚木的百年光影</div></div></div>
+        <div class="day-card" id="d8"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D8</span><span class="day-lbl">PLATEAU</span><span class="day-date-raw">第 08 天</span></div><div class="day-info-col"><span class="day-jp-sub">パミール高原の瞳</span><h3 class="day-title">喀什 ➔ 喀喇崑崙公路 ➔ 白沙湖全景 ➔ 木吉火山口 ➔ 喀拉庫勒湖 ➔ 塔縣 <small>【425KM·約8H】</small></h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>探祕帕米爾</div><div class="day-meal">🍽️ 用餐：酒店含早，中晚餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">09:00-10:30</div><div class="tl-desc">前往<strong>【帕米爾高原】</strong>，平坦的中巴友誼公路連接高原，從喀什一路攀升。帕米爾在塔吉克語中意思是"世界屋脊"，今日<span class="pdf-red">不要</span>奔跑跳躍等劇烈運動，以免高原反應。著名電影《冰山上的來客》拍攝地。</div></div><div class="timeline-item"><div class="tl-time">12:30-13:30</div><div class="tl-desc">自行享用午餐後前往<strong>【白沙湖南岸+北岸】</strong>—碧藍湖水+潔白沙子+皚皚雪山，白沙湖兩側遙遙矗立着公格爾九別峯。一湖隔兩岸，兩岸風景各不相同。</div></div><div class="timeline-item"><div class="tl-time">13:30-15:00</div><div class="tl-desc">抵達<strong>【木吉火山口】</strong>—全名喀日鐵米爾火山羣，被稱爲"帕米爾之眼"，大大小小數十個零散分佈的休眠火山口，非常壯觀。遠觀昆蓋山<strong>【十八羅漢峯】</strong>，一字排開終年積雪不化，雪山連綿起伏數百公里。</div></div><div class="timeline-item"><div class="tl-time">17:30-20:30</div><div class="tl-desc">乘車遊覽<strong>【喀拉庫勒湖】</strong>，俯看寬廣波瀾湖水顏色變幻。高大的慕士塔格峯、公格爾峯、公格爾九別峯等終年不化的雪山將湖緊緊環抱。天氣晴朗之日，水面映襯着連成片的雪山，高原獨有的靜謐純潔。</div></div><div class="timeline-item"><div class="tl-time">20:30-21:30</div><div class="tl-desc">到達塔縣入住酒店。<strong>【巴鐵集市】</strong>作爲可選項，根據體力決定是否前往。</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：喀什到塔縣爲山路，沿途限速60/小時，請理解<span class="pdf-red">不要</span>催促司機。海拔最高達4000米，<span class="pdf-red">不要</span>奔跑跳躍、<span class="pdf-red">不要</span>飲酒。塔縣晚上很冷，注意保暖，當晚<span class="pdf-red">不建議</span>洗澡。喀拉庫裏湖沿途設有檢查站，<span class="pdf-red">禁止</span>拍照。</div></div><div class="day-accommodation">🏨 <b>推介住宿</b><br><span class="ht">高原明珠</span> <span class="ht">歐羅巴</span> <span class="ht">雲之彼端</span> <span class="ht">前海</span> <span class="ht">慕士塔格冰川</span> <span class="ht">喬戈裏</span> <span class="ht">迎賓館</span><br><em>【舒適】· 連宿第1晚</em></div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('baisha.jpg');"><div class="day-banner-title">❄️ 帕米爾之眼 · 白砂藍湖畔的萬年沉寂</div></div></div>
+        <div class="day-card" id="d9"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D9</span><span class="day-lbl">ROYAL</span><span class="day-date-raw">第 09 天</span></div><div class="day-info-col"><span class="day-jp-sub">天空の道 · タジクの暮らし</span><h3 class="day-title">塔縣 ➔ 紅其拉甫國門 ➔ 盤龍古道 ➔ 班迪爾藍湖 ➔ 塔吉克家訪 <small>【330KM·約7H】</small></h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>今天走過了所有彎路，從此人生盡是坦途</div><div class="day-meal">🍽️ 用餐：酒店含早，中晚餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">09:00-12:30</div><div class="tl-desc">前往<strong>【紅其拉甫口岸/國門】</strong>（如遇惡劣天氣國門不開，退門票）。這是中巴友誼公路國內段終點，對面就是"巴鐵"巴基斯坦，是世界上海拔最高的口岸，絲綢之路上重要關卡，也是中巴經濟走廊重要口岸。</div></div><div class="timeline-item"><div class="tl-time">12:30-14:00</div><div class="tl-desc">前往<strong>【瓦罕走廊起點】</strong>—瓦罕走廊又稱阿富汗走廊，歷史上曾爲中國領土，是古絲綢之路一部分，也是華夏文明與印度文明交流的重要通道。東晉高僧法顯、大唐高僧玄奘都曾經過這裏去印度研究佛法。</div></div><div class="timeline-item"><div class="tl-time">14:30-18:30</div><div class="tl-desc">前往<strong>【盤龍古道】</strong>（天氣原因未開放則取消，無退費）—位於塔縣瓦恰鄉境內，當地叫瓦恰公路，全部盤山公路超過600個彎道全長75公里，海拔約4100米。黑色公路與土色山體的完美配合，加上遠處連綿的雪山，只屬於帕米爾高原。<strong>今日走過人生所有的彎路，從此人生盡是坦途。</strong>返回路上看到<strong>【班迪爾藍湖】</strong>（又叫下坂地水庫），五個相連的湖泊，被稱爲"最藍的湖"。</div></div><div class="timeline-item"><div class="tl-time">18:30-19:30</div><div class="tl-desc"><strong>【贈送塔吉克族家訪】</strong>—高質量家訪體驗：塔吉克族文化講解、品嚐美食、歌舞互動、換裝體驗，杜絕走馬觀花！</div></div><div class="timeline-item"><div class="tl-time">19:30-21:30</div><div class="tl-desc">前往<strong>【托格倫夏村】</strong>—位於塔什庫爾干鄉，距塔縣車程15分鐘，塔吉克族聚居村落，被雪山環抱，塔什庫爾幹河穿流而過，草甸、溼地、沙棘連成片，視野開闊。</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：早晚溫差大，注意保暖。海拔最高達4000米，<span class="pdf-red">不要</span>奔跑跳躍、<span class="pdf-red">不要</span>飲酒。塔縣晚上很冷，當晚<span class="pdf-red">不建議</span>洗澡。塔吉克人民純樸好客，拍攝先徵得同意。盤龍古道彎道多，容易暈車建議備暈車藥。若不通車則繞行班迪爾藍湖。</div></div><div class="day-accommodation">🏨 <b>推介住宿</b><br><span class="ht">高原明珠</span> <span class="ht">歐羅巴</span> <span class="ht">雲之彼端</span> <span class="ht">前海</span> <span class="ht">慕士塔格冰川</span> <span class="ht">喬戈裏</span> <span class="ht">迎賓館</span><br><em>【舒適】· 連宿第2晚</em></div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('panlong.jpg');"><div class="day-banner-title">🐉 盤龍古道 · 六百道迴旋金光光軌</div></div></div>
+        <div class="day-card" id="d10"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D10</span><span class="day-lbl">GLACIER</span><span class="day-date-raw">第 10 天</span></div><div class="day-info-col"><span class="day-jp-sub">氷山の王と雪柳のトンネル</span><h3 class="day-title">塔縣 ➔ 塔合曼溼地 ➔ 樹洞公路 ➔ 慕士塔格冰川公園 ➔ 喀什 <small>【310KM·約7H】</small></h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>冰川之旅</div><div class="day-meal">🍽️ 用餐：酒店含早，中晚餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">08:30-09:00</div><div class="tl-desc">酒店享用暖心早餐，開始精彩旅程。</div></div><div class="timeline-item"><div class="tl-time">09:00-12:00</div><div class="tl-desc">前往<strong>【塔合曼溼地】</strong>—塔什庫爾幹最大的盆地和草地，"塔合曼"塔吉克語意爲"四面環山"，無數冰川雪山溪流匯到盆地，形成九曲蜿蜒的塔合曼河。之後遊覽網紅<strong>【雪柳樹洞公路】</strong>，以樹洞爲背景拍照，定是隨時都歡喜。</div></div><div class="timeline-item"><div class="tl-time">12:30-15:30</div><div class="tl-desc">遊覽<strong>【慕士塔格冰川公園】</strong>（海拔4,668米，天氣原因未開放則取消退門票）。位於世界著名的"冰山之父"、7,546米的慕士塔格峯裙帶之下，可看到雄偉的冰川、秀麗的冰舌，還有冰塔、冰洞等多姿多彩的壯美景觀。</div></div><div class="timeline-item"><div class="tl-time">15:30-18:00</div><div class="tl-desc">沿途午餐後前往<strong>【奧依塔克紅山谷】</strong>—帕米爾公路上極具辨識度的赤紅峽谷地貌。</div></div><div class="timeline-item"><div class="tl-time">20:00-21:00</div><div class="tl-desc">入住喀什酒店後自由活動，可自行前往著名的喀什夜市，讓各種美食來滿足你的味蕾！</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：早晚溫差大注意保暖。<span class="pdf-red">不要</span>直對人臉拍攝。冰川<span class="pdf-red">限制</span>70歲以上入內，遇雨雪閉園退門票。</div></div><div class="day-accommodation">🏨 <b>推介住宿</b><br><span class="ht">其尼瓦克</span> <span class="ht">美豪麗致</span> <span class="ht">朗譽</span> <span class="ht">柏曼</span> <span class="ht">維也納</span> <span class="ht">格林東方</span> <span class="ht">錦江都城</span> <span class="ht">麗柏</span><br><em>【四鑽】· 連宿第1晚</em></div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('glacier.jpg');"><div class="day-banner-title">🏔️ 冰山之父 · 慕士塔格晶瑩剔透之美</div></div></div>
+        <div class="day-card" id="d11"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D11</span><span class="day-lbl">WEST</span><span class="day-date-raw">第 11 天</span></div><div class="day-info-col"><span class="day-jp-sub">中國最西端の落日</span><h3 class="day-title">喀什 ➔ 天山崑崙山交匯 ➔ 斯姆哈納村 (中國西極) ➔ 喀什 <small>【480KM·約8H】</small></h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>中國最後一縷陽光 · 中國西極</div><div class="day-meal">🍽️ 用餐：酒店含早，中晚餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">09:00-11:30</div><div class="tl-desc">乘車前往<strong>【中國西極】</strong>，沿途各種七彩地貌，雪山、草甸、牛羊，風景非常美麗。途徑<strong>【七彩雅丹地貌】</strong>—色彩分明，是億萬年地質變遷所賦予的自然外貌，屬全國少見山地景觀，會在雅丹羣安排茶歇不錯過每一個美景與心情的邂逅。</div></div><div class="timeline-item"><div class="tl-time">11:30-12:30</div><div class="tl-desc"><strong>【兩山交匯之處】</strong>—天山與崑崙山兩個山系本是遙遙相望，大自然讓兩山在烏恰縣的烏魯克恰提鄉來了一次親密握手，締造了一處絕無僅有的世界奇觀。天山山脈呈駝色，崑崙山山脈呈黛色，站在交匯處細細品味每片山脊的不同形態和顏色，感受兩山交匯的無窮魅力。</div></div><div class="timeline-item"><div class="tl-time">14:30-15:30</div><div class="tl-desc"><strong>【斯姆哈納村】</strong>—北漠河西烏恰，中國的西極，中國最西邊的一個村，鄰國吉爾吉斯斯坦。這裏也是西邊日落最晚的村落，被稱爲"太陽的家"。最長的日光時間在這裏停留，山巔籠罩，雄渾壯美，他每日送別着神州大地最後一縷陽光。</div></div><div class="timeline-item"><div class="tl-time">15:30-19:30</div><div class="tl-desc">遊覽結束後乘車返回喀什結束行程。</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：今日路程較長，西極屬於偏遠落後地區，餐廳不多，建議自備乾糧。西極海拔較高，請做好防曬，根據自身體力和身體情況決定是否登西極石碑。</div></div><div class="day-accommodation">🏨 <b>推介住宿</b><br><span class="ht">其尼瓦克</span> <span class="ht">美豪麗致</span> <span class="ht">朗譽</span> <span class="ht">柏曼</span> <span class="ht">維也納</span> <span class="ht">格林東方</span> <span class="ht">錦江都城</span> <span class="ht">麗柏</span><br><em>【四鑽】· 連宿第2晚</em></div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('westpole.jpg');"><div class="day-banner-title">☀️ 中國西極 · 留住太陽的最後一抹溫柔</div></div></div>
+        <div class="day-card" id="d12"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D12</span><span class="day-lbl">DEPART</span><span class="day-date-raw">第 12 天</span></div><div class="day-info-col"><span class="day-jp-sub">旅立ち・また會う日まで</span><h3 class="day-title">喀什 ➔ 出發地 (24H 送機)</h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>滿載回憶 · 返回溫暖的家</div><div class="day-meal">🍽 用餐：酒店含早</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">全天</div><div class="tl-desc">根據航班時刻安排送機。快樂的時光總是過得很快，到了我們該說再見的日子了，希望短暫的新疆之行，能讓您留下美好的回憶，期待與您的再次相遇。大美新疆更多的美景，等您來欣賞~</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：請確認自己的物品整理攜帶周全，以免遺漏。請在北京時間14:00前辦理退房手續，由於延遲退房產生的額外費用敬請自付。離開酒店前一定要再次檢查物品，<span class="pdf-red">不要</span>忘在酒店裏了！</div></div><div class="day-accommodation">🏠 <b>推介住宿</b><br><span class="ht">溫暖的家 ✈️</span></div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('goodbye.jpg');"><div class="day-banner-title">🎉 凱旋而歸 · 期待與您的下一次相遇</div></div></div>
+      </div>
+    </section>
+
+    <section id="spot-highlight">
+      <div class="section-title">🏔 焦點祕境詳解</div>
+      <div class="spot-highlight-sec">
+        <div class="spot-card"><div class="spot-hero-img" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 10%, rgba(0,0,0,0.05) 100%), url('muztag.jpg');"><div class="spot-hero-title"><span>Father of Ice Mountains</span><h3>慕士塔格冰川公園</h3></div></div><div class="spot-info-grid"><div class="spot-grid-item"><span class="spot-grid-label">🏔️ 海拔高度</span><span class="spot-grid-val">4,668 米 (終年積雪)</span></div><div class="spot-grid-item"><span class="spot-grid-label">🎟️ 門票狀態</span><span class="spot-grid-val">包團含首道大門票</span></div><div class="spot-grid-item"><span class="spot-grid-label">⚠️ 年齡<span class="pdf-red">限制</span></span><span class="spot-grid-val">限 70 歲以下人士入內</span></div><div class="spot-grid-item"><span class="spot-grid-label">🍂 最佳觀賞</span><span class="spot-grid-val">10月中旬 (雪線最美)</span></div></div><div class="spot-footer"><div class="spot-tag-pills"><span class="spot-pill">高海拔</span><span class="spot-pill">壯麗冰川</span></div><span class="spot-back-btn" onclick="scrollToId('d10')">📍 返 Day 10 行程</span></div></div>
+        <div class="spot-card"><div class="spot-hero-img" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 10%, rgba(0,0,0,0.05) 100%), url('panlong.jpg');"><div class="spot-hero-title"><span>Pamir Wacha Highway</span><h3>瓦恰盤龍古道</h3></div></div><div class="spot-info-grid"><div class="spot-grid-item"><span class="spot-grid-label">🛣️ 彎道總數</span><span class="spot-grid-val">超 600 個 U 形急彎</span></div><div class="spot-grid-item"><span class="spot-grid-label">📍 地理位置</span><span class="spot-grid-val">塔縣瓦恰鄉境內</span></div><div class="spot-grid-item"><span class="spot-grid-label">🚘 道路條件</span><span class="spot-grid-val">需由 7 座商務車通行</span></div><div class="spot-grid-item"><span class="spot-grid-label">💡 替代路徑</span><span class="spot-grid-val">如遇天氣封路繞行藍湖</span></div></div><div class="spot-footer"><div class="spot-tag-pills"><span class="spot-pill">網紅打卡</span><span class="spot-pill">挑戰極限</span></div><span class="spot-back-btn" onclick="scrollToId('d9')">📍 返 Day 9 行程</span></div></div>
+      </div>
+    </section>
+
+    <section id="budget" class="budget-section">
+      <div class="section-title">💰 全景南疆費用預算 (12天)</div>
+      <div class="budget-card">
+        <div class="budget-total"><div class="budget-total-num">¥18,000</div><div class="budget-total-lbl">每人總預算 (CNY)</div></div>
+        <div class="budget-item"><div class="budget-meta"><span class="budget-name">🇨🇳 新疆 A 版 11 晚包團費 (含家訪)</span><span class="budget-val">¥7,899 (43.9%)</span></div><div class="progress-track"><div class="progress-bar bar-gold" style="width: 43.9%;"></div></div></div>
+        <div class="budget-item"><div class="budget-meta"><span class="budget-name">✈️ 大交通 (飛機雙程 + 鄭州高鐵)</span><span class="budget-val">¥5,000 (27.8%)</span></div><div class="progress-track"><div class="progress-bar bar-red" style="width: 27.8%;"></div></div></div>
+        <div class="budget-item"><div class="budget-meta"><span class="budget-name">🍖 新疆當地正餐與風味餐</span><span class="budget-val">¥3,000 (16.7%)</span></div><div class="progress-track"><div class="progress-bar bar-sand" style="width: 16.7%;"></div></div></div>
+        <div class="budget-item"><div class="budget-meta"><span class="budget-name">🏨 深圳及鄭州自由行喫住手信</span><span class="budget-val">¥2,000 (11.1%)</span></div><div class="progress-track"><div class="progress-bar bar-grey" style="width: 11.1%;"></div></div></div>
+      </div>
+    </section>
+
+    
+    <section id="fees" class="tips-section">
+      <div class="section-title">📋 費用說明</div>
+      <div class="tips-grid">
+        <div class="tip-glass-card"><div class="tip-header"><span>✅</span> 費用包含</div><div class="tip-content"><ul><li><strong>交通：</strong>四人配7座商務艙（大通G10/G20/別克）；五人配7座頭等艙（福特/依維柯）；六人配豪華7座1+1頭等艙（海格/大通/中通/宇通/福特）</li><li><strong>住宿：</strong>全程11晚（8晚4鑽+3晚舒適型），雙人標準間，5人安排1標間+1親子間/三人間</li><li><strong>門票：</strong>行程所列景點首道大門票及區間車（旅行社折扣價）</li><li><strong>司機：</strong>全程司機服務（含食宿），負責接待銜接和簡單介紹</li><li><strong>餐食：</strong>酒店含早餐，正餐自理</li><li><strong>保險：</strong>旅行社責任險+旅遊意外險</li></ul></div></div>
+        <div class="tip-glass-card warning"><div class="tip-header"><span>❌</span> 費用不含</div><div class="tip-content"><ul><li><strong>餐食：</strong>全程不含正餐（不需遊客均攤司機食宿）</li><li><strong>景點：</strong>景區內娛樂項目</li><li><strong>其他：</strong>A.因交通延阻、罷工、天氣、飛機、機器故障、航班取消或更改時間等不可抗力原因所導致的額外費用；B.酒店內洗衣、理髮、電話、傳真、收費電視、飲品、菸酒等個人消費</li></ul><p style="font-size:11px;margin-top:4px">以上兩種情況產生的消費費用及包含中未提及的任何費用都將自行承擔，本社不予承擔。</p></div></div>
+        <div class="tip-glass-card"><div class="tip-header"><span>🎁</span> 贈送項目</div><div class="tip-content"><ul><li><strong>1. 塔吉克族家訪+換裝體驗</strong>（若行程緊張無法安排或不想參加退40元/人）</li><li><strong>2. 贈送無人機視頻至少2段</strong>（贈送項目不去不退，僅限天氣情況良好安排；如遇師傅沒有拍攝，退50元/人）</li></ul><p style="color:var(--red);font-size:11px;margin-top:6px"><strong>注意：</strong>贈送項目如遇惡劣天氣/自行放棄使用/行程時間不允許等因素，退相關費用，不作爲任何投訴理由，請諒解</p></div></div>
+        <div class="tip-glass-card warning"><div class="tip-header"><span>⚠️</span> 注意事項</div><div class="tip-content"><ol>
+<li><strong>返程提示：</strong>不建議預定散團當天返程的機票/火車票，因爲路上或許會遇到堵車等特殊情況</li>
+<li><strong>限制遊覽事項：</strong>65歲及以上老年人簽署免責聲明；70歲以上須有家人陪同，單人出行不收</li>
+<li><strong>優惠政策：</strong>現役軍人、退役軍人、警察、援疆幹部、殘疾人、大學生、身高1.2米以下兒童及其他優惠證件，請報名時告知銷售或管家，並出遊時攜帶相關證件（如未攜帶無法幫您購買特殊優惠票）</li>
+<li><strong>持國外護照及外籍人士</strong>請提前和客服溝通，部分景區不接待外籍遊客</li>
+<li><strong>其他說明：</strong>出行過程中因不可抗力因素造成景點關閉未能正常遊玩的，雙方協商後根據實際情況取消或更換該景點，費用差價現場退補</li>
+<li><strong>騎馬風險：</strong>騎馬是有風險的活動，輕則顛簸摔傷手機，重則摔下馬後果不堪設想。旅行社不建議大家參加，如果要騎馬一定選擇正規的有保險的馬隊。任何時候千萬別在馬的後面站，馬兒一受驚特別容易踢後蹄</li>
+<li><strong>行前提示：</strong>出團前一天22:00點之前您將收到旅行社管家或司機發的出團通知電話或微信，敬請留意，保持電話暢通。如超過22:00點您未收到任何通知，請及時聯繫報名銷售</li>
+</ol></div></div>
+      </div>
+    </section>
+
+    
+    <section id="restrictions" class="tips-section">
+      <div class="section-title">⚠️ 重要限制與須知</div>
+      <div class="tips-grid">
+        <div class="tip-glass-card warning"><div class="tip-header"><span>🚫</span> 年齡與外籍人士限制</div><div class="tip-content"><ul><li><span class="pdf-highlight">75歲以上：不宜報團，謝絕參團。</span></li><li>65歲以上必須簽署免責聲明；70歲以上須有家人陪同，單人出行不收。</li><li><span class="pdf-highlight">慕士塔格冰川公園禁止70歲以上入內。</span></li><li><span class="pdf-highlight">外籍人士：羅布人村寨、塔塔祕境、葫蘆島、紅其拉甫國門禁止外籍人員參觀。</span></li></ul></div></div>
+        <div class="tip-glass-card warning"><div class="tip-header"><span>⛰️</span> 帕米爾高原防高反</div><div class="tip-content"><ul><li>高海拔最高可達4000～4668米。<span class="pdf-highlight">有心源性疾病、心臟病、高血壓、糖尿病的客人不建議參團。</span></li><li><span class="pdf-red">切記不要奔跑跳躍、不要暴飲暴食、請勿飲酒。</span></li><li>塔縣當晚<span class="pdf-highlight">強烈建議不要洗澡</span>，防感冒引發急性高原肺水腫。</li><li>人手贈送一個氧氣瓶，建議自備抗高反藥物。</li></ul></div></div>
+        <div class="tip-glass-card warning"><div class="tip-header"><span>🚗</span> 交通與行車限制</div><div class="tip-content"><ul><li>新疆運管規定<span class="pdf-red">每日限行600公里</span>，超出將面臨2-10萬罰款/吊銷執照。</li><li>旅遊車全程GPS監控，行駛4小時必須停車休息20分鐘。</li><li>每日在外時間高達10-12小時（純車程+景點遊玩）。</li></ul></div></div>
+        <div class="tip-glass-card"><div class="tip-header"><span>🛂</span> 邊防證辦理</div><div class="tip-content"><ul><li>持身份證或港澳通行證者可手機辦理電子邊防證。</li><li>必須寫明前往地點：<span class="pdf-red">"喀什地區塔什庫爾幹縣，克孜勒蘇柯爾克孜自治州"</span>。</li><li><span class="pdf-highlight">16歲以下不支持線上辦理</span>，需帶身份證/戶口本/出生證明到現場。</li></ul></div></div>
+        <div class="tip-glass-card warning"><div class="tip-header"><span>📸</span> 拍攝禁忌</div><div class="tip-content"><ul><li>喀拉庫勒湖沿途檢查站<span class="pdf-red">嚴禁拍照</span>。</li><li><span class="pdf-red">不要直拍人臉：</span>拍攝前必須先徵得對方同意，否則極不禮貌。</li></ul></div></div>
+        <div class="tip-glass-card warning"><div class="tip-header"><span>🐎</span> 騎馬安全</div><div class="tip-content"><ul><li>騎馬有高風險，如要騎必須選擇正規有保險的馬隊。</li><li><span class="pdf-highlight">任何時候千萬不要站在馬的後面</span>，馬受驚會踢後蹄造成嚴重傷害。</li></ul></div></div>
+        <div class="tip-glass-card"><div class="tip-header"><span>🍲</span> 時差與飲食</div><div class="tip-content"><ul><li>新疆與內地有2小時時差，早餐8:30、午餐14-15點、晚餐20點。</li><li>長途行車務必自備乾糧零食防餓。飲食偏重，點菜建議少量多次。</li></ul></div></div>
+      </div>
+    </section>
+
+    <section id="tips" class="tips-section">
+      <div class="section-title">💡 行前防禦與提醒</div>
+      <div class="tips-grid">
+        <div class="tip-glass-card warning"><div class="tip-header"><span>🧳</span> 行理與年齡參團<span class="pdf-red">限制</span></div><div class="tip-content">因商務車後備箱空間有限：<ul><li><strong>每人限帶 26-28 寸行李箱一個</strong> + 隨身背包一個。</li><li>因景點間路途遙遠，孕婦、哺乳期兒童、75歲以上老人<span class="pdf-red">謝絕</span>參團。</li></ul></div></div>
+        <div class="tip-glass-card warning"><div class="tip-header"><span>🔋</span> 充電寶 (行動電源) 登機規範</div><div class="tip-content">前往新疆的航班安檢極其嚴格！隨身攜帶之充電寶<strong><span class="pdf-red">必須</span>印有清晰之 3C 認證標誌</strong>及<strong>索源二維碼</strong>，否則機場將強制沒收，請<span class="pdf-red">務必</span>提前檢查！</div></div>
+        <div class="tip-glass-card"><div class="tip-header"><span>🪪</span> 邊防通行證與禁入提醒</div><div class="tip-content">行程包含<strong>塔縣、木吉、西極</strong>等高海拔邊境地區：<ul><li>請隨身保管好<strong>回鄉證</strong>與<strong>身份證</strong>，邊防通行證須寫明：喀什地區塔縣、克孜勒蘇柯爾克孜自治州。</li><li>羅布人村寨、塔塔祕境、葫蘆島、紅其拉甫國門<strong><span class="pdf-red">禁止</span>外籍人員</strong>參觀，請知悉。</li></ul></div></div>
+        <div class="tip-glass-card"><div class="tip-header"><span>☀️</span> 高原反應與防曬</div><div class="tip-content">高原山區夜間極其寒冷：<ul><li><strong>保暖防風衣物</strong>（羽絨或衝鋒衣必備），當晚<span class="pdf-red">不建議</span>洗澡，防寒防高反。</li><li>防曬霜、潤脣膏、高保溼面霜。</li><li>行程中慕士塔格冰川公園<strong><span class="pdf-red">禁止</span> 70 歲以上人員入內</strong>。</li></ul></div></div>
+      
+        <div class="tip-glass-card warning"><div class="tip-header"><span>📢</span> 溫馨提示</div><div class="tip-content"><ol>
+<li><strong>新疆運管規定：</strong>營運車每天行車距離不可超過600公里。如超出600公里數，司機將面臨2-10萬的鉅額罰款/吊銷營業執照。因此行程計劃外的日常出行活動，建議您自行安排出租車、網約車或其他交通。</li>
+<li><strong>預定時務必提供準確完整的身份信息、聯繫方式</strong>，以免預訂錯誤影響出行（許多景區是刷身份證進入）；如因遊客個人原因信息提供不準確最終造成無法挽救的後果，旅行社不承擔任何責任。</li>
+<li><strong>出行過程中如遊客中途選擇離團</strong>，未完成部分視爲遊客自願放棄，僅退還套餐中未產生的費用，車費無法退還。</li>
+<li><strong>新疆地區飲食口味偏重</strong>，鹽味辣味稍重，份量較大，在點菜時建議少量多次。</li>
+<li><strong>用餐時間：</strong>由於新疆和內地有2小時左右時差（但依然採用北京時間），一般早8點半左右早餐、午餐14-15點、晚餐20點左右；旅遊耗費體力，請提前自備零食。</li>
+<li><strong>新疆賓館條件：</strong>因新疆經濟較之內地落後，賓館與內地同級賓館之間、景區與城市同級賓館之間都有很大差異，對此遊客需要有足夠的心裏準備。</li>
+<li><strong>行程說明：</strong>以上行程安排可能會根據當天天氣、溫度、路況、景區等實際情況進行適當調整。行程中有任何意見或困惑，請及時告知司機或客服管家。</li>
+<li><strong>健康聲明：</strong>遊客由於自身健康原因或參加不適合自身條件的旅遊活動造成人身、財產損失的，由遊客本人及家屬自行承擔。因個人既有病史和身體殘障在旅遊行程中引起的疾病進一步發作和傷亡，旅行社不承擔任何責任。</li>
+<li><strong>高原提示：</strong>塔縣、白沙湖、慕士塔格冰川、盤龍古道等地屬於帕米爾高原，本次長途旅行時間長、溫差大、海拔高。自身患有<span class="pdf-red">心臟病、高血壓、糖尿病</span>等疾病的客人<span class="pdf-highlight">不建議參團</span>。</li>
+</ol></div></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>設計與規劃：<strong>金秋南疆 A 版奢華探險行</strong></p>
+      <p>© 2026 金秋南疆 · 不留遺憾之旅</p>
+    </footer>
+  </div>
+
+
+  <button class="back-to-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ 回到首頁</button>
+</body>
+</html>
