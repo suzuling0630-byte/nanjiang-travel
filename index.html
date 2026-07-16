@@ -29,7 +29,7 @@
     .app-container { width: 100%; max-width: 600px; margin: 0 auto; background: rgba(15, 8, 4, 0.95); border-left: 1px solid rgba(197, 168, 128, 0.15); border-right: 1px solid rgba(197, 168, 128, 0.15); min-height: 100vh; padding-bottom: 80px; }
     section[id], .day-card[id] { scroll-margin-top: calc(var(--nav-height) + 20px); }
     .sticky-nav { position: sticky; top: 0; z-index: 100; height: var(--nav-height); background: rgba(26, 14, 8, 0.96); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(197, 168, 128, 0.2); display: flex; overflow-x: auto; white-space: nowrap; scrollbar-width: none; padding: 0 8px; align-items: center; }
-    .sticky-nav::-webkit-scrollbar { display: none; }
+    .sticky-nav::-webkit-scrollbar { display: flex; }
     .sticky-nav-item { display: inline-flex; align-items: center; padding: 0 16px; height: 100%; color: rgba(234, 227, 210, 0.6); text-decoration: none; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; cursor: pointer; }
     .hero::before { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.55); z-index:0; }
   .hero-title { text-shadow: 0 2px 16px rgba(0,0,0,0.95), 0 0 50px rgba(0,0,0,0.7); }
