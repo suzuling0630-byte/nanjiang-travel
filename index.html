@@ -296,5 +296,17 @@
     </footer>
   </div>
 
+
+  <button class="back-to-top-btn" onclick="scrollToId('hero')" title="返回顶部">↑</button>
+
+
+  <script>
+    var btn = document.querySelector('.back-to-top-btn');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 300) btn.classList.add('show');
+      else btn.classList.remove('show');
+    });
+  </script>
+
 </body>
 </html>
