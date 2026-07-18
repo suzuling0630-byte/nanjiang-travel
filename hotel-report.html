@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>南疆15日行程 · 機票+酒店+高鐵對比報表 | Oct 15-29, 2026</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+HK:wght@400;600;700;900&family=Noto+Sans+HK:wght@300;400;500;700&display=swap');
+:root {
+  --bg:#0d0804; --bg-card:#1a1008; --bg-section:linear-gradient(135deg,#1a1008,#2d1a0a,#3d2008);
+  --gold:#c8872b; --gold-light:#e0a542; --gold-pale:#f5d78c; --cream:#fef9f0;
+  --text:#e8dcc8; --text-muted:#9b8570; --text-dark:#1a1008;
+  --red:#c0392b; --green:#27ae60; --blue:#2980b9; --border:#3d2a15; --card-hover:#2a1a0c;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans HK',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}
+.container{max-width:680px;margin:0 auto;padding:0 16px}
+/* Hero */
+.hero{background:linear-gradient(180deg,#1a0800 0%,#2d1500 40%,#1a0800 100%);text-align:center;padding:48px 20px 36px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 50% 30%,rgba(200,135,43,0.15) 0%,transparent 70%)}
+.hero-icon{font-size:48px;margin-bottom:12px;position:relative}
+.hero h1{font-family:'Noto Serif HK',serif;font-size:26px;font-weight:900;color:var(--gold-light);position:relative;letter-spacing:.5px}
+.hero .subtitle{font-size:14px;color:var(--text-muted);margin-top:8px;position:relative}
+.hero .badge-row{display:flex;justify-content:center;gap:6px;margin-top:14px;flex-wrap:wrap;position:relative}
+.hero .badge{background:rgba(200,135,43,0.15);border:1px solid rgba(200,135,43,0.3);color:var(--gold-light);padding:3px 10px;border-radius:20px;font-size:11px;font-weight:500}
+/* Meta */
+.meta-bar{background:var(--bg-card);border-bottom:1px solid var(--border);padding:12px 16px;display:flex;justify-content:space-around;gap:6px;flex-wrap:wrap}
+.meta-item{text-align:center}
+.meta-item .val{font-family:'Noto Serif HK',serif;font-size:17px;font-weight:700;color:var(--gold-light)}
+.meta-item .lbl{font-size:10px;color:var(--text-muted);margin-top:1px}
+/* Nav */
+.quick-nav{display:flex;gap:5px;overflow-x:auto;padding:10px 16px;background:var(--bg-card);border-bottom:1px solid var(--border);-webkit-overflow-scrolling:touch}
+.quick-nav::-webkit-scrollbar{display:none}
+.nav-btn{background:rgba(200,135,43,0.1);border:1px solid rgba(200,135,43,0.2);color:var(--gold-light);padding:5px 12px;border-radius:20px;font-size:11px;white-space:nowrap;cursor:pointer;flex-shrink:0;font-family:inherit}
+/* Sections */
+.section{margin:18px 0}
+.section-title{font-family:'Noto Serif HK',serif;font-size:19px;font-weight:700;color:var(--gold-light);margin-bottom:14px;padding-left:14px;border-left:3px solid var(--gold);display:flex;align-items:center;gap:8px}
+.section-title .icon{font-size:20px}
+/* Cards */
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:18px;margin-bottom:12px}
+.card.recommended{border-color:var(--gold);background:linear-gradient(135deg,#1a1008,#2d1808)}
+.card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px;gap:8px}
+.card-header h3{font-family:'Noto Serif HK',serif;font-size:16px;font-weight:700;color:var(--cream)}
+.rank{background:var(--gold);color:var(--text-dark);font-size:10px;font-weight:700;padding:2px 9px;border-radius:12px;white-space:nowrap;flex-shrink:0}
+/* Tables */
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0}
+table{width:100%;border-collapse:collapse;font-size:12px;min-width:480px}
+th{background:rgba(200,135,43,0.12);color:var(--gold-light);font-weight:600;padding:8px 10px;text-align:left;font-size:11px;white-space:nowrap;border-bottom:1px solid var(--border)}
+td{padding:8px 10px;border-bottom:1px solid rgba(61,42,21,0.5);color:var(--text);vertical-align:top}
+tr:last-child td{border-bottom:none}
+.price{color:var(--gold-light);font-weight:700;white-space:nowrap}
+.score{color:var(--gold-light);font-weight:700}
+/* Tags */
+.tag{display:inline-block;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:600;margin:2px 3px 2px 0}
+.tag-gold{background:rgba(200,135,43,0.2);color:var(--gold-light)}
+.tag-green{background:rgba(39,174,96,0.15);color:var(--green)}
+.tag-red{background:rgba(192,57,43,0.15);color:var(--red)}
+.tag-blue{background:rgba(41,128,185,0.15);color:var(--blue)}
+.tag-gray{background:rgba(155,133,112,0.15);color:var(--text-muted)}
+/* Review */
+.review{background:rgba(200,135,43,0.06);border-left:3px solid var(--gold);padding:8px 12px;margin:8px 0;border-radius:0 8px 8px 0;font-size:12px;color:var(--text-muted);font-style:italic;line-height:1.6}
+/* Budget */
+.budget-grid{display:flex;flex-direction:column;gap:8px}
+.budget-card{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:14px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.budget-card.best{border-color:var(--gold);background:linear-gradient(135deg,#1a1008,#2d1808);position:relative}
+.budget-card.best::before{content:'🥇 推薦';position:absolute;top:-9px;right:10px;background:var(--gold);color:var(--text-dark);font-size:9px;font-weight:700;padding:2px 9px;border-radius:10px}
+.budget-level{font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px}
+.budget-total{font-family:'Noto Serif HK',serif;font-size:20px;font-weight:900;color:var(--gold-light);white-space:nowrap}
+/* Alert */
+.alert{background:rgba(200,135,43,0.08);border:1px solid rgba(200,135,43,0.25);border-radius:8px;padding:12px 14px;margin:10px 0;font-size:12px;color:var(--text-muted);display:flex;align-items:flex-start;gap:8px}
+.alert.danger{background:rgba(192,57,43,0.08);border-color:rgba(192,57,43,0.2)}
+.alert .alert-icon{font-size:16px;flex-shrink:0}
+/* Day header */
+.day-label{display:inline-block;background:rgba(200,135,43,0.2);color:var(--gold-light);padding:3px 10px;border-radius:6px;font-size:12px;font-weight:600;margin-bottom:10px}
+/* Footer */
+.footer{text-align:center;padding:28px 20px;color:var(--text-muted);font-size:11px;border-top:1px solid var(--border);margin-top:20px}
+.footer .sources{margin-top:6px;font-size:10px}
+/* Route flow */
+.route-flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:center;padding:12px 0;font-size:12px}
+.route-node{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:6px 10px;text-align:center;white-space:nowrap}
+.route-node .city{font-weight:700;color:var(--cream);font-size:13px}
+.route-node .date{font-size:10px;color:var(--text-muted)}
+.route-arrow{color:var(--gold);font-size:16px}
+/* Hotel grid compact */
+.hotel-mini{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(61,42,21,0.3);gap:8px}
+.hotel-mini:last-child{border-bottom:none}
+.hotel-mini .name{font-weight:600;color:var(--cream);font-size:13px}
+.hotel-mini .info{font-size:11px;color:var(--text-muted);white-space:nowrap}
+.warn{color:#e74c3c}
+/* transport card */
+.transport-card{background:rgba(41,128,185,0.06);border:1px solid rgba(41,128,185,0.2);border-radius:10px;padding:14px;margin-bottom:12px}
+.transport-card .ttitle{font-size:14px;font-weight:700;color:#5dade2;margin-bottom:8px}
+
+@media(max-width:480px){
+  .hero h1{font-size:21px}
+  .section-title{font-size:16px}
+  .budget-card{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ HERO ═══ -->
+<div class="hero">
+  <div class="hero-icon">🐫</div>
+  <h1>南疆15日 · 機票+酒店+高鐵<br>完整對比報表</h1>
+  <div class="subtitle">2026年10月15日 – 10月29日 · 深圳出發 → 鄭州高鐵返港</div>
+  <div class="badge-row">
+    <span class="badge">✈️ 3程機票</span>
+    <span class="badge">🏨 11晚南疆酒店</span>
+    <span class="badge">🚄 高鐵返港</span>
+    <span class="badge">📊 三平台比價</span>
+  </div>
+</div>
+
+<!-- ═══ META ═══ -->
+<div class="meta-bar">
+  <div class="meta-item"><div class="val">15日</div><div class="lbl">總行程</div></div>
+  <div class="meta-item"><div class="val">3程</div><div class="lbl">機票</div></div>
+  <div class="meta-item"><div class="val">11晚</div><div class="lbl">南疆住宿</div></div>
+  <div class="meta-item"><div class="val">50+</div><div class="lbl">酒店搜尋</div></div>
+</div>
+
+<!-- ═══ NAV ═══ -->
+<div class="quick-nav">
+  <button class="nav-btn" onclick="document.getElementById('route').scrollIntoView({behavior:'smooth'})">🗺️ 路線總覽</button>
+  <button class="nav-btn" onclick="document.getElementById('transport').scrollIntoView({behavior:'smooth'})">✈️🚄 交通</button>
+  <button class="nav-btn" onclick="document.getElementById('d1').scrollIntoView({behavior:'smooth'})">🏨 Day1 烏市</button>
+  <button class="nav-btn" onclick="document.getElementById('d2').scrollIntoView({behavior:'smooth'})">🏨 Day2-3 庫爾勒</button>
+  <button class="nav-btn" onclick="document.getElementById('d4').scrollIntoView({behavior:'smooth'})">🏨 Day4 庫車</button>
+  <button class="nav-btn" onclick="document.getElementById('d5').scrollIntoView({behavior:'smooth'})">🏨 Day5 阿拉爾</button>
+  <button class="nav-btn" onclick="document.getElementById('d6').scrollIntoView({behavior:'smooth'})">🏨 Day6 和田</button>
+  <button class="nav-btn" onclick="document.getElementById('d7').scrollIntoView({behavior:'smooth'})">🏨 Day7-11 喀什塔縣</button>
+  <button class="nav-btn" onclick="document.getElementById('budget').scrollIntoView({behavior:'smooth'})">💰 總預算</button>
+</div>
+
+<div class="container">
+
+<!-- ═══ ROUTE ═══ -->
+<div class="section" id="route">
+  <div class="section-title"><span class="icon">🗺️</span> 15日路線總覽</div>
+  <div class="card">
+    <div class="route-flow">
+      <div class="route-node"><div class="city">🏙️ 深圳</div><div class="date">10/15</div></div><div class="route-arrow">✈️→</div>
+      <div class="route-node"><div class="city">🏔️ 烏魯木齊</div><div class="date">10/16 Day1</div></div><div class="route-arrow">🚗→</div>
+      <div class="route-node"><div class="city">🌊 庫爾勒</div><div class="date">10/17-18 Day2-3</div></div><div class="route-arrow">🚗→</div>
+      <div class="route-node"><div class="city">🏛️ 庫車</div><div class="date">10/19 Day4</div></div><div class="route-arrow">🚗→</div>
+      <div class="route-node"><div class="city">🌾 阿拉爾</div><div class="date">10/20 Day5</div></div><div class="route-arrow">🚗→</div>
+      <div class="route-node"><div class="city">🕌 和田</div><div class="date">10/21 Day6</div></div><div class="route-arrow">🚗→</div>
+      <div class="route-node"><div class="city">🏰 喀什</div><div class="date">10/22 Day7</div></div><div class="route-arrow">🚗→</div>
+      <div class="route-node"><div class="city">⛰️ 塔縣</div><div class="date">10/23-24 Day8-9</div></div><div class="route-arrow">🚗→</div>
+      <div class="route-node"><div class="city">🏰 喀什</div><div class="date">10/25-26 Day10-11</div></div><div class="route-arrow">✈️→</div>
+      <div class="route-node"><div class="city">🏙️ 鄭州</div><div class="date">10/27-28</div></div><div class="route-arrow">🚄→</div>
+      <div class="route-node"><div class="city">🏠 香港</div><div class="date">10/29</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ TRANSPORT ═══ -->
+<div class="section" id="transport">
+  <div class="section-title"><span class="icon">✈️🚄</span> 交通詳情</div>
+
+  <!-- SZX hotel -->
+  <div class="card recommended">
+    <div class="card-header"><h3>🏨 10/15 深圳機場酒店</h3><span class="rank">首選</span></div>
+    <p style="font-size:13px"><strong>深圳機場凱悅嘉軒酒店</strong> (Hyatt Place)</p>
+    <p style="font-size:12px;color:var(--text-muted)">📍 T3航站樓14號門3樓 · 🚶 室內通道步行5分鐘到T3</p>
+    <p style="font-size:12px;color:var(--text-muted)">⭐ Trip.com 9.3/10 (5,378評價)</p>
+    <p style="font-size:13px;margin-top:4px"><span class="price">HK$623-2,182/晚</span></p>
+    <div class="review">「室內通道直達T3航站樓，朝早6點機都唔使趕」</div>
+    <p style="font-size:11px;color:var(--text-muted);margin-top:6px">備選：凱悅嘉寓(9.4分,全套房) · 維也納好眠(9.5分,24h接駁) · RANZ蘭茲(9.6分)</p>
+  </div>
+
+  <!-- SZX→URC -->
+  <div class="transport-card">
+    <div class="ttitle">✈️ 10/16 朝早 深圳(SZX) → 烏魯木齊(URC)</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>航空</th><th>出發</th><th>到達</th><th>飛行</th><th>票價</th><th>備註</th></tr></thead>
+        <tbody>
+          <tr><td><strong>海南航空</strong></td><td>06:40/06:50</td><td>12:30</td><td>~5h40m</td><td class="price">HK$1,192-1,700</td><td><span class="tag tag-green">推薦</span></td></tr>
+          <tr><td><strong>深圳航空</strong></td><td>08:45</td><td>14:40</td><td>~5h55m</td><td class="price">HK$1,500-2,000</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:11px;color:var(--text-muted)">📊 10月均價 HK$1,700 · 每日約8班直航 · 建議海南06:40班次（中午到烏市）</p>
+  </div>
+
+  <!-- KHG→CGO -->
+  <div class="transport-card">
+    <div class="ttitle">✈️ 10/27 喀什(KHG) → 鄭州(CGO)</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>航空</th><th>航班</th><th>出發</th><th>到達</th><th>飛行</th><th>票價(USD)</th></tr></thead>
+        <tbody>
+          <tr><td><strong>南方航空</strong></td><td>CZ6693</td><td>11:05</td><td>15:50</td><td>4h45m</td><td class="price">~$158-200</td></tr>
+          <tr><td>四川航空</td><td>3U1739</td><td>11:05</td><td>15:50</td><td>4h45m</td><td>$170-200</td></tr>
+          <tr><td>長龍航空</td><td>GJ8584</td><td>17:00</td><td>22:00</td><td>5h</td><td>~$198</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:11px;color:var(--text-muted)">📊 10月淡季全年最低 · 首選南方CZ6693（每日直航，最快4h45m）</p>
+  </div>
+
+  <!-- Zhengzhou Hotel -->
+  <div class="card">
+    <div class="card-header"><h3>🏨 10/27-28 鄭州酒店（近高鐵站）</h3><span class="rank">🥇 桔子</span></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>酒店</th><th>距東站</th><th>評分</th><th>參考價</th></tr></thead>
+        <tbody>
+          <tr><td><strong>桔子酒店(東廣場)</strong></td><td>0.26km</td><td class="score">9.8</td><td class="price">HK$412起</td></tr>
+          <tr><td>漢庭酒店(東廣場)</td><td>0.27km</td><td>9.6</td><td class="price">HK$323起</td></tr>
+          <tr><td>亞朵酒店(西廣場)</td><td>0.68km</td><td>9.7</td><td class="price">HK$490起</td></tr>
+          <tr><td>智選假日</td><td>0.72km</td><td>9.5</td><td class="price">HK$317起</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- HSR -->
+  <div class="transport-card">
+    <div class="ttitle">🚄 10/29 鄭州東 → 香港西九龍 高鐵</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>車次</th><th>出發</th><th>到達</th><th>車程</th><th>二等座</th><th>一等座</th></tr></thead>
+        <tbody>
+          <tr><td><strong>G79</strong> 🥇</td><td>12:21</td><td>18:12</td><td>5h51m</td><td class="price">HK$1,148</td><td class="price">HK$1,722</td></tr>
+          <tr><td>G305</td><td>14:37</td><td>22:04</td><td>~7h27m</td><td class="price">HK$1,148</td><td class="price">HK$1,722</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:11px;color:var(--text-muted)">📊 首選 G79（最快5h51m） · 10/14起可購票（提前15天） · 證件：回鄉證</p>
+  </div>
+</div>
+
+<!-- ═══ DAY 1: URUMQI ═══ -->
+<div class="section" id="d1">
+  <div class="section-title"><span class="icon">🏨</span> Day1 · 烏魯木齊 <span style="font-size:13px;color:var(--text-muted);font-weight:400">10/16 · 四鑽</span></div>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>酒店</th><th>攜程</th><th>Trip.com</th><th>參考價(¥)</th><th>亮點</th></tr></thead>
+        <tbody>
+          <tr><td><strong id="ht-ur-ju">桔子水晶</strong>(博物館店)</td><td class="score">4.8</td><td class="score">9.7</td><td class="price">¥180-350</td><td><span class="tag tag-green">CP值最高</span><span class="tag tag-gold">推薦</span></td></tr>
+          <tr><td><strong id="ht-ur-bsc">百世昌龍泉</strong>(大巴扎)</td><td>—</td><td class="score">9.4</td><td class="price">¥200-350</td><td>2,174評價·口碑穩</td></tr>
+          <tr><td><strong id="ht-ur-hy">恆裕國際</strong>(萬達)</td><td>—</td><td class="score">9.3</td><td class="price">¥200-400</td><td>2,436評價</td></tr>
+          <tr><td><strong id="ht-ur-df">東方王朝</strong>(大巴扎)</td><td class="score">4.7</td><td class="score">9.1</td><td class="price">¥720起</td><td>專用停車場</td></tr>
+          <tr><td><strong id="ht-ur-xl">新旅逸格</strong>(紅山)</td><td>—</td><td class="score">9.5</td><td class="price">¥300-500</td><td>近紅山公園·CCMALL</td></tr>
+          <tr><td><strong id="ht-ur-ly">麗怡</strong>(博物館)</td><td class="score">4.6</td><td class="score">9.3</td><td class="price">¥250-450</td><td>2024開業</td></tr>
+          <tr><td><strong id="ht-ur-bsh">百世昌歡居</strong>(紅山)</td><td class="score">4.6</td><td class="score">9.3</td><td class="price">¥200-350</td><td>2024開業</td></tr>
+          <tr><td><strong id="ht-ur-pg">蘋果酒店</strong>(大巴扎)</td><td>—</td><td>—</td><td class="price">¥200-350</td><td>位置好·和田二街</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="review">🥇 推薦：桔子水晶（博物館店）— 9.7分，性價比極高，四鑽評級五鑽水準</div>
+  </div>
+</div>
+
+<!-- ═══ DAY 2-3: KORLA ═══ -->
+<div class="section" id="d2">
+  <div class="section-title"><span class="icon">🏨</span> Day2-3 · 庫爾勒 <span style="font-size:13px;color:var(--text-muted);font-weight:400">10/17-18 · 四鑽 · 連宿2晚</span></div>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>酒店</th><th>攜程</th><th>Trip.com</th><th>參考價(¥)</th><th>亮點</th></tr></thead>
+        <tbody>
+          <tr><td><strong id="ht-kr-as">艾尚酒店</strong>(人民廣場)</td><td>—</td><td class="score">9.7</td><td class="price">¥310起</td><td><span class="tag tag-gold">評分最高</span></td></tr>
+          <tr><td><strong id="ht-kr-bst">博斯騰賓館</strong></td><td class="score">4.8</td><td>—</td><td class="price">¥600+</td><td>老牌口碑·孔雀河畔</td></tr>
+          <tr><td><strong id="ht-kr-bl">百麗·梨城</strong></td><td>—</td><td class="score">9.7</td><td class="price">¥180-210</td><td><span class="tag tag-green">高CP值</span></td></tr>
+          <tr><td><strong id="ht-kr-rd">瑞德雪蓮</strong></td><td class="score">4.8</td><td class="score">9.6</td><td class="price">¥210起</td><td>2026新開業·寵物友好</td></tr>
+          <tr><td><strong id="ht-kr-ss">申舍</strong>(火車站)</td><td>—</td><td class="score">9.6</td><td class="price">¥80-150</td><td>超值之選</td></tr>
+          <tr><td><strong id="ht-kr-md">摩登四季</strong>(新滙嘉)</td><td>—</td><td class="score">9.4</td><td class="price">¥195起</td><td>智能聲控</td></tr>
+          <tr><td><strong id="ht-kr-xa">希岸</strong>(客運站)</td><td>—</td><td class="score">9.4</td><td class="price">¥100-150</td><td>品牌連鎖</td></tr>
+          <tr><td><strong id="ht-kr-pj">璞居</strong>(天鵝湖)</td><td>—</td><td class="score">9.4</td><td class="price">¥130-200</td><td>天鵝湖核心地段</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="review">🥇 推薦：艾尚酒店（9.7最高分） 或 博斯騰賓館（老牌4.8，2,221評價）</div>
+  </div>
+</div>
+
+<!-- ═══ DAY 4: KUQA ═══ -->
+<div class="section" id="d4">
+  <div class="section-title"><span class="icon">🏨</span> Day4 · 庫車 <span style="font-size:13px;color:var(--text-muted);font-weight:400">10/19 · 四鑽</span></div>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>酒店</th><th>攜程</th><th>Trip.com</th><th>參考價(¥)</th><th>亮點</th></tr></thead>
+        <tbody>
+          <tr><td><strong id="ht-kc-yc">怡程酒店</strong>(龜茲)</td><td class="score">4.8</td><td class="score">9.6</td><td class="price">¥240起</td><td><span class="tag tag-gold">雙平台高分</span></td></tr>
+          <tr><td><strong id="ht-kc-ld">麗都大酒店</strong></td><td>—</td><td class="score">9.6</td><td class="price">¥250起</td><td>2,049評價·回頭率高</td></tr>
+          <tr><td><strong id="ht-kc-wd">萬達悅華</strong>(步行街)</td><td>—</td><td class="score">9.5</td><td class="price">¥360起</td><td>1,862評價·品牌保障</td></tr>
+          <tr><td><strong id="ht-kc-wc">萬宸凱徠</strong></td><td>—</td><td class="score">9.8+</td><td class="price">¥180-280</td><td><span class="tag tag-green">性價比最高</span></td></tr>
+          <tr><td><strong id="ht-kc-hy">華悅國際</strong></td><td>—</td><td class="score">9.3</td><td class="price">¥240起</td><td>設施新·早餐豐盛</td></tr>
+          <tr><td><strong id="ht-kc-kc">庫車飯店</strong>(A座)</td><td class="score">4.7</td><td class="score">9.4</td><td class="price">¥110-250</td><td>氣派大堂</td></tr>
+          <tr><td><strong id="ht-kc-kg">庫車國際</strong>(火車站)</td><td>—</td><td class="score">9.3</td><td class="price">¥145起</td><td><span class="warn">⚠️ 設施偏舊</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="review">🥇 推薦：怡程酒店（4.8+9.6雙高分）或 萬宸凱徠（9.8+，性價比王）</div>
+  </div>
+</div>
+
+<!-- ═══ DAY 5: ARAL ═══ -->
+<div class="section" id="d5">
+  <div class="section-title"><span class="icon">🏨</span> Day5 · 阿拉爾 <span style="font-size:13px;color:var(--text-muted);font-weight:400">10/20 · 舒適型</span></div>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>酒店</th><th>攜程</th><th>參考價(¥)</th><th>亮點</th></tr></thead>
+        <tbody>
+          <tr><td><strong id="ht-ks-gl">格林東方</strong>(市政府)</td><td class="score">4.8</td><td class="price">¥250-400</td><td><span class="tag tag-gold">推薦</span>免費接送機·2023開業</td></tr>
+          <tr><td><strong id="ht-al-lx">蘭祥酒店</strong>(塔大)</td><td class="score">4.8</td><td class="price">¥250-400</td><td>1,188評價·贈水果酸奶</td></tr>
+          <tr><td><strong id="ht-al-yy">亞悅酒店</strong>(文化館)</td><td class="score">4.8</td><td class="price">¥200-350</td><td>新開業·機器人服務</td></tr>
+          <tr><td><strong id="ht-al-bm">柏曼</strong>(胡楊河)</td><td class="score">4.7</td><td class="price">¥200-350</td><td>2024開業·熱賣No.1</td></tr>
+          <tr><td><strong id="ht-al-wy">維也納</strong>(塔大)</td><td class="score">4.7</td><td class="price">¥250-400</td><td>2025開業·智能客控</td></tr>
+          <tr><td><strong id="ht-al-sz">沙棗花香</strong>(胡楊河)</td><td class="score">4.7</td><td class="price">¥250-400</td><td>家庭影院·兒童樂園</td></tr>
+          <tr><td><strong id="ht-al-th">塔河陽光</strong>(塔大)</td><td class="score">4.7</td><td class="price">¥200-350</td><td>2025開業·電競房</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="review">🥇 推薦：格林東方（4.8分，免費接送機，早餐到11點）</div>
+  </div>
+</div>
+
+<!-- ═══ DAY 6: HOTAN ═══ -->
+<div class="section" id="d6">
+  <div class="section-title"><span class="icon">🏨</span> Day6 · 和田 <span style="font-size:13px;color:var(--text-muted);font-weight:400">10/21 · 四鑽</span></div>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>酒店</th><th>攜程</th><th>Trip.com</th><th>參考價(¥)</th><th>亮點</th></tr></thead>
+        <tbody>
+          <tr><td><strong id="ht-ht-mj">美居酒店</strong>(夜市)</td><td class="score">4.9</td><td class="score">9.8</td><td class="price">¥180-350</td><td><span class="tag tag-gold">強推</span>雅高品牌·2024新開</td></tr>
+          <tr><td><strong id="ht-ht-yd">亞朵</strong>(團結廣場)</td><td class="score">4.8</td><td class="score">9.6</td><td class="price">¥300-500</td><td>免費接送機·早餐到11點</td></tr>
+          <tr><td><strong id="ht-ht-yx">銀星麗呈</strong>(夜市)</td><td class="score">4.8</td><td class="score">9.5</td><td class="price">¥220-400</td><td>四星·全智能聲控</td></tr>
+          <tr><td><strong id="ht-ht-jj">錦江都城</strong>(團結廣場)</td><td class="score">4.8</td><td>—</td><td class="price">¥250-400</td><td>免費接送機</td></tr>
+          <tr><td><strong id="ht-ht-jy">金鷹國際</strong>(團結廣場)</td><td class="score">4.6</td><td>9.1</td><td class="price">¥250-400</td><td>充電樁·洗衣房</td></tr>
+          <tr><td><strong id="ht-ht-lo">蘭歐</strong>(團城景區)</td><td class="score">4.5</td><td>—</td><td class="price">¥150-280</td><td>近團城景區</td></tr>
+          <tr><td><strong>天王酒店</strong></td><td colspan="2" style="color:#e74c3c">⚠️ 未在平台找到</td><td>—</td><td>建議確認</td></tr>
+          <tr><td><strong>國玉酒店</strong></td><td colspan="2" style="color:#e74c3c">⚠️ 未在平台找到</td><td>—</td><td>可能已更名</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="review">🥇 推薦：美居酒店（4.9+9.8雙最高分，2024新開，雅高品牌）</div>
+    <div class="alert danger"><span class="alert-icon">⚠️</span><div><strong>天王酒店</strong>及<strong>國玉酒店</strong>未在攜程/Trip.com找到，請確認名稱或考慮替代</div></div>
+  </div>
+</div>
+
+<!-- ═══ DAY 7-11: KASHGAR + TAXKORGAN ═══ -->
+<div class="section" id="d7">
+  <div class="section-title"><span class="icon">🏨</span> Day7-11 · 喀什 + 塔縣 <span style="font-size:13px;color:var(--text-muted);font-weight:400">10/22-26</span></div>
+
+  <!-- KASHGAR -->
+  <div class="card">
+    <div class="day-label">Day7 · 10/22 喀什① + Day10-11 · 10/25-26 喀什②③（連宿）</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>酒店</th><th>攜程</th><th>Trip.com</th><th>參考價(¥)</th><th>距古城</th></tr></thead>
+        <tbody>
+          <tr><td><strong id="ht-ks-mh">美豪麗致</strong>(古城景區)</td><td class="score">4.7</td><td class="score">9.0</td><td class="price">¥300-550</td><td>🚶3分鐘 <span class="tag tag-gold">首選</span></td></tr>
+          <tr><td><strong id="ht-ks-bm">柏曼國際</strong>(古城西門)</td><td class="score">4.7</td><td class="score">9.4</td><td class="price">¥250-400</td><td>🚶西門旁</td></tr>
+          <tr><td><strong id="ht-ks-qn">其尼瓦克</strong>(古城)</td><td>4.3</td><td>8.7</td><td class="price">¥175-350</td><td>🚶5分鐘<span class="warn">⚠️設施舊</span></td></tr>
+          <tr><td><strong>格林東方</strong>(美食街)</td><td>4.5</td><td>—</td><td class="price">¥200-350</td><td>2.4km</td></tr>
+          <tr><td><strong id="ht-ks-lb">麗柏</strong>(東城)</td><td>4.7</td><td>—</td><td class="price">¥250-400</td><td><span class="warn">6-7km</span></td></tr>
+          <tr><td><strong>維也納</strong>(美食街)</td><td>4.6</td><td>—</td><td class="price">¥200-350</td><td>—</td></tr>
+          <tr><td><strong>錦江都城</strong>(疏勒)</td><td>4.7</td><td>—</td><td class="price">¥200-350</td><td><span class="warn">10km!</span></td></tr>
+          <tr><td><strong>麗呈朗譽</strong>(濕地公園)</td><td>4.5</td><td>—</td><td class="price">¥250-400</td><td><span class="warn">8km</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="review">🥇 推薦：美豪麗致（2024新開，古城門口3分鐘，智能客控）或 柏曼國際（古城西門旁，3,574評價最多）</div>
+  </div>
+
+  <!-- TAXKORGAN -->
+  <div class="card">
+    <div class="day-label">Day8-9 · 10/23-24 塔縣 連宿2晚（⚠️海拔3,000-4,000m，必須供氧設施）</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>酒店</th><th>攜程</th><th>Trip.com</th><th>參考價(¥)</th><th>供氧</th></tr></thead>
+        <tbody>
+          <tr><td><strong id="ht-tx-qg">喬戈里大酒店</strong></td><td class="score">4.8-4.9</td><td class="score">9.4</td><td class="price">¥300-550</td><td>✅ <span class="tag tag-gold">首選</span></td></tr>
+          <tr><td><strong id="ht-tx-yz">雲之彼端</strong></td><td class="score">4.7</td><td>—</td><td class="price">¥250-450</td><td>✅製氧機</td></tr>
+          <tr><td><strong id="ht-tx-ms">慕士塔格冰川</strong>(石頭城)</td><td class="score">4.6</td><td>—</td><td class="price">¥300-500</td><td>✅日照金山</td></tr>
+          <tr><td><strong id="ht-tx-yb">迎賓館</strong></td><td class="score">4.6</td><td>—</td><td class="price">¥200-350</td><td>—</td></tr>
+          <tr><td><strong id="ht-tx-gy">高原明珠</strong></td><td>4.5</td><td>—</td><td class="price">¥200-350</td><td>✅</td></tr>
+          <tr><td><strong id="ht-tx-ol">歐羅巴</strong>(美食街)</td><td>4.1</td><td>8.3</td><td class="price">¥190-300</td><td><span class="warn">⚠️評分偏低</span></td></tr>
+          <tr><td><strong>前海國際</strong></td><td colspan="2" style="color:#e74c3c">❌ TripAdvisor 2.0/5 極差</td><td>—</td><td><span class="warn">❌不推薦</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="review">🥇 推薦：喬戈里大酒店（4.8-4.9最高分，供氧，日照金山，星空拍攝）</div>
+    <div class="alert danger"><span class="alert-icon">⚠️</span><div><strong>前海國際大酒店</strong> TripAdvisor 僅2.0/5，<strong>強烈不推薦</strong>。塔縣海拔高，務必選有供氧設施的酒店！</div></div>
+  </div>
+</div>
+
+<!-- ═══ BUDGET ═══ -->
+<div class="section" id="budget">
+  <div class="section-title"><span class="icon">💰</span> 總預算估算（每人）</div>
+  <div class="budget-grid">
+    <div class="budget-card">
+      <div><div class="budget-level">✈️ SZX→URC 機票</div></div>
+      <div class="budget-total">~HK$1,500</div>
+    </div>
+    <div class="budget-card">
+      <div><div class="budget-level">✈️ KHG→CGO 機票</div></div>
+      <div class="budget-total">~HK$1,400</div>
+    </div>
+    <div class="budget-card">
+      <div><div class="budget-level">🚄 鄭州→香港 高鐵</div></div>
+      <div class="budget-total">HK$1,148</div>
+    </div>
+    <div class="budget-card">
+      <div><div class="budget-level">🏨 深圳機場酒店 1晚</div></div>
+      <div class="budget-total">~HK$700</div>
+    </div>
+    <div class="budget-card">
+      <div><div class="budget-level">🏨 南疆酒店 11晚（均價¥300）</div></div>
+      <div class="budget-total">~HK$3,500</div>
+    </div>
+    <div class="budget-card">
+      <div><div class="budget-level">🏨 鄭州酒店 1-2晚</div></div>
+      <div class="budget-total">~HK$400</div>
+    </div>
+    <div class="budget-card best">
+      <div><div class="budget-level">🎯 每人總預算</div></div>
+      <div class="budget-total">~HK$8,650</div>
+    </div>
+  </div>
+  <p style="font-size:11px;color:var(--text-muted);margin-top:10px;text-align:center">以上為參考價，10月淡季實際可能更低。不含餐飲、景點門票、當地交通。</p>
+</div>
+
+<!-- ═══ TIPS ═══ -->
+<div class="section">
+  <div class="section-title"><span class="icon">⚠️</span> 重要提示</div>
+  <div class="alert"><span class="alert-icon">📅</span><div>高鐵票10/14起售（提前15天）；機票出發前40天（9月初）最抵</div></div>
+  <div class="alert"><span class="alert-icon">🌡️</span><div>10月南疆：烏市5-15°C、塔縣0-10°C（高原）、喀什10-20°C。帶羽絨+防曬</div></div>
+  <div class="alert"><span class="alert-icon">🆔</span><div>高鐵用回鄉證；喀什塔縣邊防證需提前辦理（戶口所在地或喀什辦理）</div></div>
+  <div class="alert"><span class="alert-icon">🏔️</span><div>塔縣海拔3000-4000m，務必確認酒店有供氧設施，預留高原適應時間</div></div>
+  <div class="alert"><span class="alert-icon">🔐</span><div>攜程/Trip.com登錄後可見更低會員價，建議註冊比較</div></div>
+</div>
+
+<!-- ═══ SUMMARY ═══ -->
+<div class="section">
+  <div class="section-title"><span class="icon">🏆</span> Leyla 精選組合</div>
+  <div class="card recommended">
+    <table style="min-width:auto;font-size:13px">
+      <tr><td style="color:var(--text-muted);width:80px">10/15</td><td>🏨 深圳凱悅嘉軒（步行5分鐘到T3）</td></tr>
+      <tr><td style="color:var(--text-muted)">10/16早</td><td>✈️ 海南航空 SZX→URC 06:40-12:30</td></tr>
+      <tr><td style="color:var(--text-muted)">Day1</td><td>🏨 桔子水晶（博物館店）⭐4.8/9.7</td></tr>
+      <tr><td style="color:var(--text-muted)">Day2-3</td><td>🏨 艾尚酒店 庫爾勒 ⭐9.7</td></tr>
+      <tr><td style="color:var(--text-muted)">Day4</td><td>🏨 怡程酒店 庫車 ⭐4.8/9.6</td></tr>
+      <tr><td style="color:var(--text-muted)">Day5</td><td>🏨 格林東方 阿拉爾 ⭐4.8</td></tr>
+      <tr><td style="color:var(--text-muted)">Day6</td><td>🏨 美居酒店 和田 ⭐4.9/9.8</td></tr>
+      <tr><td style="color:var(--text-muted)">Day7/10-11</td><td>🏨 美豪麗致 喀什古城 ⭐4.7</td></tr>
+      <tr><td style="color:var(--text-muted)">Day8-9</td><td>🏨 喬戈里大酒店 塔縣 ⭐4.8-4.9</td></tr>
+      <tr><td style="color:var(--text-muted)">10/27</td><td>✈️ 南方航空 KHG→CGO 11:05-15:50</td></tr>
+      <tr><td style="color:var(--text-muted)">10/27-28</td><td>🏨 桔子酒店 鄭州東站 ⭐9.8</td></tr>
+      <tr><td style="color:var(--text-muted)">10/29</td><td>🚄 G79 鄭州東→香港西九龍 12:21-18:12</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<div class="footer">
+  <p>📊 數據來源：攜程旅行 · Trip.com · 高德地圖 · MTR · 12306</p>
+  <p class="sources">搜尋日期：2026年7月17日 · 價格可能隨時間變動 · 僅供參考</p>
+  <p class="sources" style="margin-top:6px;color:var(--gold);">🐫 南疆15日 · 深圳→烏魯木齊→庫爾勒→庫車→阿拉爾→和田→喀什→塔縣→鄭州→香港</p>
+  <p class="sources" style="margin-top:4px;">Made with ❤️ by Hermes Agent for Leyla</p>
+</div>
+
+</div>
+</body>
+</html>
