@@ -135,8 +135,68 @@
     .footer { text-align: center; padding: 48px 24px; color: rgba(234, 227, 210, 0.4); font-size: 11px; letter-spacing: 1px; border-top: 1px solid rgba(197, 168, 128, 0.1); margin-top: 40px; }
     .footer p { margin-bottom: 4px; }
     .footer strong { color: var(--gold); }
-  </style>
-<style>@page { margin: 12mm; size: A4; }</style></head>
+  
+  .ht-group { display: inline-flex; align-items: center; gap: 0; margin: 2px 3px; background: #fff; border: 1px solid #e0d3c0; border-radius: 10px; overflow: hidden; }
+  .ht-group .ht { border: none; margin: 0; padding: 2px 8px; border-radius: 0; background: transparent; border-right: 1px solid #f0e8d8; }
+  .ht-links { display: inline-flex; gap: 0; }
+  .ht-plat { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; font-size: 9px; font-weight: 700; cursor: pointer; color: #fff; border-radius: 0; }
+  .ht-plat.ct { background: #1890ff; }
+  .ht-plat.am { background: #e74c3c; }
+  .ht-plat.tp { background: #27ae60; }
+  .ht-plat:active { opacity: 0.7; }
+
+
+  .hd-section-title{font-size:14px;font-weight:700;color:#2A231F;margin-bottom:10px;padding:4px 0}
+  .hd-section-title em{font-size:10px;color:#A63A2B;font-style:normal;margin-left:6px;background:rgba(166,58,43,0.08);padding:2px 6px;border-radius:4px}
+  .hd-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .hd-card{background:#fff;border:1px solid #e8ddd0;border-radius:10px;padding:10px 12px}
+  .hd-card.hd-warn{border-color:#f5c6cb;background:#fff8f8}
+  .hd-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
+  .hd-name{font-weight:700;font-size:13px;color:#2A231F}
+  .hd-price{font-weight:800;font-size:12px;color:#A63A2B;white-space:nowrap}
+  .hd-mid{display:flex;gap:6px;margin-bottom:4px}
+  .hd-ctrip{font-size:10px;background:#e3f2fd;color:#1565c0;padding:1px 5px;border-radius:4px;font-weight:600}
+  .hd-trip{font-size:10px;background:#e8f5e9;color:#2e7d32;padding:1px 5px;border-radius:4px;font-weight:600}
+  .hd-review{font-size:10px;color:#6B5E56;line-height:1.45;margin-bottom:6px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .hd-links{display:flex;gap:4px}
+  .hd-btn{font-size:9px;padding:3px 7px;border-radius:4px;cursor:pointer;font-weight:600;color:#fff;white-space:nowrap}
+  .hd-btn.ct{background:#1890ff}.hd-btn.am{background:#e74c3c}.hd-btn.tp{background:#27ae60}
+  .hd-btn:active{opacity:0.7}
+  .day-accommodation{background:#F4EFE3;padding:14px 18px;font-size:12px;color:#2A231F;border-top:1px solid rgba(42,35,31,0.06);line-height:1.5}
+  @media(max-width:480px){.hd-grid{grid-template-columns:1fr}}
+
+</style>
+<style>@page { margin: 12mm; size: A4; }
+  .ht-group { display: inline-flex; align-items: center; gap: 0; margin: 2px 3px; background: #fff; border: 1px solid #e0d3c0; border-radius: 10px; overflow: hidden; }
+  .ht-group .ht { border: none; margin: 0; padding: 2px 8px; border-radius: 0; background: transparent; border-right: 1px solid #f0e8d8; }
+  .ht-links { display: inline-flex; gap: 0; }
+  .ht-plat { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; font-size: 9px; font-weight: 700; cursor: pointer; color: #fff; border-radius: 0; }
+  .ht-plat.ct { background: #1890ff; }
+  .ht-plat.am { background: #e74c3c; }
+  .ht-plat.tp { background: #27ae60; }
+  .ht-plat:active { opacity: 0.7; }
+
+
+  .hd-section-title{font-size:14px;font-weight:700;color:#2A231F;margin-bottom:10px;padding:4px 0}
+  .hd-section-title em{font-size:10px;color:#A63A2B;font-style:normal;margin-left:6px;background:rgba(166,58,43,0.08);padding:2px 6px;border-radius:4px}
+  .hd-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .hd-card{background:#fff;border:1px solid #e8ddd0;border-radius:10px;padding:10px 12px}
+  .hd-card.hd-warn{border-color:#f5c6cb;background:#fff8f8}
+  .hd-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
+  .hd-name{font-weight:700;font-size:13px;color:#2A231F}
+  .hd-price{font-weight:800;font-size:12px;color:#A63A2B;white-space:nowrap}
+  .hd-mid{display:flex;gap:6px;margin-bottom:4px}
+  .hd-ctrip{font-size:10px;background:#e3f2fd;color:#1565c0;padding:1px 5px;border-radius:4px;font-weight:600}
+  .hd-trip{font-size:10px;background:#e8f5e9;color:#2e7d32;padding:1px 5px;border-radius:4px;font-weight:600}
+  .hd-review{font-size:10px;color:#6B5E56;line-height:1.45;margin-bottom:6px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .hd-links{display:flex;gap:4px}
+  .hd-btn{font-size:9px;padding:3px 7px;border-radius:4px;cursor:pointer;font-weight:600;color:#fff;white-space:nowrap}
+  .hd-btn.ct{background:#1890ff}.hd-btn.am{background:#e74c3c}.hd-btn.tp{background:#27ae60}
+  .hd-btn:active{opacity:0.7}
+  .day-accommodation{background:#F4EFE3;padding:14px 18px;font-size:12px;color:#2A231F;border-top:1px solid rgba(42,35,31,0.06);line-height:1.5}
+  @media(max-width:480px){.hd-grid{grid-template-columns:1fr}}
+
+</style></head>
 <body>
   <script>function scrollToId(id){var e=document.getElementById(id);if(e)e.scrollIntoView({behavior:'smooth'});}</script>
   <div class="app-container">
@@ -242,17 +302,795 @@
     <section id="itinerary">
       <div class="section-title">📅 12日深度奢華行程</div>
       <div class="day-timeline">
-        <div class="day-card" id="d1"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D1</span><span class="day-lbl">ARRIVE</span><span class="day-date-raw">第 01 天</span></div><div class="day-info-col"><span class="day-jp-sub">ウルムチ到着 · 接機</span><h3 class="day-title">出發地 ✈️ 烏魯木齊 (24H 接機)</h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>烏市初體驗</div><div class="day-meal">🍽️ 用餐：三餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">全天</div><div class="tl-desc">歡迎來到大美新疆！接機後送您入住酒店休息，然後自由活動，如時間允許您可自行前往推薦景點參觀遊覽（不含單獨用車）。次日出發時間司機和管家會發信息或電話告知，請您注意查收。</div></div><div class="timeline-item"><div class="tl-time">—</div><div class="tl-desc">自由活動推薦：<strong>【自治區博物館】</strong>（免費·需提前一天預約·營業時間10:30-18:00·週一閉館·憑身份證安檢入內）感懷西域歷史的滄桑變化。</div></div><div class="timeline-item"><div class="tl-time">—</div><div class="tl-desc">也可自行前往<strong>【二道橋國際大巴扎】</strong>體驗濃郁的新疆維吾爾族風情，晚上找一家新疆特色餐廳，品嚐地道的新疆美食，做個地道的吃貨！</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：<strong>重要：</strong>前往塔縣需要邊防通行證。外籍人員需前往喀什辦理，其餘持身份證件或者港澳通行證者，均可手機辦理電子版。邊防通行證須寫明前往地點：新疆維吾爾自治區喀什地區塔什庫爾幹縣，克孜勒蘇柯爾克孜自治州。<span class="pdf-highlight">16歲以下不支持線上辦理</span>，需帶身份證/戶口本/出生證明。新疆酒店入住時間一般在14:00以後，如提前到達可能發生等候。</div></div><div class="day-accommodation">🏨 <b>推介住宿</b><br><span class="ht" onclick="window.open('hotel-report.html#ht-ur-xl','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">新旅逸格</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ur-ly','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">麗怡</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ur-pg','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">蘋果</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ur-df','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">東方王朝</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ur-ju','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">桔子水晶</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ur-bsc','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">百世昌龍泉</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ur-bsh','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">百世昌歡居</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ur-hy','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">恆裕</span><br><em>【四鑽】</em></div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('bazaar.jpg');"><div class="day-banner-title">🕌 西域大巴扎 · 體驗熱情民族風情</div></div></div>
-        <div class="day-card" id="d2"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D2</span><span class="day-lbl">TRAVEL</span><span class="day-date-raw">第 02 天</span></div><div class="day-info-col"><span class="day-jp-sub">天山を越える砂漠の海</span><h3 class="day-title">烏魯木齊 ➔ 烏尉高速 ➔ 天山勝利隧道 ➔ 博斯騰湖 (白鷺洲) ➔ 庫爾勒 <small>【380KM·約5H】</small></h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>中國最大的內陸淡水湖～博斯騰湖</div><div class="day-meal">🍽️ 用餐：酒店含早，中晚餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">08:00-09:00</div><div class="tl-desc">司機小哥按遠近順序依次接駕，交友小團純玩之旅馬上開啟~</div></div><div class="timeline-item"><div class="tl-time">09:00-14:00</div><div class="tl-desc">離開烏魯木齊一路向南，穿過<strong>烏尉高速·天山勝利隧道</strong>，到達南疆。</div></div><div class="timeline-item"><div class="tl-time">14:00-15:00</div><div class="tl-desc">沿途合適地點自行用午餐，推薦拌麪、抓飯等新疆風味簡餐。</div></div><div class="timeline-item"><div class="tl-time">15:00-19:30</div><div class="tl-desc">遊覽<strong>【博斯騰湖】白鷺洲景區</strong>—沙漠與湖水共存，紅柳與胡楊同生；白鷺與沙鷗起飛，藍天共湖光一色。碧水，黃沙，藍天，紅柳，胡楊，羊羣，漁帆，遊船，大自然呈現出氣象萬千生機勃勃的景象。</div></div><div class="timeline-item"><div class="tl-time">19:30-20:30</div><div class="tl-desc">乘車前往香梨的家鄉—庫爾勒市，入住酒店休息。建議晚間自行前往孔雀河散步。</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：今日行車距離較長，建議準備小零食。旅遊車輛全程GPS監控，行駛4小時<span class="pdf-red">必須</span>停車休息20分鐘。</div></div><div class="day-accommodation">🏨 <b>推介住宿</b><br><span class="ht" onclick="window.open('hotel-report.html#ht-kr-bst','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">博斯騰賓館</span> <span class="ht" onclick="window.open('hotel-report.html#ht-kr-ss','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">申舍</span> <span class="ht" onclick="window.open('hotel-report.html#ht-kr-as','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">艾尚</span> <span class="ht" onclick="window.open('hotel-report.html#ht-kr-bl','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">半城百麗·梨城</span> <span class="ht" onclick="window.open('hotel-report.html#ht-kr-md','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">摩登四季</span> <span class="ht" onclick="window.open('hotel-report.html#ht-kr-xa','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">希岸</span> <span class="ht" onclick="window.open('hotel-report.html#ht-kr-pj','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">璞居</span> <span class="ht" onclick="window.open('hotel-report.html#ht-kr-rd','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">瑞德雪蓮</span><br><em>【四鑽】· 連宿第1晚</em></div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('bosten.jpg');"><div class="day-banner-title">🦢 白鷺戲水 · 沙沙共舞碧海</div></div></div>
-        <div class="day-card" id="d3"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D3</span><span class="day-lbl">EXPLORE</span><span class="day-date-raw">第 03 天</span></div><div class="day-info-col"><span class="day-jp-sub">ロプ人の砂漠祕境</span><h3 class="day-title">庫爾勒 ➔ 羅布人村寨 / 塔塔祕境 / 葫蘆島 (三選一) ➔ 庫爾勒 <small>【300KM·約5H】</small></h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>大漠風光</div><div class="day-meal">🍽️ 用餐：酒店含早，中晚餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">08:00-09:00</div><div class="tl-desc">酒店享用早餐，開始今天精彩的旅程。</div></div><div class="timeline-item"><div class="tl-time">10:00-18:00</div><div class="tl-desc"><strong>【羅布人村寨】/【塔塔祕境】/【葫蘆島景區】三選一。</strong>塔塔祕境含門票+區間車（不含遊船），隱匿於世的羅布湖，宛如一顆藍寶石鑲嵌在塔克拉瑪干沙漠之中，河流與湖泊交織，沙漠與胡楊林相映成趣。羅布人村寨集沙漠、胡楊、河流、湖泊於一體，羅布人不種五穀，不牧牲畜，唯以小舟捕魚爲食。葫蘆島胡楊林—超小衆水上胡楊，深秋時節沙漠中的胡楊樹全部染黃，宛如大漠桃源仙境。</div></div><div class="timeline-item"><div class="tl-time">18:00-20:00</div><div class="tl-desc">遊玩結束後前往酒店入住。</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：夏季蚊蟲多，做好防蚊蟲準備。景區均不含遊船、騎駱駝等項目，費用自理。南疆乾旱風沙大，做好防曬補水。</div></div><div class="day-accommodation">🏨 <b>推介住宿</b><br><span class="ht" onclick="window.open('hotel-report.html#ht-kr-bst','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">博斯騰賓館</span> <span class="ht" onclick="window.open('hotel-report.html#ht-kr-ss','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">申舍</span> <span class="ht" onclick="window.open('hotel-report.html#ht-kr-as','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">艾尚</span> <span class="ht" onclick="window.open('hotel-report.html#ht-kr-bl','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">半城百麗·梨城</span> <span class="ht" onclick="window.open('hotel-report.html#ht-kr-md','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">摩登四季</span> <span class="ht" onclick="window.open('hotel-report.html#ht-kr-xa','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">希岸</span> <span class="ht" onclick="window.open('hotel-report.html#ht-kr-pj','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">璞居</span> <span class="ht" onclick="window.open('hotel-report.html#ht-kr-rd','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">瑞德雪蓮</span><br><em>【四鑽】· 連宿第2晚</em></div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('tata.jpg');"><div class="day-banner-title">🛶 羅布木舟 · 浩瀚金黃大漠綠洲</div></div></div>
-        <div class="day-card" id="d4"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D4</span><span class="day-lbl">HISTORY</span><span class="day-date-raw">第 04 天</span></div><div class="day-info-col"><span class="day-jp-sub">黃金の海と亀茲古城</span><h3 class="day-title">庫爾勒 ➔ 輪臺塔里木胡楊林 ➔ 庫車 (熱斯坦街 / 龜茲小巷) <small>【390KM·約7H】</small></h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>不一樣的視覺衝擊</div><div class="day-meal">🍽️ 用餐：酒店含早，中晚餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">08:00-09:00</div><div class="tl-desc">酒店自由享用早餐，餐後退房出發。</div></div><div class="timeline-item"><div class="tl-time">09:00-12:30</div><div class="tl-desc">如玄奘取經一般一路向西，右手是天山南坡，左手是塔里木盆地的北延，路過村莊、農場、城鎮前往<strong>【輪臺胡楊林】</strong>。</div></div><div class="timeline-item"><div class="tl-time">13:30-17:30</div><div class="tl-desc">遊覽<strong>【輪臺塔里木胡楊林】</strong>（含門票+區間車，不含小火車，小火車¥100/人）。位於塔里木胡楊保護區的核心部位，每年秋天便是金色的海洋，河水倒影，小火車穿梭，美輪美奐。胡楊林變金色約從10月12-15號開始。</div></div><div class="timeline-item"><div class="tl-time">17:30-22:30</div><div class="tl-desc">抵達龜茲古城—庫車市，前往網紅打卡地<strong>【熱斯坦街】【龜茲小巷】【門巴扎】</strong>—穿越千年的西域風情體驗，街道兩旁古民居林立，色彩斑斕的門扉上雕刻着精美的花紋，攝影愛好者天堂！</div></div><div class="timeline-item"><div class="tl-time">22:30</div><div class="tl-desc">入住酒店休息，自行享用晚餐。</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：南疆乾旱風沙大，做好防曬補水。沿途服務區間距長設施較差。</div></div><div class="day-accommodation">🏨 <b>推介住宿</b><br><span class="ht" onclick="window.open('hotel-report.html#ht-kc-yc','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">怡程</span> <span class="ht" onclick="window.open('hotel-report.html#ht-kc-kc','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">庫車飯店</span> <span class="ht" onclick="window.open('hotel-report.html#ht-kc-kg','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">庫車國際</span> <span class="ht" onclick="window.open('hotel-report.html#ht-kc-wd','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">萬達悅華</span> <span class="ht" onclick="window.open('hotel-report.html#ht-kc-hy','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">華悅</span> <span class="ht" onclick="window.open('hotel-report.html#ht-kc-ld','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">麗都</span> <span class="ht" onclick="window.open('hotel-report.html#ht-kc-wc','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">萬宸凱徠</span><br><em>【四鑽】</em></div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('huyang.jpg');"><div class="day-banner-title">🚞 金秋輪臺 · 千年大漠生命奇蹟</div></div></div>
-        <div class="day-card" id="d5"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D5</span><span class="day-lbl">ADVENTURE</span><span class="day-date-raw">第 05 天</span></div><div class="day-info-col"><span class="day-jp-sub">赤い峽谷と絕景公路</span><h3 class="day-title">庫車 ➔ 克孜利亞 / 天山神祕大峽谷 (二選一) ➔ 139祕境胡楊公路 ➔ 阿拉爾 <small>【360KM·約7H】</small></h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>神祕的雅丹地貌大峽谷</div><div class="day-meal">🍽️ 用餐：酒店含早，中晚餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">08:30-09:30</div><div class="tl-desc">早餐開啟，吃飽肚子要去神祕的雅丹地貌大峽谷啦。</div></div><div class="timeline-item"><div class="tl-time">09:30-11:30</div><div class="tl-desc">驅車前往<strong>【克孜利亞大峽谷】/【天山神祕大峽谷】</strong>二選一，欣賞沿途戈壁風光。</div></div><div class="timeline-item"><div class="tl-time">11:30-14:30</div><div class="tl-desc"><strong>天山神祕大峽谷</strong>：位於庫車市北部72公里處217國道旁，縱深長約5.5公里，紅褐色岩石經風雕雨刻而成，中國最美十大峽谷之一！<strong>克孜利亞大峽谷</strong>：維語意爲"紅色懸崖"，紅褐色巨大山體羣組成，中國最美十大峽谷之一！</div></div><div class="timeline-item"><div class="tl-time">15:30-20:00</div><div class="tl-desc">穿越<strong>【139祕境胡楊公路】</strong>—全長139公里，沿塔里木河流域，橫跨3座大橋，串聯星星湖、帕滿湖、月亮灣、塔河古渡口、沙雁洲、魔鬼林、塔河外灘等9個典型胡楊沙漠綜合景觀。金秋時節萬畝原始胡楊林層林盡染！</div></div><div class="timeline-item"><div class="tl-time">20:00</div><div class="tl-desc">前往酒店辦理入住。</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：做好防曬。如遇暴雨立即撤退景區。大峽谷穿鮮豔衣服拍照更好看，腳上<span class="pdf-red">不要</span>穿涼鞋。</div></div><div class="day-accommodation">🏨 <b>推介住宿</b><br><span class="ht" onclick="window.open('hotel-report.html#ht-al-gl','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">格林東方</span> <span class="ht" onclick="window.open('hotel-report.html#ht-al-lx','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">蘭祥</span> <span class="ht" onclick="window.open('hotel-report.html#ht-al-bm','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">柏曼</span> <span class="ht" onclick="window.open('hotel-report.html#ht-al-wy','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">維也納</span> <span class="ht" onclick="window.open('hotel-report.html#ht-al-sz','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">沙棗花香</span> <span class="ht" onclick="window.open('hotel-report.html#ht-al-th','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">塔河陽光</span> <span class="ht" onclick="window.open('hotel-report.html#ht-al-yy','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">亞悅</span><br><em>【舒適】</em></div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('xiagu.jpg');"><div class="day-banner-title">🌋 天山奇觀 · 赤紅峽谷的壯美斧鑿</div></div></div>
-        <div class="day-card" id="d6"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D6</span><span class="day-lbl">DESERT</span><span class="day-date-raw">第 06 天</span></div><div class="day-info-col"><span class="day-jp-sub">砂漠公路と夜の古都</span><h3 class="day-title">阿拉爾 ➔ 沙漠公路 ➔ 翡翠湖 ➔ 約特幹故城 ➔ 和田 <small>【440KM·約6H】</small></h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>穿越沙漠公路</div><div class="day-meal">🍽️ 用餐：酒店含早，中晚餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">08:30-09:00</div><div class="tl-desc">酒店自由享用早餐。</div></div><div class="timeline-item"><div class="tl-time">09:00-16:00</div><div class="tl-desc">在世界上最大的<strong>【塔克拉瑪干大沙漠】</strong>馳騁，穿越被稱爲"死亡之海"的世界第二大沙漠。沒有荒涼的人生，只有荒涼的沙漠，奇蹟般的沙漠公路，千里瀚海，沙漠、沙丘、胡楊、紅柳，令人讚歎。</div></div><div class="timeline-item"><div class="tl-time">16:00-17:30</div><div class="tl-desc">遊玩<strong>【翡翠湖】</strong>—崑崙山冰雪融水彙集成湖，湖水富含礦物質，陽光照射下呈現淺綠到深碧的層次色彩，宛如鑲嵌金色沙海中的翡翠。每年秋季10月左右湖水碧綠、胡楊金黃，是最佳觀賞期，當地居民稱其爲"天賜的短暫奇蹟"。</div></div><div class="timeline-item"><div class="tl-time">17:30-19:00</div><div class="tl-desc">前往<strong>【約特幹故城】</strong>（含日間演藝票78元/人，晚19點之前進入無需補差價，夜間票168元/人，過了時間補差價哦，若放棄此景點，退還78元/人的門票費用），晚19點之前進入無需補差價，夜間票¥168/人，過了時間補差價。若放棄此景點，退還¥78/人的門票費用）。欣賞中國古代文化藝術魅力，感受絲綢之路的歷史文化。</div></div><div class="timeline-item"><div class="tl-time">20:00</div><div class="tl-desc">可自行前往<strong>【和田夜市】</strong>或返回酒店休息。</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：今日車程較長，建議攜帶頭枕眼罩，如有暈車請自備暈車藥。南疆氣候乾旱多敷面膜多喝水。午餐在沙漠公路中途服務區簡餐，建議提前準備。</div></div><div class="day-accommodation">🏨 <b>推介住宿</b><br><span class="ht" onclick="window.open('hotel-report.html#ht-ht-yx','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">銀星麗呈</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ht-yd','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">亞朵</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ht-jy','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">金鷹國際</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ht-mj','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">美居</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ht-jj','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">錦江都城</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ht-gy','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">國玉</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ht-tw','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">天王</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ht-lo','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">蘭歐</span><br><em>【四鑽】</em></div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('desert.jpg');"><div class="day-banner-title">🐫 沙海奇蹟 · 浩瀚大漠邊緣的璀璨夜色</div></div></div>
-        <div class="day-card" id="d7"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D7</span><span class="day-lbl">CULTURE</span><span class="day-date-raw">第 07 天</span></div><div class="day-info-col"><span class="day-jp-sub">異國情緒のカシュガル</span><h3 class="day-title">和田 ➔ 澤普金胡楊 / 莎車老茶館 / 喀什古城 (三選一) ➔ 喀什 <small>【520KM·約6H】</small></h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>三選一自由規劃</div><div class="day-meal">🍽️ 用餐：酒店含早，中晚餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">09:30-16:00</div><div class="tl-desc">驅車前往<strong>【澤普金胡楊林】/【莎車王陵+莎車老茶館】/喀什古城自由行（三選一）</strong>。溫馨建議：1.如果返程機票離開喀什比較早，建議今天直接前往喀什古城遊玩。2.如果胡楊林已經視覺疲勞，可以放棄澤普胡楊林，選擇莎車或直接前往喀什古城。</div></div><div class="timeline-item"><div class="tl-time">16:00-20:00</div><div class="tl-desc">抵達喀什，入住後自由活動。可選擇遊覽<strong>【喀什古城】</strong>—老城是維吾爾民族文化保留最完整的地方，街巷縱橫交錯，佈局靈活多變，曲徑通幽，民居大多爲土木、磚木結構，不少傳統民居已有上百年曆史。晚餐自行前往<strong>【喀什夜市】</strong>：烤鴿子、面肺子、烤包子、椒麻雞、特色烤肉、手工冰激凌等，還有當地人載歌載舞，熱鬧非凡。</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：今日路程較長建議自備乾糧。<span class="pdf-red">不要</span>直對人臉拍攝，當地人會覺得不禮貌。喀什夜市美食價格平民。</div></div><div class="day-accommodation">🏨 <b>推介住宿</b><br><span class="ht" onclick="window.open('hotel-report.html#ht-ks-qn','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">其尼瓦克</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ks-mh','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">美豪麗致</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ks-ly','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">朗譽</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ks-bm','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">柏曼</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ks-wy','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">維也納</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ks-gl','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">格林東方</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ks-jj','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">錦江都城</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ks-lb','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">麗柏</span><br><em>【四鑽】· 連宿第1晚</em></div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('kashgar.jpg');"><div class="day-banner-title">🏯 喀什老城 · 穿梭於生土與磚木的百年光影</div></div></div>
-        <div class="day-card" id="d8"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D8</span><span class="day-lbl">PLATEAU</span><span class="day-date-raw">第 08 天</span></div><div class="day-info-col"><span class="day-jp-sub">パミール高原の瞳</span><h3 class="day-title">喀什 ➔ 喀喇崑崙公路 ➔ 白沙湖全景 ➔ 木吉火山口 ➔ 喀拉庫勒湖 ➔ 塔縣 <small>【425KM·約8H】</small></h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>探祕帕米爾</div><div class="day-meal">🍽️ 用餐：酒店含早，中晚餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">09:00-10:30</div><div class="tl-desc">前往<strong>【帕米爾高原】</strong>，平坦的中巴友誼公路連接高原，從喀什一路攀升。帕米爾在塔吉克語中意思是"世界屋脊"，今日<span class="pdf-red">不要</span>奔跑跳躍等劇烈運動，以免高原反應。著名電影《冰山上的來客》拍攝地。</div></div><div class="timeline-item"><div class="tl-time">12:30-13:30</div><div class="tl-desc">自行享用午餐後前往<strong>【白沙湖南岸+北岸】</strong>—碧藍湖水+潔白沙子+皚皚雪山，白沙湖兩側遙遙矗立着公格爾九別峯。一湖隔兩岸，兩岸風景各不相同。</div></div><div class="timeline-item"><div class="tl-time">13:30-15:00</div><div class="tl-desc">抵達<strong>【木吉火山口】</strong>—全名喀日鐵米爾火山羣，被稱爲"帕米爾之眼"，大大小小數十個零散分佈的休眠火山口，非常壯觀。遠觀昆蓋山<strong>【十八羅漢峯】</strong>，一字排開終年積雪不化，雪山連綿起伏數百公里。</div></div><div class="timeline-item"><div class="tl-time">17:30-20:30</div><div class="tl-desc">乘車遊覽<strong>【喀拉庫勒湖】</strong>，俯看寬廣波瀾湖水顏色變幻。高大的慕士塔格峯、公格爾峯、公格爾九別峯等終年不化的雪山將湖緊緊環抱。天氣晴朗之日，水面映襯着連成片的雪山，高原獨有的靜謐純潔。</div></div><div class="timeline-item"><div class="tl-time">20:30-21:30</div><div class="tl-desc">到達塔縣入住酒店。<strong>【巴鐵集市】</strong>作爲可選項，根據體力決定是否前往。</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：喀什到塔縣爲山路，沿途限速60/小時，請理解<span class="pdf-red">不要</span>催促司機。海拔最高達4000米，<span class="pdf-red">不要</span>奔跑跳躍、<span class="pdf-red">不要</span>飲酒。塔縣晚上很冷，注意保暖，當晚<span class="pdf-red">不建議</span>洗澡。喀拉庫裏湖沿途設有檢查站，<span class="pdf-red">禁止</span>拍照。</div></div><div class="day-accommodation">🏨 <b>推介住宿</b><br><span class="ht" onclick="window.open('hotel-report.html#ht-tx-gy','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">高原明珠</span> <span class="ht" onclick="window.open('hotel-report.html#ht-tx-ol','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">歐羅巴</span> <span class="ht" onclick="window.open('hotel-report.html#ht-tx-yz','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">雲之彼端</span> <span class="ht" onclick="window.open('hotel-report.html#ht-tx-qh','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">前海</span> <span class="ht" onclick="window.open('hotel-report.html#ht-tx-ms','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">慕士塔格冰川</span> <span class="ht" onclick="window.open('hotel-report.html#ht-tx-qg','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">喬戈裏</span> <span class="ht" onclick="window.open('hotel-report.html#ht-tx-yb','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">迎賓館</span><br><em>【舒適】· 連宿第1晚</em></div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('baisha.jpg');"><div class="day-banner-title">❄️ 帕米爾之眼 · 白砂藍湖畔的萬年沉寂</div></div></div>
-        <div class="day-card" id="d9"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D9</span><span class="day-lbl">ROYAL</span><span class="day-date-raw">第 09 天</span></div><div class="day-info-col"><span class="day-jp-sub">天空の道 · タジクの暮らし</span><h3 class="day-title">塔縣 ➔ 紅其拉甫國門 ➔ 盤龍古道 ➔ 班迪爾藍湖 ➔ 塔吉克家訪 <small>【330KM·約7H】</small></h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>今天走過了所有彎路，從此人生盡是坦途</div><div class="day-meal">🍽️ 用餐：酒店含早，中晚餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">09:00-12:30</div><div class="tl-desc">前往<strong>【紅其拉甫口岸/國門】</strong>（如遇惡劣天氣國門不開，退門票）。這是中巴友誼公路國內段終點，對面就是"巴鐵"巴基斯坦，是世界上海拔最高的口岸，絲綢之路上重要關卡，也是中巴經濟走廊重要口岸。</div></div><div class="timeline-item"><div class="tl-time">12:30-14:00</div><div class="tl-desc">前往<strong>【瓦罕走廊起點】</strong>—瓦罕走廊又稱阿富汗走廊，歷史上曾爲中國領土，是古絲綢之路一部分，也是華夏文明與印度文明交流的重要通道。東晉高僧法顯、大唐高僧玄奘都曾經過這裏去印度研究佛法。</div></div><div class="timeline-item"><div class="tl-time">14:30-18:30</div><div class="tl-desc">前往<strong>【盤龍古道】</strong>（天氣原因未開放則取消，無退費）—位於塔縣瓦恰鄉境內，當地叫瓦恰公路，全部盤山公路超過600個彎道全長75公里，海拔約4100米。黑色公路與土色山體的完美配合，加上遠處連綿的雪山，只屬於帕米爾高原。<strong>今日走過人生所有的彎路，從此人生盡是坦途。</strong>返回路上看到<strong>【班迪爾藍湖】</strong>（又叫下坂地水庫），五個相連的湖泊，被稱爲"最藍的湖"。</div></div><div class="timeline-item"><div class="tl-time">18:30-19:30</div><div class="tl-desc"><strong>【贈送塔吉克族家訪】</strong>—高質量家訪體驗：塔吉克族文化講解、品嚐美食、歌舞互動、換裝體驗，杜絕走馬觀花！</div></div><div class="timeline-item"><div class="tl-time">19:30-21:30</div><div class="tl-desc">前往<strong>【托格倫夏村】</strong>—位於塔什庫爾干鄉，距塔縣車程15分鐘，塔吉克族聚居村落，被雪山環抱，塔什庫爾幹河穿流而過，草甸、溼地、沙棘連成片，視野開闊。</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：早晚溫差大，注意保暖。海拔最高達4000米，<span class="pdf-red">不要</span>奔跑跳躍、<span class="pdf-red">不要</span>飲酒。塔縣晚上很冷，當晚<span class="pdf-red">不建議</span>洗澡。塔吉克人民純樸好客，拍攝先徵得同意。盤龍古道彎道多，容易暈車建議備暈車藥。若不通車則繞行班迪爾藍湖。</div></div><div class="day-accommodation">🏨 <b>推介住宿</b><br><span class="ht" onclick="window.open('hotel-report.html#ht-tx-gy','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">高原明珠</span> <span class="ht" onclick="window.open('hotel-report.html#ht-tx-ol','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">歐羅巴</span> <span class="ht" onclick="window.open('hotel-report.html#ht-tx-yz','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">雲之彼端</span> <span class="ht" onclick="window.open('hotel-report.html#ht-tx-qh','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">前海</span> <span class="ht" onclick="window.open('hotel-report.html#ht-tx-ms','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">慕士塔格冰川</span> <span class="ht" onclick="window.open('hotel-report.html#ht-tx-qg','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">喬戈裏</span> <span class="ht" onclick="window.open('hotel-report.html#ht-tx-yb','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">迎賓館</span><br><em>【舒適】· 連宿第2晚</em></div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('panlong.jpg');"><div class="day-banner-title">🐉 盤龍古道 · 六百道迴旋金光光軌</div></div></div>
-        <div class="day-card" id="d10"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D10</span><span class="day-lbl">GLACIER</span><span class="day-date-raw">第 10 天</span></div><div class="day-info-col"><span class="day-jp-sub">氷山の王と雪柳のトンネル</span><h3 class="day-title">塔縣 ➔ 塔合曼溼地 ➔ 樹洞公路 ➔ 慕士塔格冰川公園 ➔ 喀什 <small>【310KM·約7H】</small></h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>冰川之旅</div><div class="day-meal">🍽️ 用餐：酒店含早，中晚餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">08:30-09:00</div><div class="tl-desc">酒店享用暖心早餐，開始精彩旅程。</div></div><div class="timeline-item"><div class="tl-time">09:00-12:00</div><div class="tl-desc">前往<strong>【塔合曼溼地】</strong>—塔什庫爾幹最大的盆地和草地，"塔合曼"塔吉克語意爲"四面環山"，無數冰川雪山溪流匯到盆地，形成九曲蜿蜒的塔合曼河。之後遊覽網紅<strong>【雪柳樹洞公路】</strong>，以樹洞爲背景拍照，定是隨時都歡喜。</div></div><div class="timeline-item"><div class="tl-time">12:30-15:30</div><div class="tl-desc">遊覽<strong>【慕士塔格冰川公園】</strong>（海拔4,668米，天氣原因未開放則取消退門票）。位於世界著名的"冰山之父"、7,546米的慕士塔格峯裙帶之下，可看到雄偉的冰川、秀麗的冰舌，還有冰塔、冰洞等多姿多彩的壯美景觀。</div></div><div class="timeline-item"><div class="tl-time">15:30-18:00</div><div class="tl-desc">沿途午餐後前往<strong>【奧依塔克紅山谷】</strong>—帕米爾公路上極具辨識度的赤紅峽谷地貌。</div></div><div class="timeline-item"><div class="tl-time">20:00-21:00</div><div class="tl-desc">入住喀什酒店後自由活動，可自行前往著名的喀什夜市，讓各種美食來滿足你的味蕾！</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：早晚溫差大注意保暖。<span class="pdf-red">不要</span>直對人臉拍攝。冰川<span class="pdf-red">限制</span>70歲以上入內，遇雨雪閉園退門票。</div></div><div class="day-accommodation">🏨 <b>推介住宿</b><br><span class="ht" onclick="window.open('hotel-report.html#ht-ks-qn','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">其尼瓦克</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ks-mh','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">美豪麗致</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ks-ly','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">朗譽</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ks-bm','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">柏曼</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ks-wy','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">維也納</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ks-gl','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">格林東方</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ks-jj','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">錦江都城</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ks-lb','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">麗柏</span><br><em>【四鑽】· 連宿第1晚</em></div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('glacier.jpg');"><div class="day-banner-title">🏔️ 冰山之父 · 慕士塔格晶瑩剔透之美</div></div></div>
-        <div class="day-card" id="d11"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D11</span><span class="day-lbl">WEST</span><span class="day-date-raw">第 11 天</span></div><div class="day-info-col"><span class="day-jp-sub">中國最西端の落日</span><h3 class="day-title">喀什 ➔ 天山崑崙山交匯 ➔ 斯姆哈納村 (中國西極) ➔ 喀什 <small>【480KM·約8H】</small></h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>中國最後一縷陽光 · 中國西極</div><div class="day-meal">🍽️ 用餐：酒店含早，中晚餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">09:00-11:30</div><div class="tl-desc">乘車前往<strong>【中國西極】</strong>，沿途各種七彩地貌，雪山、草甸、牛羊，風景非常美麗。途徑<strong>【七彩雅丹地貌】</strong>—色彩分明，是億萬年地質變遷所賦予的自然外貌，屬全國少見山地景觀，會在雅丹羣安排茶歇不錯過每一個美景與心情的邂逅。</div></div><div class="timeline-item"><div class="tl-time">11:30-12:30</div><div class="tl-desc"><strong>【兩山交匯之處】</strong>—天山與崑崙山兩個山系本是遙遙相望，大自然讓兩山在烏恰縣的烏魯克恰提鄉來了一次親密握手，締造了一處絕無僅有的世界奇觀。天山山脈呈駝色，崑崙山山脈呈黛色，站在交匯處細細品味每片山脊的不同形態和顏色，感受兩山交匯的無窮魅力。</div></div><div class="timeline-item"><div class="tl-time">14:30-15:30</div><div class="tl-desc"><strong>【斯姆哈納村】</strong>—北漠河西烏恰，中國的西極，中國最西邊的一個村，鄰國吉爾吉斯斯坦。這裏也是西邊日落最晚的村落，被稱爲"太陽的家"。最長的日光時間在這裏停留，山巔籠罩，雄渾壯美，他每日送別着神州大地最後一縷陽光。</div></div><div class="timeline-item"><div class="tl-time">15:30-19:30</div><div class="tl-desc">遊覽結束後乘車返回喀什結束行程。</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：今日路程較長，西極屬於偏遠落後地區，餐廳不多，建議自備乾糧。西極海拔較高，請做好防曬，根據自身體力和身體情況決定是否登西極石碑。</div></div><div class="day-accommodation">🏨 <b>推介住宿</b><br><span class="ht" onclick="window.open('hotel-report.html#ht-ks-qn','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">其尼瓦克</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ks-mh','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">美豪麗致</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ks-ly','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">朗譽</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ks-bm','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">柏曼</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ks-wy','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">維也納</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ks-gl','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">格林東方</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ks-jj','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">錦江都城</span> <span class="ht" onclick="window.open('hotel-report.html#ht-ks-lb','_blank')" style="cursor:pointer;text-decoration:underline" title="點擊查看詳細評價和價格">麗柏</span><br><em>【四鑽】· 連宿第2晚</em></div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('westpole.jpg');"><div class="day-banner-title">☀️ 中國西極 · 留住太陽的最後一抹溫柔</div></div></div>
+        <div class="day-card" id="d1"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D1</span><span class="day-lbl">ARRIVE</span><span class="day-date-raw">第 01 天</span></div><div class="day-info-col"><span class="day-jp-sub">ウルムチ到着 · 接機</span><h3 class="day-title">出發地 ✈️ 烏魯木齊 (24H 接機)</h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>烏市初體驗</div><div class="day-meal">🍽️ 用餐：三餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">全天</div><div class="tl-desc">歡迎來到大美新疆！接機後送您入住酒店休息，然後自由活動，如時間允許您可自行前往推薦景點參觀遊覽（不含單獨用車）。次日出發時間司機和管家會發信息或電話告知，請您注意查收。</div></div><div class="timeline-item"><div class="tl-time">—</div><div class="tl-desc">自由活動推薦：<strong>【自治區博物館】</strong>（免費·需提前一天預約·營業時間10:30-18:00·週一閉館·憑身份證安檢入內）感懷西域歷史的滄桑變化。</div></div><div class="timeline-item"><div class="tl-time">—</div><div class="tl-desc">也可自行前往<strong>【二道橋國際大巴扎】</strong>體驗濃郁的新疆維吾爾族風情，晚上找一家新疆特色餐廳，品嚐地道的新疆美食，做個地道的吃貨！</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：<strong>重要：</strong>前往塔縣需要邊防通行證。外籍人員需前往喀什辦理，其餘持身份證件或者港澳通行證者，均可手機辦理電子版。邊防通行證須寫明前往地點：新疆維吾爾自治區喀什地區塔什庫爾幹縣，克孜勒蘇柯爾克孜自治州。<span class="pdf-highlight">16歲以下不支持線上辦理</span>，需帶身份證/戶口本/出生證明。新疆酒店入住時間一般在14:00以後，如提前到達可能發生等候。</div></div><div class="day-accommodation">
+      <div class="hd-section-title">🏨 推介住宿 <em>【四鑽】</em></div>
+      <div class="hd-grid"><div class="hd-card">
+      <div class="hd-top"><span class="hd-name">新旅逸格</span><span class="hd-price">¥300-500</span></div>
+      <div class="hd-mid"><span class="hd-trip">Trip 9.5</span></div>
+      <div class="hd-review">近紅山公園·CCMALL時代廣場，房型升級，裝修簡約大氣</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=烏魯木齊+新旅逸格','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=烏魯木齊+新旅逸格','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=烏魯木齊+新旅逸格','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">麗怡</span><span class="hd-price">¥250-450</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.6</span><span class="hd-trip">Trip 9.3</span></div>
+      <div class="hd-review">2024年開業，設施較新，近美美購物中心及自治區博物館</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=烏魯木齊+麗怡','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=烏魯木齊+麗怡','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=烏魯木齊+麗怡','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">蘋果</span><span class="hd-price">¥200-350</span></div>
+      <div class="hd-mid"></div>
+      <div class="hd-review">近國際大巴扎·和田二街，位置方便，提供周邊美食購物小卡片</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=烏魯木齊+蘋果','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=烏魯木齊+蘋果','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=烏魯木齊+蘋果','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">東方王朝</span><span class="hd-price">¥720起</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.7</span><span class="hd-trip">Trip 9.1</span></div>
+      <div class="hd-review">近國際大巴扎，專用停車場，房間寬敞結構合理</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=烏魯木齊+東方王朝','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=烏魯木齊+東方王朝','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=烏魯木齊+東方王朝','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">桔子水晶</span><span class="hd-price">¥180-350</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.8</span><span class="hd-trip">Trip 9.7</span></div>
+      <div class="hd-review">🥇性價比極高！四鑽評級五鑽水準，早餐豐富有特色，服務熱情</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=烏魯木齊+桔子水晶','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=烏魯木齊+桔子水晶','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=烏魯木齊+桔子水晶','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">百世昌龍泉</span><span class="hd-price">¥200-350</span></div>
+      <div class="hd-mid"><span class="hd-trip">Trip 9.4</span></div>
+      <div class="hd-review">2174則評價口碑穩，健身房+會議室，全樓高速WiFi覆蓋</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=烏魯木齊+百世昌龍泉','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=烏魯木齊+百世昌龍泉','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=烏魯木齊+百世昌龍泉','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">百世昌歡居</span><span class="hd-price">¥200-350</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.6</span><span class="hd-trip">Trip 9.3</span></div>
+      <div class="hd-review">2024開業，近自治區博物館和紅山公園，位置便利</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=烏魯木齊+百世昌歡居','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=烏魯木齊+百世昌歡居','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=烏魯木齊+百世昌歡居','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">恆裕</span><span class="hd-price">¥200-400</span></div>
+      <div class="hd-mid"><span class="hd-trip">Trip 9.3</span></div>
+      <div class="hd-review">2436則評價，近德滙萬達廣場，生活機能便利</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=烏魯木齊+恆裕','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=烏魯木齊+恆裕','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=烏魯木齊+恆裕','_blank')">🟢 Trip</span>
+      </div></div></div>
+    </div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('bazaar.jpg');"><div class="day-banner-title">🕌 西域大巴扎 · 體驗熱情民族風情</div></div></div>
+        <div class="day-card" id="d2"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D2</span><span class="day-lbl">TRAVEL</span><span class="day-date-raw">第 02 天</span></div><div class="day-info-col"><span class="day-jp-sub">天山を越える砂漠の海</span><h3 class="day-title">烏魯木齊 ➔ 烏尉高速 ➔ 天山勝利隧道 ➔ 博斯騰湖 (白鷺洲) ➔ 庫爾勒 <small>【380KM·約5H】</small></h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>中國最大的內陸淡水湖～博斯騰湖</div><div class="day-meal">🍽️ 用餐：酒店含早，中晚餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">08:00-09:00</div><div class="tl-desc">司機小哥按遠近順序依次接駕，交友小團純玩之旅馬上開啟~</div></div><div class="timeline-item"><div class="tl-time">09:00-14:00</div><div class="tl-desc">離開烏魯木齊一路向南，穿過<strong>烏尉高速·天山勝利隧道</strong>，到達南疆。</div></div><div class="timeline-item"><div class="tl-time">14:00-15:00</div><div class="tl-desc">沿途合適地點自行用午餐，推薦拌麪、抓飯等新疆風味簡餐。</div></div><div class="timeline-item"><div class="tl-time">15:00-19:30</div><div class="tl-desc">遊覽<strong>【博斯騰湖】白鷺洲景區</strong>—沙漠與湖水共存，紅柳與胡楊同生；白鷺與沙鷗起飛，藍天共湖光一色。碧水，黃沙，藍天，紅柳，胡楊，羊羣，漁帆，遊船，大自然呈現出氣象萬千生機勃勃的景象。</div></div><div class="timeline-item"><div class="tl-time">19:30-20:30</div><div class="tl-desc">乘車前往香梨的家鄉—庫爾勒市，入住酒店休息。建議晚間自行前往孔雀河散步。</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：今日行車距離較長，建議準備小零食。旅遊車輛全程GPS監控，行駛4小時<span class="pdf-red">必須</span>停車休息20分鐘。</div></div><div class="day-accommodation">
+      <div class="hd-section-title">🏨 推介住宿 <em>【四鑽】· 連宿第1晚</em></div>
+      <div class="hd-grid"><div class="hd-card">
+      <div class="hd-top"><span class="hd-name">博斯騰賓館</span><span class="hd-price">¥600+</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.8</span></div>
+      <div class="hd-review">🥇老牌口碑！2221評價，孔雀河畔，早餐豐富，現煮小面特別推薦</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=庫爾勒+博斯騰賓館','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=庫爾勒+博斯騰賓館','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=庫爾勒+博斯騰賓館','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">申舍</span><span class="hd-price">¥80-150</span></div>
+      <div class="hd-mid"><span class="hd-trip">Trip 9.6</span></div>
+      <div class="hd-review">超值之選！近火車站+巴州博物館，性價比極高</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=庫爾勒+申舍','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=庫爾勒+申舍','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=庫爾勒+申舍','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">艾尚</span><span class="hd-price">¥310起</span></div>
+      <div class="hd-mid"><span class="hd-trip">Trip 9.7</span></div>
+      <div class="hd-review">🥇評分最高！服務口碑極好，TripAdvisor亦有收錄</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=庫爾勒+艾尚','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=庫爾勒+艾尚','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=庫爾勒+艾尚','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">半城百麗·梨城</span><span class="hd-price">¥180-210</span></div>
+      <div class="hd-mid"><span class="hd-trip">Trip 9.7</span></div>
+      <div class="hd-review">高CP值，371則評價，平台上實際名稱為「庫爾勒百麗·梨城酒店」</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=庫爾勒+半城百麗·梨城','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=庫爾勒+半城百麗·梨城','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=庫爾勒+半城百麗·梨城','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">摩登四季</span><span class="hd-price">¥195起</span></div>
+      <div class="hd-mid"><span class="hd-trip">Trip 9.4</span></div>
+      <div class="hd-review">智能語音系統控制窗簾燈光電視空調，1405則評價</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=庫爾勒+摩登四季','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=庫爾勒+摩登四季','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=庫爾勒+摩登四季','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">希岸</span><span class="hd-price">¥100-150</span></div>
+      <div class="hd-mid"><span class="hd-trip">Trip 9.4</span></div>
+      <div class="hd-review">品牌連鎖，OTA服務點評分持續保持4.9分</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=庫爾勒+希岸','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=庫爾勒+希岸','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=庫爾勒+希岸','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">璞居</span><span class="hd-price">¥130-200</span></div>
+      <div class="hd-mid"><span class="hd-trip">Trip 9.4</span></div>
+      <div class="hd-review">天鵝湖景區核心地段，環境優美，早餐¥38/份自助餐</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=庫爾勒+璞居','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=庫爾勒+璞居','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=庫爾勒+璞居','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">瑞德雪蓮</span><span class="hd-price">¥210起</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.8</span><span class="hd-trip">Trip 9.6</span></div>
+      <div class="hd-review">2026年新開業設施最新！歡迎寵物入住（貓狗免費）</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=庫爾勒+瑞德雪蓮','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=庫爾勒+瑞德雪蓮','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=庫爾勒+瑞德雪蓮','_blank')">🟢 Trip</span>
+      </div></div></div>
+    </div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('bosten.jpg');"><div class="day-banner-title">🦢 白鷺戲水 · 沙沙共舞碧海</div></div></div>
+        <div class="day-card" id="d3"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D3</span><span class="day-lbl">EXPLORE</span><span class="day-date-raw">第 03 天</span></div><div class="day-info-col"><span class="day-jp-sub">ロプ人の砂漠祕境</span><h3 class="day-title">庫爾勒 ➔ 羅布人村寨 / 塔塔祕境 / 葫蘆島 (三選一) ➔ 庫爾勒 <small>【300KM·約5H】</small></h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>大漠風光</div><div class="day-meal">🍽️ 用餐：酒店含早，中晚餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">08:00-09:00</div><div class="tl-desc">酒店享用早餐，開始今天精彩的旅程。</div></div><div class="timeline-item"><div class="tl-time">10:00-18:00</div><div class="tl-desc"><strong>【羅布人村寨】/【塔塔祕境】/【葫蘆島景區】三選一。</strong>塔塔祕境含門票+區間車（不含遊船），隱匿於世的羅布湖，宛如一顆藍寶石鑲嵌在塔克拉瑪干沙漠之中，河流與湖泊交織，沙漠與胡楊林相映成趣。羅布人村寨集沙漠、胡楊、河流、湖泊於一體，羅布人不種五穀，不牧牲畜，唯以小舟捕魚爲食。葫蘆島胡楊林—超小衆水上胡楊，深秋時節沙漠中的胡楊樹全部染黃，宛如大漠桃源仙境。</div></div><div class="timeline-item"><div class="tl-time">18:00-20:00</div><div class="tl-desc">遊玩結束後前往酒店入住。</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：夏季蚊蟲多，做好防蚊蟲準備。景區均不含遊船、騎駱駝等項目，費用自理。南疆乾旱風沙大，做好防曬補水。</div></div><div class="day-accommodation">
+      <div class="hd-section-title">🏨 推介住宿 <em>【四鑽】· 連宿第2晚</em></div>
+      <div class="hd-grid"><div class="hd-card">
+      <div class="hd-top"><span class="hd-name">博斯騰賓館</span><span class="hd-price">¥600+</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.8</span></div>
+      <div class="hd-review">🥇老牌口碑！2221評價，孔雀河畔，早餐豐富，現煮小面特別推薦</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=庫爾勒+博斯騰賓館','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=庫爾勒+博斯騰賓館','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=庫爾勒+博斯騰賓館','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">申舍</span><span class="hd-price">¥80-150</span></div>
+      <div class="hd-mid"><span class="hd-trip">Trip 9.6</span></div>
+      <div class="hd-review">超值之選！近火車站+巴州博物館，性價比極高</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=庫爾勒+申舍','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=庫爾勒+申舍','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=庫爾勒+申舍','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">艾尚</span><span class="hd-price">¥310起</span></div>
+      <div class="hd-mid"><span class="hd-trip">Trip 9.7</span></div>
+      <div class="hd-review">🥇評分最高！服務口碑極好，TripAdvisor亦有收錄</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=庫爾勒+艾尚','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=庫爾勒+艾尚','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=庫爾勒+艾尚','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">半城百麗·梨城</span><span class="hd-price">¥180-210</span></div>
+      <div class="hd-mid"><span class="hd-trip">Trip 9.7</span></div>
+      <div class="hd-review">高CP值，371則評價，平台上實際名稱為「庫爾勒百麗·梨城酒店」</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=庫爾勒+半城百麗·梨城','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=庫爾勒+半城百麗·梨城','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=庫爾勒+半城百麗·梨城','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">摩登四季</span><span class="hd-price">¥195起</span></div>
+      <div class="hd-mid"><span class="hd-trip">Trip 9.4</span></div>
+      <div class="hd-review">智能語音系統控制窗簾燈光電視空調，1405則評價</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=庫爾勒+摩登四季','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=庫爾勒+摩登四季','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=庫爾勒+摩登四季','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">希岸</span><span class="hd-price">¥100-150</span></div>
+      <div class="hd-mid"><span class="hd-trip">Trip 9.4</span></div>
+      <div class="hd-review">品牌連鎖，OTA服務點評分持續保持4.9分</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=庫爾勒+希岸','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=庫爾勒+希岸','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=庫爾勒+希岸','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">璞居</span><span class="hd-price">¥130-200</span></div>
+      <div class="hd-mid"><span class="hd-trip">Trip 9.4</span></div>
+      <div class="hd-review">天鵝湖景區核心地段，環境優美，早餐¥38/份自助餐</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=庫爾勒+璞居','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=庫爾勒+璞居','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=庫爾勒+璞居','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">瑞德雪蓮</span><span class="hd-price">¥210起</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.8</span><span class="hd-trip">Trip 9.6</span></div>
+      <div class="hd-review">2026年新開業設施最新！歡迎寵物入住（貓狗免費）</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=庫爾勒+瑞德雪蓮','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=庫爾勒+瑞德雪蓮','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=庫爾勒+瑞德雪蓮','_blank')">🟢 Trip</span>
+      </div></div></div>
+    </div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('tata.jpg');"><div class="day-banner-title">🛶 羅布木舟 · 浩瀚金黃大漠綠洲</div></div></div>
+        <div class="day-card" id="d4"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D4</span><span class="day-lbl">HISTORY</span><span class="day-date-raw">第 04 天</span></div><div class="day-info-col"><span class="day-jp-sub">黃金の海と亀茲古城</span><h3 class="day-title">庫爾勒 ➔ 輪臺塔里木胡楊林 ➔ 庫車 (熱斯坦街 / 龜茲小巷) <small>【390KM·約7H】</small></h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>不一樣的視覺衝擊</div><div class="day-meal">🍽️ 用餐：酒店含早，中晚餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">08:00-09:00</div><div class="tl-desc">酒店自由享用早餐，餐後退房出發。</div></div><div class="timeline-item"><div class="tl-time">09:00-12:30</div><div class="tl-desc">如玄奘取經一般一路向西，右手是天山南坡，左手是塔里木盆地的北延，路過村莊、農場、城鎮前往<strong>【輪臺胡楊林】</strong>。</div></div><div class="timeline-item"><div class="tl-time">13:30-17:30</div><div class="tl-desc">遊覽<strong>【輪臺塔里木胡楊林】</strong>（含門票+區間車，不含小火車，小火車¥100/人）。位於塔里木胡楊保護區的核心部位，每年秋天便是金色的海洋，河水倒影，小火車穿梭，美輪美奐。胡楊林變金色約從10月12-15號開始。</div></div><div class="timeline-item"><div class="tl-time">17:30-22:30</div><div class="tl-desc">抵達龜茲古城—庫車市，前往網紅打卡地<strong>【熱斯坦街】【龜茲小巷】【門巴扎】</strong>—穿越千年的西域風情體驗，街道兩旁古民居林立，色彩斑斕的門扉上雕刻着精美的花紋，攝影愛好者天堂！</div></div><div class="timeline-item"><div class="tl-time">22:30</div><div class="tl-desc">入住酒店休息，自行享用晚餐。</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：南疆乾旱風沙大，做好防曬補水。沿途服務區間距長設施較差。</div></div><div class="day-accommodation">
+      <div class="hd-section-title">🏨 推介住宿 <em>【四鑽】</em></div>
+      <div class="hd-grid"><div class="hd-card">
+      <div class="hd-top"><span class="hd-name">怡程</span><span class="hd-price">¥240起</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.8</span><span class="hd-trip">Trip 9.6</span></div>
+      <div class="hd-review">🥇雙平台高分！庫車評分最高酒店之一，設施完善口碑優秀</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=庫車+怡程','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=庫車+怡程','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=庫車+怡程','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">庫車飯店</span><span class="hd-price">¥110-250</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.7</span><span class="hd-trip">Trip 9.4</span></div>
+      <div class="hd-review">分ABC座，A座最佳。大堂氣派華麗，早餐不錯</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=庫車+庫車飯店','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=庫車+庫車飯店','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=庫車+庫車飯店','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card hd-warn">
+      <div class="hd-top"><span class="hd-name">庫車國際</span><span class="hd-price">¥145起</span></div>
+      <div class="hd-mid"><span class="hd-trip">Trip 9.3</span></div>
+      <div class="hd-review">⚠️部分評價反映設施陳舊、衛生欠佳，價格偏低但品質有爭議</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=庫車+庫車國際','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=庫車+庫車國際','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=庫車+庫車國際','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">萬達悅華</span><span class="hd-price">¥360起</span></div>
+      <div class="hd-mid"><span class="hd-trip">Trip 9.5</span></div>
+      <div class="hd-review">萬達品牌，1862則評價品質有保障，步行街核心地段</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=庫車+萬達悅華','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=庫車+萬達悅華','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=庫車+萬達悅華','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">華悅</span><span class="hd-price">¥240起</span></div>
+      <div class="hd-mid"><span class="hd-trip">Trip 9.3</span></div>
+      <div class="hd-review">設施新，有健身房洗衣房，前台熱情，早餐豐盛</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=庫車+華悅','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=庫車+華悅','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=庫車+華悅','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">麗都</span><span class="hd-price">¥250起</span></div>
+      <div class="hd-mid"><span class="hd-trip">Trip 9.6</span></div>
+      <div class="hd-review">🥇2049則評價！住客回頭率高，可升級套房，停車場大</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=庫車+麗都','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=庫車+麗都','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=庫車+麗都','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">萬宸凱徠</span><span class="hd-price">¥180-280</span></div>
+      <div class="hd-mid"><span class="hd-trip">Trip 9.8+</span></div>
+      <div class="hd-review">🔥性價比最高！房間極乾淨，免費升級房型，周邊吃飯選擇多</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=庫車+萬宸凱徠','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=庫車+萬宸凱徠','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=庫車+萬宸凱徠','_blank')">🟢 Trip</span>
+      </div></div></div>
+    </div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('huyang.jpg');"><div class="day-banner-title">🚞 金秋輪臺 · 千年大漠生命奇蹟</div></div></div>
+        <div class="day-card" id="d5"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D5</span><span class="day-lbl">ADVENTURE</span><span class="day-date-raw">第 05 天</span></div><div class="day-info-col"><span class="day-jp-sub">赤い峽谷と絕景公路</span><h3 class="day-title">庫車 ➔ 克孜利亞 / 天山神祕大峽谷 (二選一) ➔ 139祕境胡楊公路 ➔ 阿拉爾 <small>【360KM·約7H】</small></h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>神祕的雅丹地貌大峽谷</div><div class="day-meal">🍽️ 用餐：酒店含早，中晚餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">08:30-09:30</div><div class="tl-desc">早餐開啟，吃飽肚子要去神祕的雅丹地貌大峽谷啦。</div></div><div class="timeline-item"><div class="tl-time">09:30-11:30</div><div class="tl-desc">驅車前往<strong>【克孜利亞大峽谷】/【天山神祕大峽谷】</strong>二選一，欣賞沿途戈壁風光。</div></div><div class="timeline-item"><div class="tl-time">11:30-14:30</div><div class="tl-desc"><strong>天山神祕大峽谷</strong>：位於庫車市北部72公里處217國道旁，縱深長約5.5公里，紅褐色岩石經風雕雨刻而成，中國最美十大峽谷之一！<strong>克孜利亞大峽谷</strong>：維語意爲"紅色懸崖"，紅褐色巨大山體羣組成，中國最美十大峽谷之一！</div></div><div class="timeline-item"><div class="tl-time">15:30-20:00</div><div class="tl-desc">穿越<strong>【139祕境胡楊公路】</strong>—全長139公里，沿塔里木河流域，橫跨3座大橋，串聯星星湖、帕滿湖、月亮灣、塔河古渡口、沙雁洲、魔鬼林、塔河外灘等9個典型胡楊沙漠綜合景觀。金秋時節萬畝原始胡楊林層林盡染！</div></div><div class="timeline-item"><div class="tl-time">20:00</div><div class="tl-desc">前往酒店辦理入住。</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：做好防曬。如遇暴雨立即撤退景區。大峽谷穿鮮豔衣服拍照更好看，腳上<span class="pdf-red">不要</span>穿涼鞋。</div></div><div class="day-accommodation">
+      <div class="hd-section-title">🏨 推介住宿 <em>【舒適】</em></div>
+      <div class="hd-grid"><div class="hd-card">
+      <div class="hd-top"><span class="hd-name">格林東方</span><span class="hd-price">¥250-400</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.8</span><span class="hd-trip">Trip 9.7</span></div>
+      <div class="hd-review">🥇免費接送機！自助早餐到11點，機器人服務，688評價</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=阿拉爾+格林東方','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=阿拉爾+格林東方','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=阿拉爾+格林東方','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">蘭祥</span><span class="hd-price">¥250-400</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.8</span></div>
+      <div class="hd-review">1188評價，江河景房，贈水果酸奶，乒乓球室，停車場大</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=阿拉爾+蘭祥','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=阿拉爾+蘭祥','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=阿拉爾+蘭祥','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">柏曼</span><span class="hd-price">¥200-350</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.7</span></div>
+      <div class="hd-review">2024開業熱賣No.1，洗衣房+自助早餐+機器人服務</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=阿拉爾+柏曼','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=阿拉爾+柏曼','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=阿拉爾+柏曼','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">維也納</span><span class="hd-price">¥250-400</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.7</span></div>
+      <div class="hd-review">2025開業，智能客控，免費接送機，免費迷你吧</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=阿拉爾+維也納','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=阿拉爾+維也納','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=阿拉爾+維也納','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">沙棗花香</span><span class="hd-price">¥250-400</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.7</span></div>
+      <div class="hd-review">胡楊河景色不錯，兒童樂園+家庭影院+管家服務</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=阿拉爾+沙棗花香','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=阿拉爾+沙棗花香','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=阿拉爾+沙棗花香','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">塔河陽光</span><span class="hd-price">¥200-350</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.7</span></div>
+      <div class="hd-review">2025開業，親子主題房+電競房，環境優雅安靜</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=阿拉爾+塔河陽光','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=阿拉爾+塔河陽光','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=阿拉爾+塔河陽光','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">亞悅</span><span class="hd-price">¥200-350</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.8</span></div>
+      <div class="hd-review">新開業，免費健身室，機器人服務，床品柔軟舒適</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=阿拉爾+亞悅','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=阿拉爾+亞悅','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=阿拉爾+亞悅','_blank')">🟢 Trip</span>
+      </div></div></div>
+    </div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('xiagu.jpg');"><div class="day-banner-title">🌋 天山奇觀 · 赤紅峽谷的壯美斧鑿</div></div></div>
+        <div class="day-card" id="d6"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D6</span><span class="day-lbl">DESERT</span><span class="day-date-raw">第 06 天</span></div><div class="day-info-col"><span class="day-jp-sub">砂漠公路と夜の古都</span><h3 class="day-title">阿拉爾 ➔ 沙漠公路 ➔ 翡翠湖 ➔ 約特幹故城 ➔ 和田 <small>【440KM·約6H】</small></h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>穿越沙漠公路</div><div class="day-meal">🍽️ 用餐：酒店含早，中晚餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">08:30-09:00</div><div class="tl-desc">酒店自由享用早餐。</div></div><div class="timeline-item"><div class="tl-time">09:00-16:00</div><div class="tl-desc">在世界上最大的<strong>【塔克拉瑪干大沙漠】</strong>馳騁，穿越被稱爲"死亡之海"的世界第二大沙漠。沒有荒涼的人生，只有荒涼的沙漠，奇蹟般的沙漠公路，千里瀚海，沙漠、沙丘、胡楊、紅柳，令人讚歎。</div></div><div class="timeline-item"><div class="tl-time">16:00-17:30</div><div class="tl-desc">遊玩<strong>【翡翠湖】</strong>—崑崙山冰雪融水彙集成湖，湖水富含礦物質，陽光照射下呈現淺綠到深碧的層次色彩，宛如鑲嵌金色沙海中的翡翠。每年秋季10月左右湖水碧綠、胡楊金黃，是最佳觀賞期，當地居民稱其爲"天賜的短暫奇蹟"。</div></div><div class="timeline-item"><div class="tl-time">17:30-19:00</div><div class="tl-desc">前往<strong>【約特幹故城】</strong>（含日間演藝票78元/人，晚19點之前進入無需補差價，夜間票168元/人，過了時間補差價哦，若放棄此景點，退還78元/人的門票費用），晚19點之前進入無需補差價，夜間票¥168/人，過了時間補差價。若放棄此景點，退還¥78/人的門票費用）。欣賞中國古代文化藝術魅力，感受絲綢之路的歷史文化。</div></div><div class="timeline-item"><div class="tl-time">20:00</div><div class="tl-desc">可自行前往<strong>【和田夜市】</strong>或返回酒店休息。</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：今日車程較長，建議攜帶頭枕眼罩，如有暈車請自備暈車藥。南疆氣候乾旱多敷面膜多喝水。午餐在沙漠公路中途服務區簡餐，建議提前準備。</div></div><div class="day-accommodation">
+      <div class="hd-section-title">🏨 推介住宿 <em>【四鑽】</em></div>
+      <div class="hd-grid"><div class="hd-card">
+      <div class="hd-top"><span class="hd-name">銀星麗呈</span><span class="hd-price">¥220-400</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.8</span><span class="hd-trip">Trip 9.5</span></div>
+      <div class="hd-review">四星Trip.Best精選，全智能聲控，近和田夜市</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=和田+銀星麗呈','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=和田+銀星麗呈','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=和田+銀星麗呈','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">亞朵</span><span class="hd-price">¥300-500</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.8</span><span class="hd-trip">Trip 9.6</span></div>
+      <div class="hd-review">高檔酒店榜No.3，免費接送機，早餐到11點</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=和田+亞朵','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=和田+亞朵','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=和田+亞朵','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">金鷹國際</span><span class="hd-price">¥250-400</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.6</span><span class="hd-trip">Trip 9.1</span></div>
+      <div class="hd-review">充電樁+洗衣房+免費接送站，近團結廣場</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=和田+金鷹國際','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=和田+金鷹國際','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=和田+金鷹國際','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">美居</span><span class="hd-price">¥180-350</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.9</span><span class="hd-trip">Trip 9.8</span></div>
+      <div class="hd-review">🥇雅高品牌！2024新開，全城最高評分，近和田夜市</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=和田+美居','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=和田+美居','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=和田+美居','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">錦江都城</span><span class="hd-price">¥250-400</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.8</span></div>
+      <div class="hd-review">免費接送機+租車服務+會議廳，近團結廣場</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=和田+錦江都城','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=和田+錦江都城','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=和田+錦江都城','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card hd-warn">
+      <div class="hd-top"><span class="hd-name">國玉</span><span class="hd-price">—</span></div>
+      <div class="hd-mid"></div>
+      <div class="hd-review">⚠️未在攜程/Trip.com找到明確頁面，可能已更名，建議確認</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=和田+國玉','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=和田+國玉','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=和田+國玉','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card hd-warn">
+      <div class="hd-top"><span class="hd-name">天王</span><span class="hd-price">—</span></div>
+      <div class="hd-mid"></div>
+      <div class="hd-review">⚠️未在任何平台找到，可能為小型本地酒店或已更名</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=和田+天王','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=和田+天王','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=和田+天王','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">蘭歐</span><span class="hd-price">¥150-280</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.5</span></div>
+      <div class="hd-review">近團城景區+和田新夜市，免費停車場，含早餐</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=和田+蘭歐','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=和田+蘭歐','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=和田+蘭歐','_blank')">🟢 Trip</span>
+      </div></div></div>
+    </div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('desert.jpg');"><div class="day-banner-title">🐫 沙海奇蹟 · 浩瀚大漠邊緣的璀璨夜色</div></div></div>
+        <div class="day-card" id="d7"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D7</span><span class="day-lbl">CULTURE</span><span class="day-date-raw">第 07 天</span></div><div class="day-info-col"><span class="day-jp-sub">異國情緒のカシュガル</span><h3 class="day-title">和田 ➔ 澤普金胡楊 / 莎車老茶館 / 喀什古城 (三選一) ➔ 喀什 <small>【520KM·約6H】</small></h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>三選一自由規劃</div><div class="day-meal">🍽️ 用餐：酒店含早，中晚餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">09:30-16:00</div><div class="tl-desc">驅車前往<strong>【澤普金胡楊林】/【莎車王陵+莎車老茶館】/喀什古城自由行（三選一）</strong>。溫馨建議：1.如果返程機票離開喀什比較早，建議今天直接前往喀什古城遊玩。2.如果胡楊林已經視覺疲勞，可以放棄澤普胡楊林，選擇莎車或直接前往喀什古城。</div></div><div class="timeline-item"><div class="tl-time">16:00-20:00</div><div class="tl-desc">抵達喀什，入住後自由活動。可選擇遊覽<strong>【喀什古城】</strong>—老城是維吾爾民族文化保留最完整的地方，街巷縱橫交錯，佈局靈活多變，曲徑通幽，民居大多爲土木、磚木結構，不少傳統民居已有上百年曆史。晚餐自行前往<strong>【喀什夜市】</strong>：烤鴿子、面肺子、烤包子、椒麻雞、特色烤肉、手工冰激凌等，還有當地人載歌載舞，熱鬧非凡。</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：今日路程較長建議自備乾糧。<span class="pdf-red">不要</span>直對人臉拍攝，當地人會覺得不禮貌。喀什夜市美食價格平民。</div></div><div class="day-accommodation">
+      <div class="hd-section-title">🏨 推介住宿 <em>【四鑽】· 連宿第1晚</em></div>
+      <div class="hd-grid"><div class="hd-card hd-warn">
+      <div class="hd-top"><span class="hd-name">其尼瓦克</span><span class="hd-price">¥175-350</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.3</span><span class="hd-trip">Trip 8.7</span></div>
+      <div class="hd-review">距古城西門步行5分鐘，4513評價，⚠️設施較舊，貴賓樓較好</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=喀什+其尼瓦克','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=喀什+其尼瓦克','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=喀什+其尼瓦克','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">美豪麗致</span><span class="hd-price">¥300-550</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.7</span><span class="hd-trip">Trip 9.0</span></div>
+      <div class="hd-review">🥇2024新開！古城入口步行3分鐘，智能客控，免費迷你吧</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=喀什+美豪麗致','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=喀什+美豪麗致','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=喀什+美豪麗致','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card hd-warn">
+      <div class="hd-top"><span class="hd-name">朗譽</span><span class="hd-price">¥250-400</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.5</span></div>
+      <div class="hd-review">⚠️距古城約8公里，位置較偏，近小亞郎濕地公園</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=喀什+朗譽','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=喀什+朗譽','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=喀什+朗譽','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">柏曼_kashgar</span><span class="hd-price">¥250-400</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.7</span><span class="hd-trip">Trip 9.4</span></div>
+      <div class="hd-review">🥇古城西門旁！3574評價最多，環疆商圈核心，性價比高</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=喀什+柏曼_kashgar','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=喀什+柏曼_kashgar','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=喀什+柏曼_kashgar','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">維也納_kashgar</span><span class="hd-price">¥200-350</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.6</span></div>
+      <div class="hd-review">免費停車場+管家服務+早餐到11點，近西二環路美食街</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=喀什+維也納_kashgar','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=喀什+維也納_kashgar','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=喀什+維也納_kashgar','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card hd-warn">
+      <div class="hd-top"><span class="hd-name">格林東方_kashgar</span><span class="hd-price">¥200-350</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.5</span></div>
+      <div class="hd-review">1844評價，洗衣房+充電樁+智能客控，⚠️距古城2.4公里</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=喀什+格林東方_kashgar','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=喀什+格林東方_kashgar','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=喀什+格林東方_kashgar','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card hd-warn">
+      <div class="hd-top"><span class="hd-name">錦江都城_kashgar</span><span class="hd-price">¥200-350</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.7</span></div>
+      <div class="hd-review">⚠️位於疏勒縣，距古城約10公里，近張騫公園</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=喀什+錦江都城_kashgar','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=喀什+錦江都城_kashgar','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=喀什+錦江都城_kashgar','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card hd-warn">
+      <div class="hd-top"><span class="hd-name">麗柏</span><span class="hd-price">¥250-400</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.7</span></div>
+      <div class="hd-review">健身中心+花園+露台，⚠️位於東城新區，距古城6-7公里</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=喀什+麗柏','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=喀什+麗柏','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=喀什+麗柏','_blank')">🟢 Trip</span>
+      </div></div></div>
+    </div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('kashgar.jpg');"><div class="day-banner-title">🏯 喀什老城 · 穿梭於生土與磚木的百年光影</div></div></div>
+        <div class="day-card" id="d8"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D8</span><span class="day-lbl">PLATEAU</span><span class="day-date-raw">第 08 天</span></div><div class="day-info-col"><span class="day-jp-sub">パミール高原の瞳</span><h3 class="day-title">喀什 ➔ 喀喇崑崙公路 ➔ 白沙湖全景 ➔ 木吉火山口 ➔ 喀拉庫勒湖 ➔ 塔縣 <small>【425KM·約8H】</small></h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>探祕帕米爾</div><div class="day-meal">🍽️ 用餐：酒店含早，中晚餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">09:00-10:30</div><div class="tl-desc">前往<strong>【帕米爾高原】</strong>，平坦的中巴友誼公路連接高原，從喀什一路攀升。帕米爾在塔吉克語中意思是"世界屋脊"，今日<span class="pdf-red">不要</span>奔跑跳躍等劇烈運動，以免高原反應。著名電影《冰山上的來客》拍攝地。</div></div><div class="timeline-item"><div class="tl-time">12:30-13:30</div><div class="tl-desc">自行享用午餐後前往<strong>【白沙湖南岸+北岸】</strong>—碧藍湖水+潔白沙子+皚皚雪山，白沙湖兩側遙遙矗立着公格爾九別峯。一湖隔兩岸，兩岸風景各不相同。</div></div><div class="timeline-item"><div class="tl-time">13:30-15:00</div><div class="tl-desc">抵達<strong>【木吉火山口】</strong>—全名喀日鐵米爾火山羣，被稱爲"帕米爾之眼"，大大小小數十個零散分佈的休眠火山口，非常壯觀。遠觀昆蓋山<strong>【十八羅漢峯】</strong>，一字排開終年積雪不化，雪山連綿起伏數百公里。</div></div><div class="timeline-item"><div class="tl-time">17:30-20:30</div><div class="tl-desc">乘車遊覽<strong>【喀拉庫勒湖】</strong>，俯看寬廣波瀾湖水顏色變幻。高大的慕士塔格峯、公格爾峯、公格爾九別峯等終年不化的雪山將湖緊緊環抱。天氣晴朗之日，水面映襯着連成片的雪山，高原獨有的靜謐純潔。</div></div><div class="timeline-item"><div class="tl-time">20:30-21:30</div><div class="tl-desc">到達塔縣入住酒店。<strong>【巴鐵集市】</strong>作爲可選項，根據體力決定是否前往。</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：喀什到塔縣爲山路，沿途限速60/小時，請理解<span class="pdf-red">不要</span>催促司機。海拔最高達4000米，<span class="pdf-red">不要</span>奔跑跳躍、<span class="pdf-red">不要</span>飲酒。塔縣晚上很冷，注意保暖，當晚<span class="pdf-red">不建議</span>洗澡。喀拉庫裏湖沿途設有檢查站，<span class="pdf-red">禁止</span>拍照。</div></div><div class="day-accommodation">
+      <div class="hd-section-title">🏨 推介住宿 <em>【舒適】· 連宿第1晚</em></div>
+      <div class="hd-grid"><div class="hd-card">
+      <div class="hd-top"><span class="hd-name">高原明珠</span><span class="hd-price">¥200-350</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.5</span></div>
+      <div class="hd-review">供氧設施！免費專車送機，雪山景+家庭房</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=塔什庫爾幹+高原明珠','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=塔什庫爾幹+高原明珠','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=塔什庫爾幹+高原明珠','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card hd-warn">
+      <div class="hd-top"><span class="hd-name">歐羅巴</span><span class="hd-price">¥190-300</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.1</span><span class="hd-trip">Trip 8.3</span></div>
+      <div class="hd-review">⚠️評分偏低設施較舊，近美食街，2017年開業</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=塔什庫爾幹+歐羅巴','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=塔什庫爾幹+歐羅巴','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=塔什庫爾幹+歐羅巴','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">雲之彼端</span><span class="hd-price">¥250-450</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.7</span></div>
+      <div class="hd-review">🥇供氧設施（製氧機）！雪山景，免費洗衣+管家服務</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=塔什庫爾幹+雲之彼端','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=塔什庫爾幹+雲之彼端','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=塔什庫爾幹+雲之彼端','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card hd-warn">
+      <div class="hd-top"><span class="hd-name">前海</span><span class="hd-price">—</span></div>
+      <div class="hd-mid"><span class="hd-trip">Trip 2.0</span></div>
+      <div class="hd-review">❌ TripAdvisor 2.0/5極差！強烈不推薦</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=塔什庫爾幹+前海','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=塔什庫爾幹+前海','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=塔什庫爾幹+前海','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">慕士塔格冰川</span><span class="hd-price">¥300-500</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.6</span></div>
+      <div class="hd-review">2024開業，供氧設施！日照金山+寵物友好，近古石頭城</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=塔什庫爾幹+慕士塔格冰川','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=塔什庫爾幹+慕士塔格冰川','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=塔什庫爾幹+慕士塔格冰川','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">喬戈里</span><span class="hd-price">¥300-550</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.8-4.9</span><span class="hd-trip">Trip 9.4</span></div>
+      <div class="hd-review">🥇全城最高評分！星空拍攝+日照金山+供氧，日出日落景觀</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=塔什庫爾幹+喬戈里','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=塔什庫爾幹+喬戈里','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=塔什庫爾幹+喬戈里','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">迎賓館</span><span class="hd-price">¥200-350</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.6</span></div>
+      <div class="hd-review">政府接待背景，雪山景+套房，穩定可靠</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=塔什庫爾幹+迎賓館','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=塔什庫爾幹+迎賓館','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=塔什庫爾幹+迎賓館','_blank')">🟢 Trip</span>
+      </div></div></div>
+    </div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('baisha.jpg');"><div class="day-banner-title">❄️ 帕米爾之眼 · 白砂藍湖畔的萬年沉寂</div></div></div>
+        <div class="day-card" id="d9"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D9</span><span class="day-lbl">ROYAL</span><span class="day-date-raw">第 09 天</span></div><div class="day-info-col"><span class="day-jp-sub">天空の道 · タジクの暮らし</span><h3 class="day-title">塔縣 ➔ 紅其拉甫國門 ➔ 盤龍古道 ➔ 班迪爾藍湖 ➔ 塔吉克家訪 <small>【330KM·約7H】</small></h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>今天走過了所有彎路，從此人生盡是坦途</div><div class="day-meal">🍽️ 用餐：酒店含早，中晚餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">09:00-12:30</div><div class="tl-desc">前往<strong>【紅其拉甫口岸/國門】</strong>（如遇惡劣天氣國門不開，退門票）。這是中巴友誼公路國內段終點，對面就是"巴鐵"巴基斯坦，是世界上海拔最高的口岸，絲綢之路上重要關卡，也是中巴經濟走廊重要口岸。</div></div><div class="timeline-item"><div class="tl-time">12:30-14:00</div><div class="tl-desc">前往<strong>【瓦罕走廊起點】</strong>—瓦罕走廊又稱阿富汗走廊，歷史上曾爲中國領土，是古絲綢之路一部分，也是華夏文明與印度文明交流的重要通道。東晉高僧法顯、大唐高僧玄奘都曾經過這裏去印度研究佛法。</div></div><div class="timeline-item"><div class="tl-time">14:30-18:30</div><div class="tl-desc">前往<strong>【盤龍古道】</strong>（天氣原因未開放則取消，無退費）—位於塔縣瓦恰鄉境內，當地叫瓦恰公路，全部盤山公路超過600個彎道全長75公里，海拔約4100米。黑色公路與土色山體的完美配合，加上遠處連綿的雪山，只屬於帕米爾高原。<strong>今日走過人生所有的彎路，從此人生盡是坦途。</strong>返回路上看到<strong>【班迪爾藍湖】</strong>（又叫下坂地水庫），五個相連的湖泊，被稱爲"最藍的湖"。</div></div><div class="timeline-item"><div class="tl-time">18:30-19:30</div><div class="tl-desc"><strong>【贈送塔吉克族家訪】</strong>—高質量家訪體驗：塔吉克族文化講解、品嚐美食、歌舞互動、換裝體驗，杜絕走馬觀花！</div></div><div class="timeline-item"><div class="tl-time">19:30-21:30</div><div class="tl-desc">前往<strong>【托格倫夏村】</strong>—位於塔什庫爾干鄉，距塔縣車程15分鐘，塔吉克族聚居村落，被雪山環抱，塔什庫爾幹河穿流而過，草甸、溼地、沙棘連成片，視野開闊。</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：早晚溫差大，注意保暖。海拔最高達4000米，<span class="pdf-red">不要</span>奔跑跳躍、<span class="pdf-red">不要</span>飲酒。塔縣晚上很冷，當晚<span class="pdf-red">不建議</span>洗澡。塔吉克人民純樸好客，拍攝先徵得同意。盤龍古道彎道多，容易暈車建議備暈車藥。若不通車則繞行班迪爾藍湖。</div></div><div class="day-accommodation">
+      <div class="hd-section-title">🏨 推介住宿 <em>【舒適】· 連宿第2晚</em></div>
+      <div class="hd-grid"><div class="hd-card">
+      <div class="hd-top"><span class="hd-name">高原明珠</span><span class="hd-price">¥200-350</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.5</span></div>
+      <div class="hd-review">供氧設施！免費專車送機，雪山景+家庭房</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=塔什庫爾幹+高原明珠','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=塔什庫爾幹+高原明珠','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=塔什庫爾幹+高原明珠','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card hd-warn">
+      <div class="hd-top"><span class="hd-name">歐羅巴</span><span class="hd-price">¥190-300</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.1</span><span class="hd-trip">Trip 8.3</span></div>
+      <div class="hd-review">⚠️評分偏低設施較舊，近美食街，2017年開業</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=塔什庫爾幹+歐羅巴','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=塔什庫爾幹+歐羅巴','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=塔什庫爾幹+歐羅巴','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">雲之彼端</span><span class="hd-price">¥250-450</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.7</span></div>
+      <div class="hd-review">🥇供氧設施（製氧機）！雪山景，免費洗衣+管家服務</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=塔什庫爾幹+雲之彼端','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=塔什庫爾幹+雲之彼端','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=塔什庫爾幹+雲之彼端','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card hd-warn">
+      <div class="hd-top"><span class="hd-name">前海</span><span class="hd-price">—</span></div>
+      <div class="hd-mid"><span class="hd-trip">Trip 2.0</span></div>
+      <div class="hd-review">❌ TripAdvisor 2.0/5極差！強烈不推薦</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=塔什庫爾幹+前海','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=塔什庫爾幹+前海','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=塔什庫爾幹+前海','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">慕士塔格冰川</span><span class="hd-price">¥300-500</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.6</span></div>
+      <div class="hd-review">2024開業，供氧設施！日照金山+寵物友好，近古石頭城</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=塔什庫爾幹+慕士塔格冰川','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=塔什庫爾幹+慕士塔格冰川','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=塔什庫爾幹+慕士塔格冰川','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">喬戈里</span><span class="hd-price">¥300-550</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.8-4.9</span><span class="hd-trip">Trip 9.4</span></div>
+      <div class="hd-review">🥇全城最高評分！星空拍攝+日照金山+供氧，日出日落景觀</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=塔什庫爾幹+喬戈里','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=塔什庫爾幹+喬戈里','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=塔什庫爾幹+喬戈里','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">迎賓館</span><span class="hd-price">¥200-350</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.6</span></div>
+      <div class="hd-review">政府接待背景，雪山景+套房，穩定可靠</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=塔什庫爾幹+迎賓館','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=塔什庫爾幹+迎賓館','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=塔什庫爾幹+迎賓館','_blank')">🟢 Trip</span>
+      </div></div></div>
+    </div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('panlong.jpg');"><div class="day-banner-title">🐉 盤龍古道 · 六百道迴旋金光光軌</div></div></div>
+        <div class="day-card" id="d10"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D10</span><span class="day-lbl">GLACIER</span><span class="day-date-raw">第 10 天</span></div><div class="day-info-col"><span class="day-jp-sub">氷山の王と雪柳のトンネル</span><h3 class="day-title">塔縣 ➔ 塔合曼溼地 ➔ 樹洞公路 ➔ 慕士塔格冰川公園 ➔ 喀什 <small>【310KM·約7H】</small></h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>冰川之旅</div><div class="day-meal">🍽️ 用餐：酒店含早，中晚餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">08:30-09:00</div><div class="tl-desc">酒店享用暖心早餐，開始精彩旅程。</div></div><div class="timeline-item"><div class="tl-time">09:00-12:00</div><div class="tl-desc">前往<strong>【塔合曼溼地】</strong>—塔什庫爾幹最大的盆地和草地，"塔合曼"塔吉克語意爲"四面環山"，無數冰川雪山溪流匯到盆地，形成九曲蜿蜒的塔合曼河。之後遊覽網紅<strong>【雪柳樹洞公路】</strong>，以樹洞爲背景拍照，定是隨時都歡喜。</div></div><div class="timeline-item"><div class="tl-time">12:30-15:30</div><div class="tl-desc">遊覽<strong>【慕士塔格冰川公園】</strong>（海拔4,668米，天氣原因未開放則取消退門票）。位於世界著名的"冰山之父"、7,546米的慕士塔格峯裙帶之下，可看到雄偉的冰川、秀麗的冰舌，還有冰塔、冰洞等多姿多彩的壯美景觀。</div></div><div class="timeline-item"><div class="tl-time">15:30-18:00</div><div class="tl-desc">沿途午餐後前往<strong>【奧依塔克紅山谷】</strong>—帕米爾公路上極具辨識度的赤紅峽谷地貌。</div></div><div class="timeline-item"><div class="tl-time">20:00-21:00</div><div class="tl-desc">入住喀什酒店後自由活動，可自行前往著名的喀什夜市，讓各種美食來滿足你的味蕾！</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：早晚溫差大注意保暖。<span class="pdf-red">不要</span>直對人臉拍攝。冰川<span class="pdf-red">限制</span>70歲以上入內，遇雨雪閉園退門票。</div></div><div class="day-accommodation">
+      <div class="hd-section-title">🏨 推介住宿 <em>【四鑽】· 連宿第1晚</em></div>
+      <div class="hd-grid"><div class="hd-card hd-warn">
+      <div class="hd-top"><span class="hd-name">其尼瓦克</span><span class="hd-price">¥175-350</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.3</span><span class="hd-trip">Trip 8.7</span></div>
+      <div class="hd-review">距古城西門步行5分鐘，4513評價，⚠️設施較舊，貴賓樓較好</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=喀什+其尼瓦克','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=喀什+其尼瓦克','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=喀什+其尼瓦克','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">美豪麗致</span><span class="hd-price">¥300-550</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.7</span><span class="hd-trip">Trip 9.0</span></div>
+      <div class="hd-review">🥇2024新開！古城入口步行3分鐘，智能客控，免費迷你吧</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=喀什+美豪麗致','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=喀什+美豪麗致','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=喀什+美豪麗致','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card hd-warn">
+      <div class="hd-top"><span class="hd-name">朗譽</span><span class="hd-price">¥250-400</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.5</span></div>
+      <div class="hd-review">⚠️距古城約8公里，位置較偏，近小亞郎濕地公園</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=喀什+朗譽','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=喀什+朗譽','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=喀什+朗譽','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">柏曼_kashgar</span><span class="hd-price">¥250-400</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.7</span><span class="hd-trip">Trip 9.4</span></div>
+      <div class="hd-review">🥇古城西門旁！3574評價最多，環疆商圈核心，性價比高</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=喀什+柏曼_kashgar','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=喀什+柏曼_kashgar','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=喀什+柏曼_kashgar','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">維也納_kashgar</span><span class="hd-price">¥200-350</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.6</span></div>
+      <div class="hd-review">免費停車場+管家服務+早餐到11點，近西二環路美食街</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=喀什+維也納_kashgar','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=喀什+維也納_kashgar','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=喀什+維也納_kashgar','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card hd-warn">
+      <div class="hd-top"><span class="hd-name">格林東方_kashgar</span><span class="hd-price">¥200-350</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.5</span></div>
+      <div class="hd-review">1844評價，洗衣房+充電樁+智能客控，⚠️距古城2.4公里</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=喀什+格林東方_kashgar','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=喀什+格林東方_kashgar','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=喀什+格林東方_kashgar','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card hd-warn">
+      <div class="hd-top"><span class="hd-name">錦江都城_kashgar</span><span class="hd-price">¥200-350</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.7</span></div>
+      <div class="hd-review">⚠️位於疏勒縣，距古城約10公里，近張騫公園</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=喀什+錦江都城_kashgar','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=喀什+錦江都城_kashgar','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=喀什+錦江都城_kashgar','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card hd-warn">
+      <div class="hd-top"><span class="hd-name">麗柏</span><span class="hd-price">¥250-400</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.7</span></div>
+      <div class="hd-review">健身中心+花園+露台，⚠️位於東城新區，距古城6-7公里</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=喀什+麗柏','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=喀什+麗柏','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=喀什+麗柏','_blank')">🟢 Trip</span>
+      </div></div></div>
+    </div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('glacier.jpg');"><div class="day-banner-title">🏔️ 冰山之父 · 慕士塔格晶瑩剔透之美</div></div></div>
+        <div class="day-card" id="d11"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D11</span><span class="day-lbl">WEST</span><span class="day-date-raw">第 11 天</span></div><div class="day-info-col"><span class="day-jp-sub">中國最西端の落日</span><h3 class="day-title">喀什 ➔ 天山崑崙山交匯 ➔ 斯姆哈納村 (中國西極) ➔ 喀什 <small>【480KM·約8H】</small></h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>中國最後一縷陽光 · 中國西極</div><div class="day-meal">🍽️ 用餐：酒店含早，中晚餐自理</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">09:00-11:30</div><div class="tl-desc">乘車前往<strong>【中國西極】</strong>，沿途各種七彩地貌，雪山、草甸、牛羊，風景非常美麗。途徑<strong>【七彩雅丹地貌】</strong>—色彩分明，是億萬年地質變遷所賦予的自然外貌，屬全國少見山地景觀，會在雅丹羣安排茶歇不錯過每一個美景與心情的邂逅。</div></div><div class="timeline-item"><div class="tl-time">11:30-12:30</div><div class="tl-desc"><strong>【兩山交匯之處】</strong>—天山與崑崙山兩個山系本是遙遙相望，大自然讓兩山在烏恰縣的烏魯克恰提鄉來了一次親密握手，締造了一處絕無僅有的世界奇觀。天山山脈呈駝色，崑崙山山脈呈黛色，站在交匯處細細品味每片山脊的不同形態和顏色，感受兩山交匯的無窮魅力。</div></div><div class="timeline-item"><div class="tl-time">14:30-15:30</div><div class="tl-desc"><strong>【斯姆哈納村】</strong>—北漠河西烏恰，中國的西極，中國最西邊的一個村，鄰國吉爾吉斯斯坦。這裏也是西邊日落最晚的村落，被稱爲"太陽的家"。最長的日光時間在這裏停留，山巔籠罩，雄渾壯美，他每日送別着神州大地最後一縷陽光。</div></div><div class="timeline-item"><div class="tl-time">15:30-19:30</div><div class="tl-desc">遊覽結束後乘車返回喀什結束行程。</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：今日路程較長，西極屬於偏遠落後地區，餐廳不多，建議自備乾糧。西極海拔較高，請做好防曬，根據自身體力和身體情況決定是否登西極石碑。</div></div><div class="day-accommodation">
+      <div class="hd-section-title">🏨 推介住宿 <em>【四鑽】· 連宿第2晚</em></div>
+      <div class="hd-grid"><div class="hd-card hd-warn">
+      <div class="hd-top"><span class="hd-name">其尼瓦克</span><span class="hd-price">¥175-350</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.3</span><span class="hd-trip">Trip 8.7</span></div>
+      <div class="hd-review">距古城西門步行5分鐘，4513評價，⚠️設施較舊，貴賓樓較好</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=喀什+其尼瓦克','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=喀什+其尼瓦克','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=喀什+其尼瓦克','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">美豪麗致</span><span class="hd-price">¥300-550</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.7</span><span class="hd-trip">Trip 9.0</span></div>
+      <div class="hd-review">🥇2024新開！古城入口步行3分鐘，智能客控，免費迷你吧</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=喀什+美豪麗致','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=喀什+美豪麗致','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=喀什+美豪麗致','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card hd-warn">
+      <div class="hd-top"><span class="hd-name">朗譽</span><span class="hd-price">¥250-400</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.5</span></div>
+      <div class="hd-review">⚠️距古城約8公里，位置較偏，近小亞郎濕地公園</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=喀什+朗譽','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=喀什+朗譽','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=喀什+朗譽','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">柏曼_kashgar</span><span class="hd-price">¥250-400</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.7</span><span class="hd-trip">Trip 9.4</span></div>
+      <div class="hd-review">🥇古城西門旁！3574評價最多，環疆商圈核心，性價比高</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=喀什+柏曼_kashgar','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=喀什+柏曼_kashgar','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=喀什+柏曼_kashgar','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card">
+      <div class="hd-top"><span class="hd-name">維也納_kashgar</span><span class="hd-price">¥200-350</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.6</span></div>
+      <div class="hd-review">免費停車場+管家服務+早餐到11點，近西二環路美食街</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=喀什+維也納_kashgar','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=喀什+維也納_kashgar','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=喀什+維也納_kashgar','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card hd-warn">
+      <div class="hd-top"><span class="hd-name">格林東方_kashgar</span><span class="hd-price">¥200-350</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.5</span></div>
+      <div class="hd-review">1844評價，洗衣房+充電樁+智能客控，⚠️距古城2.4公里</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=喀什+格林東方_kashgar','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=喀什+格林東方_kashgar','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=喀什+格林東方_kashgar','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card hd-warn">
+      <div class="hd-top"><span class="hd-name">錦江都城_kashgar</span><span class="hd-price">¥200-350</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.7</span></div>
+      <div class="hd-review">⚠️位於疏勒縣，距古城約10公里，近張騫公園</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=喀什+錦江都城_kashgar','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=喀什+錦江都城_kashgar','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=喀什+錦江都城_kashgar','_blank')">🟢 Trip</span>
+      </div></div>
+<div class="hd-card hd-warn">
+      <div class="hd-top"><span class="hd-name">麗柏</span><span class="hd-price">¥250-400</span></div>
+      <div class="hd-mid"><span class="hd-ctrip">攜程 4.7</span></div>
+      <div class="hd-review">健身中心+花園+露台，⚠️位於東城新區，距古城6-7公里</div>
+      <div class="hd-links">
+        <span class="hd-btn ct" onclick="event.stopPropagation();window.open('https://m.ctrip.com/webapp/hotel/hotelsearch?searchtext=喀什+麗柏','_blank')">🔵 攜程</span>
+        <span class="hd-btn am" onclick="event.stopPropagation();window.open('https://www.amap.com/search?query=喀什+麗柏','_blank')">🔴 高德</span>
+        <span class="hd-btn tp" onclick="event.stopPropagation();window.open('https://hk.trip.com/hotels/list?keyword=喀什+麗柏','_blank')">🟢 Trip</span>
+      </div></div></div>
+    </div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('westpole.jpg');"><div class="day-banner-title">☀️ 中國西極 · 留住太陽的最後一抹溫柔</div></div></div>
         <div class="day-card" id="d12"><div class="day-card-header"><div class="day-date-col"><span class="day-num">D12</span><span class="day-lbl">DEPART</span><span class="day-date-raw">第 12 天</span></div><div class="day-info-col"><span class="day-jp-sub">旅立ち・また會う日まで</span><h3 class="day-title">喀什 ➔ 出發地 (24H 送機)</h3><div class="day-theme"><span class="pdf-red">🎯 今日主題：</span>滿載回憶 · 返回溫暖的家</div><div class="day-meal">🍽 用餐：酒店含早</div></div></div><div class="day-card-timeline"><div class="timeline-item"><div class="tl-time">全天</div><div class="tl-desc">根據航班時刻安排送機。快樂的時光總是過得很快，到了我們該說再見的日子了，希望短暫的新疆之行，能讓您留下美好的回憶，期待與您的再次相遇。大美新疆更多的美景，等您來欣賞~</div></div><div class="day-tips"><span class="pdf-highlight">💡 溫馨提示</span>：請確認自己的物品整理攜帶周全，以免遺漏。請在北京時間14:00前辦理退房手續，由於延遲退房產生的額外費用敬請自付。離開酒店前一定要再次檢查物品，<span class="pdf-red">不要</span>忘在酒店裏了！</div></div><div class="day-accommodation">🏠 <b>推介住宿</b><br><span class="ht">溫暖的家 ✈️</span></div><div class="day-card-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('goodbye.jpg');"><div class="day-banner-title">🎉 凱旋而歸 · 期待與您的下一次相遇</div></div></div>
       </div>
     </section>
